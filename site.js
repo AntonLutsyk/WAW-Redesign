@@ -351,7 +351,7 @@
     let q = m[2] || '', h = m[3] || '';
     const add = (k, v) => (q ? q + '&' : '?') + k + '=' + encodeURIComponent(v);
     let seg = p.split('/').filter(Boolean);
-    if (p === '/') return 'Home.dc.html' + q + h;
+    if (p === '/') return 'index.html' + q + h;
     if (p === '/services') return 'Services.dc.html' + q + h;
     if (seg[0] === 'service' && seg[1]) return 'Service.dc.html' + add('id', seg[1]) + h;
     if (p === '/solutions') return 'Solutions.dc.html' + q + h;
