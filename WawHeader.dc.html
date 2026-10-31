@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/layout.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/navigation/navigation.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/actions/actions.css">
+  <script src="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/_ds_bundle.js"></script>
+  <script src="site.js"></script>
+  <style>
+    .waw-iconbtn.waw-tt-round{width:48px;height:48px;border-radius:50%;border:1px solid var(--border-strong);background:transparent;box-shadow:none}
+    .waw-iconbtn.waw-tt-round:hover{border-color:var(--text-heading);background:transparent}
+  </style>
+</helmet>
+<div>
+  <header data-hdr="" style="transition:transform .5s cubic-bezier(.16,1,.3,1)">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;height:88px;padding:0 var(--gx);background:var(--surface-header);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border-subtle)">
+      <a href="/" aria-label="Web Art Work, home" style="display:flex;align-items:center;gap:12px;min-height:44px;text-decoration:none;color:var(--text-heading);flex:none">
+        <img src="assets/logo.svg" alt="" width="40" height="40" style="display:block;width:40px;height:40px">
+        <span style="font-size:19px;font-weight:500;letter-spacing:-.01em">Web Art Work</span>
+      </a>
+      <sc-if value="{{ inlineNav }}" hint-placeholder-val="{{ false }}">
+        <nav aria-label="Primary" style="display:flex;align-items:center;gap:4px">
+          <sc-for list="{{ inline }}" as="n" hint-placeholder-count="5">
+            <a href="{{ n.href }}" aria-current="{{ n.aria }}" style="position:relative;display:inline-flex;align-items:center;min-height:44px;padding:0 clamp(8px,.9vw,14px);font-size:15px;font-weight:400;text-decoration:none;color:{{ n.color }}" style-hover="color:var(--text-heading)">{{ n.label }}<span aria-hidden="true" style="position:absolute;left:12px;right:12px;bottom:8px;height:1px;background:var(--accent);opacity:{{ n.line }}"></span></a>
+          </sc-for>
+        </nav>
+      </sc-if>
+      <div style="display:flex;align-items:center;justify-content:flex-end;gap:4px;flex:none">
+        <sc-if value="{{ mid }}" hint-placeholder-val="{{ true }}">
+          <x-import component-from-global-scope="WebArtWorkDesignSystem_3241df.Button" variant="primary" size="md" arrow="up-right" href="{{ quoteHref }}" hint-size="150px,44px">Get a quote</x-import>
+        </sc-if>
+        <sc-if value="{{ showMenuBtn }}" hint-placeholder-val="{{ true }}">
+          <button type="button" data-menu-open="" onClick="{{ openMenu }}" aria-expanded="{{ menuAria }}" aria-controls="site-menu" aria-label="Open menu" style="display:grid;place-items:center;width:48px;height:48px;margin-left:20px;padding:0;background:none;border:1px solid var(--border-strong);border-radius:50%;cursor:pointer;color:var(--text-heading)" style-hover="color:var(--accent-text);border-color:var(--accent)" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:2px">
+            <span aria-hidden="true" style="display:flex;flex-direction:column;gap:6px;width:20px"><span style="display:block;height:1.5px;background:currentColor"></span><span style="display:block;height:1.5px;background:currentColor"></span></span>
+          </button>
+        </sc-if>
+      </div>
+    </div>
+  </header>
+
+  <sc-if value="{{ menu }}" hint-placeholder-val="{{ false }}">
+    <div id="site-menu" role="dialog" aria-modal="true" aria-label="Site menu" data-menu="" onKeyDown="{{ trap }}" style="position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;background-color:#111114;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:{{ gridSize }};background-position:-1px -1px;color:#ffffff;overflow-y:auto">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex:none;height:clamp(72px,10vh,104px);padding:0 var(--gx)">
+        <a href="{{ homeHref }}" onClick="{{ closeMenu }}" style="display:inline-flex;align-items:center;min-height:44px;font-size:17px;font-weight:600;letter-spacing:-.01em;text-decoration:none;color:#ffffff">WEB ART WORK<span style="color:#d7d71d">.</span></a>
+        <button type="button" data-menu-close="" onClick="{{ closeMenu }}" aria-label="Close menu" style="display:grid;place-items:center;width:56px;height:56px;padding:0;margin-right:-6px;background:none;border:0;cursor:pointer;color:#ffffff;transition:color .25s,transform .4s cubic-bezier(.25,.8,.25,1)" style-hover="color:#d7d71d;transform:rotate(90deg)" style-focus="outline:3px solid #d7d71d;outline-offset:2px"><svg aria-hidden="true" viewBox="0 0 40 40" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l28 28M34 6 6 34"></path></svg></button>
+      </div>
+      <nav aria-label="Main" style="flex:1;display:flex;align-items:center;padding:clamp(16px,4vh,48px) var(--gx)">
+        <ol style="list-style:none;margin:0;padding:0;width:100%;display:grid;grid-template-columns:{{ menuCols }};grid-auto-flow:{{ menuFlow }};grid-template-rows:{{ menuRows }};gap:clamp(4px,1.4vh,16px) clamp(32px,5vw,96px)">
+          <sc-for list="{{ nav }}" as="n" hint-placeholder-count="7">
+            <li style="overflow:hidden">
+              <a href="{{ n.href }}" data-ml="" aria-current="{{ n.aria }}" onClick="{{ closeMenu }}" style="display:flex;align-items:flex-start;gap:clamp(10px,1.2vw,20px);text-decoration:none;color:{{ n.menuColor }};transition:color .3s cubic-bezier(.25,.8,.25,1)" style-hover="color:#d7d71d">
+                <span style="font-size:{{ menuFs }};line-height:1.04;letter-spacing:-.02em;font-weight:500;text-transform:uppercase;white-space:nowrap">{{ n.label }}</span>
+              </a>
+            </li>
+          </sc-for>
+        </ol>
+      </nav>
+      <div style="flex:none;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px clamp(24px,3vw,48px);min-height:clamp(72px,10vh,96px);padding:12px var(--gx);border-top:1px solid rgba(255,255,255,.08);font-size:14px">
+        <span style="color:rgba(255,255,255,.62)">© 2026 Web Art Work</span>
+        <a href="tel:+380971862487" style="display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:#ffffff" style-hover="color:#d7d71d">+38 097 18 62 487</a>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:0 clamp(20px,2.4vw,40px)">
+          <sc-for list="{{ social }}" as="s" hint-placeholder-count="4">
+            <li><a href="{{ s.href }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:#ffffff" style-hover="color:#d7d71d">{{ s.name }} ↗</a></li>
+          </sc-for>
+        </ul>
+      </div>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;72px&quot;},&quot;current&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Home&quot;,&quot;Services&quot;,&quot;Solutions&quot;,&quot;Partners&quot;,&quot;Startups&quot;,&quot;Pricing&quot;],&quot;default&quot;:&quot;Home&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;quoteHref&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;/#contact&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { mode: 'dark', w: window.innerWidth, menu: false, ok: !!window.WAW_SITE };
+  componentDidMount() {
+    this.reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    addEventListener('resize', this.onResize);
+    this.onScroll = () => {
+      if (this.raf) return;
+      this.raf = requestAnimationFrame(() => {
+        this.raf = 0;
+        const h = document.querySelector('[data-hdr]'); if (!h) return;
+        const y = scrollY, down = y > (this.lastY || 0) && y > 240 && !this.state.menu && !h.contains(document.activeElement);
+        h.style.transform = down ? 'translateY(-100%)' : '';
+        const top = y < 24 && !this.state.menu && !!document.querySelector('[data-screen-label="Hero"]');
+        h.style.background = top ? 'transparent' : ''; h.style.borderBottomColor = top ? 'transparent' : ''; h.style.backdropFilter = top ? 'none' : ''; h.style.webkitBackdropFilter = top ? 'none' : '';
+        this.lastY = y;
+      });
+    };
+    addEventListener('scroll', this.onScroll, { passive: true });
+    setTimeout(this.onScroll, 0); setTimeout(this.onScroll, 600);
+    this.onKey = e => { if (e.key === 'Escape' && this.state.menu) this.setMenu(false); };
+    addEventListener('keydown', this.onKey);
+    const boot = () => this.setState({ ok: true, mode: window.WAW_SITE.theme.get() });
+    if (window.WAW_SITE) boot(); else this.t = setInterval(() => { if (window.WAW_SITE) { clearInterval(this.t); boot(); } }, 50);
+  }
+  componentWillUnmount() { removeEventListener('resize', this.onResize); removeEventListener('scroll', this.onScroll); removeEventListener('keydown', this.onKey); clearInterval(this.t); document.body.style.overflow = ''; }
+  componentDidUpdate() {
+    const prev = { menu: this._pm }; this._pm = this.state.menu;
+    if (this.state.menu && !prev.menu) {
+      const m = document.querySelector('[data-menu]');
+      if (!this.reduce) {
+        try { if (m) m.animate([{ clipPath: 'inset(0 0 100% 0)' }, { clipPath: 'inset(0 0 0 0)' }], { duration: 700, easing: 'cubic-bezier(.77,0,.18,1)' }); } catch (e) {}
+        document.querySelectorAll('[data-ml]').forEach((el, i) => { try { el.animate([{ transform: 'translateY(100%)' }, { transform: 'none' }], { duration: 900, delay: 60 + i * 50, easing: 'cubic-bezier(.16,1,.3,1)', fill: 'backwards' }); } catch (e) {} });
+      }
+      const c = document.querySelector('[data-menu-close]'); if (c) c.focus();
+    }
+    if (!this.state.menu && prev.menu) { const b = document.querySelector('[data-menu-open]'); if (b) b.focus(); }
+  }
+  setMenu(open) {
+    document.body.style.overflow = open ? 'hidden' : '';
+    const h = document.querySelector('[data-hdr]'); if (h) h.style.transform = '';
+    this.setState({ menu: open });
+  }
+  renderVals() {
+    const S = window.WAW_SITE;
+    const w = this.state.w, cur = this.props.current || '';
+    const pad = n => String(n).padStart(2, '0');
+    const quote = this.props.quoteHref || '/#contact';
+    const items = [['Home', '/', 'Start here'], ['Services', '/services', '24 services'], ['Solutions', '/solutions', '9 solutions'], ['Partners', '/partners', 'Who we build for'], ['Startups', '/startups', 'Built in-house'], ['Pricing', '/pricing', 'From $200'], ['Contact', quote, 'Free consultation']];
+    const nav = items.map(([label, href, note], i) => ({ i: pad(i + 1), label, href, note, aria: label === cur ? 'page' : undefined, menuColor: label === cur ? '#d7d71d' : '#ffffff' }));
+    return {
+      showMenuBtn: true, inlineNav: false,
+      wide: w >= 1100, mid: w >= 768,
+      mode: this.state.mode,
+      toggleMode: () => { const m = this.state.mode === 'dark' ? 'light' : 'dark'; if (S) S.theme.set(m); this.setState({ mode: m }); },
+      quoteHref: quote,
+      inline: nav.slice(1, 6).map(n => ({ ...n, color: n.label === cur ? 'var(--text-heading)' : 'var(--text-muted)', line: n.label === cur ? 1 : 0 })),
+      nav,
+      menu: this.state.menu, menuAria: this.state.menu ? 'true' : 'false',
+      openMenu: () => this.setMenu(true), closeMenu: () => this.setMenu(false),
+      menuCols: w >= 1024 ? 'repeat(2,minmax(0,1fr))' : 'minmax(0,1fr)', menuFlow: w >= 1024 ? 'column' : 'row', menuRows: w >= 1024 ? 'repeat(4,auto)' : 'none',
+      menuFs: w >= 1024 ? 'clamp(56px,min(6.6vw,12vh),128px)' : 'clamp(36px,min(11vw,7.5vh),64px)', gridSize: w >= 1024 ? 'calc(100vw / 12) calc(100vw / 12)' : 'calc(100vw / 4) calc(100vw / 4)',
+      homeHref: nav[0] ? nav[0].href : '/',
+      social: S ? S.social.map(([name, href]) => ({ name, href })) : [],
+      trap: e => {
+        if (e.key !== 'Tab') return;
+        const f = [...document.querySelectorAll('[data-menu] a[href], [data-menu] button')];
+        if (!f.length) return;
+        const first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

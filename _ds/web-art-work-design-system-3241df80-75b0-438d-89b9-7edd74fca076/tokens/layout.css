@@ -1,0 +1,43 @@
+/* Spacing, grid, containers, breakpoints */
+:root{
+  /* 4px base; named by px for clarity */
+  --space-2:2px;
+  --space-4:4px;
+  --space-8:8px;
+  --space-12:12px;
+  --space-16:16px;
+  --space-20:20px;
+  --space-24:24px;
+  --space-32:32px;
+  --space-40:40px;
+  --space-48:48px;
+  --space-64:64px;
+  --space-80:80px;
+  --space-96:96px;
+  --space-128:128px;
+  --space-160:160px;
+
+  /* Section rhythm */
+  --section-y:clamp(80px,6vw + 56px,160px); /* @kind spacing */
+  --section-y-tight:clamp(56px,3vw + 44px,96px); /* @kind spacing */
+
+  /* Breakpoints (reference; use in media queries as literals) */
+  --bp-sm:390px; /* @kind spacing *//* mobile design width */
+  --bp-md:768px; /* @kind spacing *//* tablet */
+  --bp-lg:1280px; /* @kind spacing *//* desktop */
+  --bp-xl:1440px; /* @kind spacing *//* desktop design width */
+
+  /* Container & grid — 12 col ≥1280, 8 col 768–1279, 4 col <768 */
+  --container:1280px;
+  --page-margin:clamp(20px,5vw,80px);
+  --grid-cols:12; /* @kind other */
+  --grid-gutter:24px;
+  --header-h:72px;
+  --tabbar-h:64px;
+}
+@media (max-width:1279px){:root{
+  --grid-cols:8; /* @kind other */
+  --grid-gutter:20px}}
+@media (max-width:767px){:root{
+  --grid-cols:4; /* @kind other */
+  --grid-gutter:16px;--header-h:60px}}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Partners of Web Art Work</title>
+  <meta name="description" content="Businesses and projects Web Art Work builds websites, apps, CRM systems and marketing for, from furniture workshops to educational apps.">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/layout.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/shape.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/legacy.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/base.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/actions/actions.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/content/content.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/navigation/navigation.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/styles.css">
+  <script src="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/_ds_bundle.js"></script>
+  <script src="site.js"></script>
+  <style>
+    html{scroll-behavior:smooth}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:0s!important}}
+    body{margin:0;background:var(--bg);color:var(--text-body);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+    a{color:var(--text-heading)}
+    a:hover{color:var(--accent-text)}
+  </style>
+</helmet>
+
+<div style="background:var(--bg);color:var(--text-body);min-height:100vh;overflow-x:clip">
+  <dc-import name="WawHeader" current="Partners" quote-href="/#contact" style="position:sticky;top:0;z-index:60;display:block" hint-size="100%,72px"></dc-import>
+  <main>
+    <section data-screen-label="Hero" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(40px,5vw,80px) var(--page-margin) 0">
+      <nav aria-label="Breadcrumb" style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-muted)"><a href="/" style="display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:var(--text-muted)" style-hover="color:var(--text-heading)">Home</a><span aria-hidden="true">/</span><span aria-current="page" style="color:var(--text-heading)">Partners</span></nav>
+      <div style="display:grid;grid-template-columns:{{ heroCols }};gap:32px var(--grid-gutter);align-items:end;margin-top:clamp(16px,2.4vw,40px)">
+        <div style="display:flex;flex-direction:column;gap:clamp(20px,2vw,28px)">
+          <h1 style="margin:0;font-size:clamp(64px,10.5vw,176px);line-height:.92;letter-spacing:-.055em;font-weight:600;color:var(--text-heading)">Partners<span style="color:var(--accent)">.</span></h1>
+          <p style="margin:0;max-width:30ch;font-size:clamp(22px,2vw,32px);line-height:1.25;letter-spacing:-.02em;font-weight:300;color:var(--text-heading);text-wrap:pretty">Businesses we build websites, apps, CRM systems and marketing for.</p>
+          
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:{{ tagAlign }};gap:16px;padding-bottom:clamp(6px,1vw,18px)">
+          <p style="margin:0;font-family:var(--font-mono);font-size:13px;line-height:1.8;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);text-align:{{ tagText }}">Different businesses.<br>Same ambition.</p>
+          <span aria-hidden="true" style="width:30px;height:3px;background:var(--accent)"></span>
+        </div>
+      </div>
+    </section>
+
+    <section data-screen-label="Partner index" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(56px,7vw,112px) var(--page-margin) clamp(96px,11vw,180px)">
+      <ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:{{ gridCols }};gap:clamp(16px,1.6vw,24px)">
+        <sc-for list="{{ partners }}" as="p" hint-placeholder-count="8">
+          <li style="display:flex">
+            <a href="{{ p.href }}" style="flex:1;display:flex;flex-direction:column;gap:20px;padding:clamp(20px,2vw,28px);border:1px solid var(--border);border-radius:8px;background:var(--surface-1);text-decoration:none;color:var(--text-heading);transition:border-color .25s cubic-bezier(.25,.8,.25,1),transform .25s cubic-bezier(.25,.8,.25,1)" style-hover="border-color:var(--accent);transform:translateY(-4px)" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:2px">
+              <span style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px">
+                <span aria-hidden="true" style="display:block;width:96px;height:96px;border-radius:8px;overflow:hidden;background:var(--surface-2) url({{ p.logo }}) center / cover no-repeat"></span>
+                <span aria-hidden="true" style="display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--border-strong);border-radius:50%;color:var(--accent-text)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"></path></svg></span>
+              </span>
+              <span style="display:flex;flex-direction:column;gap:6px;margin-top:auto">
+                <span style="font-size:clamp(22px,1.8vw,28px);line-height:1.1;letter-spacing:-.04em;font-weight:600">{{ p.name }}</span>
+                <span style="font-size:15px;line-height:1.5;font-weight:300;color:var(--text-muted)">{{ p.kicker }}</span>
+              </span>
+            </a>
+          </li>
+        </sc-for>
+      </ul>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px 40px;margin-top:clamp(40px,4vw,64px)">
+        <x-import component-from-global-scope="WebArtWorkDesignSystem_3241df.Button" variant="secondary" size="lg" arrow="right" href="/#contact" hint-size="220px,52px">Become a partner</x-import>
+        <span style="display:flex;align-items:center;gap:16px;font-family:var(--font-mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted)">Let's build something together<span aria-hidden="true" style="width:30px;height:2px;background:var(--accent)"></span></span>
+      </div>
+    </section>
+
+  </main>
+  <dc-import name="WawFooter" current="Partners" quote-href="/#contact" style="display:block" hint-size="100%,620px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { mode: 'dark', w: window.innerWidth, ok: !!window.WAW_SITE };
+  componentDidMount() {
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener('resize', this.onResize);
+    const boot = () => this.setState({ ok: true, mode: window.WAW_SITE.theme.get() });
+    if (window.WAW_SITE) boot(); else this.t = setInterval(() => { if (window.WAW_SITE) { clearInterval(this.t); boot(); } }, 60);
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this.onResize); clearInterval(this.t); }
+  renderVals() {
+    const S = window.WAW_SITE || { partners: [], footer: {} };
+    const w = this.state.w, pad = n => String(n).padStart(2, '0');
+    return {
+      mode: this.state.mode,
+      setMode: m => { S.theme && S.theme.set(m); this.setState({ mode: m }); },
+      isMobile: w < 768,
+      count: pad(S.partners.length),
+      heroCols: w >= 1024 ? 'minmax(0,7fr) minmax(0,5fr)' : 'minmax(0,1fr)',
+      gridCols: 'repeat(' + (w >= 1100 ? 4 : w >= 700 ? 2 : 1) + ',minmax(0,1fr))',
+      tagAlign: w >= 1024 ? 'flex-end' : 'flex-start', tagText: w >= 1024 ? 'right' : 'left',
+      partners: S.partners.map(p => ({ ...p, href: '/partner/' + p.id, logo: 'assets/partners/' + p.id + '.png' })),
+      footSolutions: S.footer.solutions, footCompany: S.footer.company
+    };
+  }
+}
+</script>
+</body>
+</html>

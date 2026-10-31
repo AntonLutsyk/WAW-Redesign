@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Development &amp; Business Services by Web Art Work</title>
+  <meta name="description" content="Web, mobile and back-end development, cloud infrastructure, consulting and marketing from a Ukrainian freelance community with over 10 years of delivery.">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/layout.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/shape.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/legacy.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/base.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/actions/actions.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/content/content.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/navigation/navigation.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/styles.css">
+  <script src="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/_ds_bundle.js"></script>
+  <script src="site.js"></script>
+  <style>
+    html{scroll-behavior:smooth;scroll-padding-top:96px}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:0s!important;animation-duration:0s!important}}
+    body{margin:0;background:var(--bg);color:var(--text-body);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+    a{color:var(--text-heading)}
+    a:hover{color:var(--accent-text)}
+  </style>
+</helmet>
+
+<div style="background:var(--bg);color:var(--text-body);min-height:100vh;overflow-x:clip">
+  <dc-import name="WawHeader" current="Services" quote-href="/#contact" style="position:sticky;top:0;z-index:60;display:block" hint-size="100%,88px"></dc-import>
+  <main>
+    <section data-screen-label="Hero" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(40px,5vw,80px) var(--page-margin) 0">
+      <nav aria-label="Breadcrumb" style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-muted)"><a href="/" style="display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:var(--text-muted)" style-hover="color:var(--text-heading)">Home</a><span aria-hidden="true">/</span><span aria-current="page" style="color:var(--text-heading)">Services</span></nav>
+      <div style="display:grid;grid-template-columns:{{ heroCols }};gap:28px var(--grid-gutter);align-items:end;margin-top:clamp(16px,2.4vw,40px)">
+        <h1 style="margin:0;font-size:clamp(64px,10.5vw,176px);line-height:.92;letter-spacing:-.055em;font-weight:600;color:var(--text-heading)">Services<span style="color:var(--accent)">.</span></h1>
+        <div style="display:flex;flex-direction:column;gap:20px;padding-bottom:clamp(6px,1vw,18px)">
+          <p style="margin:0;max-width:40ch;font-size:clamp(17px,1.4vw,22px);line-height:1.5;font-weight:300;color:var(--text-heading);text-wrap:pretty">Comprehensive digital delivery across product, engineering, design, operations, and growth support.</p>
+          <p style="margin:0;font-size:15px;font-weight:300;color:var(--text-muted)"><span style="color:var(--accent-text)">(</span> 24 services across 4 disciplines <span style="color:var(--accent-text)">)</span></p>
+        </div>
+      </div>
+    </section>
+
+    <sc-for list="{{ cats }}" as="c" hint-placeholder-count="4">
+      <section id="{{ c.id }}" data-screen-label="{{ c.name }}" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(80px,9vw,140px) var(--page-margin) 0">
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px 40px;flex-wrap:wrap">
+          <div style="display:flex;align-items:flex-end;gap:clamp(16px,2vw,32px)">
+            <span aria-hidden="true" style="font-size:clamp(48px,5.2vw,84px);line-height:.8;font-weight:200;letter-spacing:-.04em;color:var(--text-subtle)">{{ c.i }}</span>
+            <h2 style="margin:0;font-size:clamp(30px,3vw,48px);line-height:1;letter-spacing:-.045em;font-weight:600;color:var(--text-heading)">{{ c.name }}</h2>
+          </div>
+          <span style="font-size:15px;font-weight:300;color:var(--text-muted)"><span style="color:var(--accent-text)">(</span> {{ c.count }} services <span style="color:var(--accent-text)">)</span></span>
+        </div>
+        <ul style="list-style:none;margin:clamp(32px,3.2vw,48px) 0 0;padding:0;display:grid;grid-template-columns:{{ cardCols }};gap:clamp(16px,1.6vw,24px)">
+          <sc-for list="{{ c.items }}" as="s" hint-placeholder-count="4">
+            <li style="grid-column:{{ s.span }};display:flex">
+              <article style="position:relative;flex:1;display:grid;grid-template-columns:{{ s.inner }};border:1px solid var(--border);border-radius:8px;background:var(--surface-1);overflow:hidden;transition:border-color .25s cubic-bezier(.25,.8,.25,1),transform .25s cubic-bezier(.25,.8,.25,1)" style-hover="border-color:var(--accent);transform:translateY(-4px)">
+                <a href="{{ s.href }}" tabindex="-1" aria-hidden="true" style="position:relative;display:block;aspect-ratio:{{ s.ratio }};overflow:hidden;background:var(--surface-2);border-bottom:{{ s.mediaBb }}">
+                  <img src="{{ s.img }}" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+                </a>
+                <div style="display:flex;flex-direction:column;gap:12px;padding:clamp(20px,2vw,32px);min-width:0">
+                  <h3 style="margin:0;font-size:{{ s.nameFs }};line-height:1.02;letter-spacing:-.045em;font-weight:600"><a href="{{ s.href }}" style="color:var(--text-heading);text-decoration:none" style-hover="color:var(--accent-text)" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:2px">{{ s.name }}</a></h3>
+                  <p style="margin:0;font-size:15px;line-height:1.6;font-weight:300;color:var(--text-muted);text-wrap:pretty;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:{{ s.clamp }};overflow:hidden">{{ s.desc }}</p>
+                  <ul aria-label="Technologies" style="list-style:none;margin:4px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px">
+                    <sc-for list="{{ s.tags }}" as="tg" hint-placeholder-count="5">
+                      <li style="padding:5px 12px;border:1px solid rgba(215,215,29,.32);border-radius:4px;background:rgba(215,215,29,.08);font-size:13px;font-weight:500;line-height:1.4;color:var(--accent-text)">{{ tg }}</li>
+                    </sc-for>
+                  </ul>
+                  <div style="display:flex;flex-wrap:wrap;align-items:center;gap:0 24px;margin-top:auto;padding-top:8px">
+                    <a href="{{ s.href }}" style="display:inline-flex;align-items:center;min-height:44px;font-size:15px;font-weight:500;color:var(--text-heading);text-decoration:none" style-hover="color:var(--accent-text)">Details →</a>
+                    <a href="/#contact" style="display:inline-flex;align-items:center;min-height:44px;font-size:15px;font-weight:300;color:var(--text-muted);text-decoration:none" style-hover="color:var(--text-heading)">Get a quote ↗</a>
+                  </div>
+                </div>
+              </article>
+            </li>
+          </sc-for>
+        </ul>
+      </section>
+    </sc-for>
+
+    <section data-screen-label="CTA" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin) clamp(80px,9vw,140px)">
+      <div style="display:grid;grid-template-columns:{{ heroCols }};gap:40px var(--grid-gutter);align-items:end;padding-top:clamp(40px,4vw,64px);border-top:1px solid var(--border)">
+        <h2 style="margin:0;max-width:18ch;font-size:clamp(36px,4.4vw,72px);line-height:1.02;letter-spacing:-.05em;font-weight:600;color:var(--text-heading);text-wrap:balance">Need something specific<span style="color:var(--accent)">?</span></h2>
+        <div style="display:flex;flex-direction:column;gap:28px">
+          <p style="margin:0;max-width:40ch;font-size:clamp(16px,1.3vw,20px);line-height:1.55;font-weight:300;color:var(--text-muted)">We also shape custom delivery models for unique product or business constraints.</p>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px 40px">
+            <a href="/#contact" style="display:inline-flex;align-items:center;gap:24px;text-decoration:none;color:var(--text-heading)" style-hover="color:var(--accent-text)" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:4px">
+              <span aria-hidden="true" style="display:grid;place-items:center;width:64px;height:64px;flex:none;border:1px solid currentColor;border-radius:50%"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+              <span style="padding:6px 0 10px;font-size:clamp(18px,1.4vw,22px);font-weight:500;border-bottom:3px solid var(--accent)">Start your project</span>
+            </a>
+            <a href="/pricing" style="display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:16px;text-decoration:none;color:var(--text-muted)" style-hover="color:var(--text-heading)">See pricing →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <dc-import name="WawFooter" current="Services" quote-href="/#contact" style="display:block" hint-size="100%,620px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { w: window.innerWidth, ok: !!window.WAW_SITE };
+  componentDidMount() {
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener('resize', this.onResize);
+    if (!window.WAW_SITE) this.t = setInterval(() => { if (window.WAW_SITE) { clearInterval(this.t); this.setState({ ok: true }); } }, 60);
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this.onResize); clearInterval(this.t); }
+  renderVals() {
+    const S = window.WAW_SITE || { serviceCategories: [], services: [] };
+    const w = this.state.w, pad = n => String(n).padStart(2, '0');
+    const IMG = {"web-development":"assets/mq-web.png","mobile-development":"assets/mq-mobile.png","back-end-development":"assets/mq-backend.png","ui-ux-design":"assets/mq-uiux.png","smart-contract-development":"assets/mq-blockchain.png","blockchain-solutions":"https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=900&q=80&auto=format&fit=crop","unity-development":"https://images.unsplash.com/photo-1622737133809-d95047b9e673?w=900&q=80&auto=format&fit=crop","augmented-virtual-reality-solutions":"https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=900&q=80&auto=format&fit=crop","devops-cloud-infrastructure":"https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=80&auto=format&fit=crop","system-integration":"https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900&q=80&auto=format&fit=crop","data-solutions":"https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80&auto=format&fit=crop","cybersecurity":"https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=900&q=80&auto=format&fit=crop","quality-assurance":"https://images.unsplash.com/photo-1563986768609-322da13575f3?w=900&q=80&auto=format&fit=crop","technical-support-services":"https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900&q=80&auto=format&fit=crop","business-analysis-strategy":"https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&q=80&auto=format&fit=crop","it-consulting":"https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&q=80&auto=format&fit=crop","chief-technology-officer-services":"https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=900&q=80&auto=format&fit=crop","client-onboarding-implementation":"https://images.unsplash.com/photo-1557804506-669a67965ba0?w=900&q=80&auto=format&fit=crop","human-resource":"https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&q=80&auto=format&fit=crop","corporate-training-development":"https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=900&q=80&auto=format&fit=crop","digital-marketing":"https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80&auto=format&fit=crop","search-engine-optimization":"https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=900&q=80&auto=format&fit=crop","social-media-marketing":"https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=900&q=80&auto=format&fit=crop","influencer-marketing":"https://images.unsplash.com/photo-1626379953822-baec19c3accd?w=900&q=80&auto=format&fit=crop"};
+    const wide = w >= 1024, mid = w >= 768;
+    const n = wide ? 4 : mid ? 2 : 1;
+    return {
+      heroCols: wide ? 'minmax(0,7fr) minmax(0,5fr)' : 'minmax(0,1fr)',
+      jumpCols: 'repeat(' + n + ',minmax(0,1fr))', jumpBb: n === 4 ? '1px solid var(--border)' : '1px solid var(--border)',
+      catCols: wide ? 'minmax(0,4fr) minmax(0,8fr)' : 'minmax(0,1fr)',
+      rowCols: 'minmax(0,1fr) 48px',
+      cardCols: 'repeat(' + (w >= 1100 ? 3 : w >= 700 ? 2 : 1) + ',minmax(0,1fr))',
+      stickyPos: wide ? 'sticky' : 'static',
+      cats: S.serviceCategories.map((c, i) => {
+        const nc = w >= 1100 ? 3 : w >= 700 ? 2 : 1;
+        const items = S.services.filter(s => s.cat === c.id).map((s, k) => { const feat = k === 0 && nc > 1; return { ...s, href: '/service/' + s.id, img: IMG[s.id], tagLine: s.tags.slice(0, feat ? 6 : 3).join(' · '), span: feat ? 'span 2' : 'auto', inner: feat ? 'minmax(0,1fr) minmax(0,1fr)' : 'minmax(0,1fr)', ratio: feat ? 'auto' : '16 / 10', mediaBb: feat ? '0' : '1px solid var(--border)', nameFs: feat ? 'clamp(32px,3.4vw,56px)' : 'clamp(24px,2vw,32px)', clamp: feat ? '6' : '3' }; });
+        const first = i % n === 0;
+        return { ...c, i: pad(i + 1), anchor: '#' + c.id, count: pad(items.length), items, bl: first ? '0' : '1px solid var(--border)', padL: first ? '0' : 'clamp(16px,1.6vw,24px)', padR: 'clamp(16px,1.6vw,24px)' };
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>

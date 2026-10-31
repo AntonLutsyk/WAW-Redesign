@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Solutions | Web Art Work</title>
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/layout.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/shape.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/legacy.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/base.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/actions/actions.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/content/content.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/navigation/navigation.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/styles.css">
+  <script src="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/_ds_bundle.js"></script>
+  <script src="site.js"></script>
+  <style>
+    html{scroll-behavior:smooth;scroll-padding-top:96px}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:0s!important}}
+    body{margin:0;background:var(--bg);color:var(--text-body);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+    a{color:var(--text-heading)}
+    a:hover{color:var(--accent-text)}
+  </style>
+</helmet>
+
+<div style="background:var(--bg);color:var(--text-body);min-height:100vh;overflow-x:clip">
+  <dc-import name="WawHeader" current="Solutions" quote-href="/#contact" style="position:sticky;top:0;z-index:60;display:block" hint-size="100%,72px"></dc-import>
+  <main>
+    <section data-screen-label="Hero" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(40px,5vw,80px) var(--page-margin) 0">
+      <nav aria-label="Breadcrumb" style="display:flex;align-items:center;flex-wrap:wrap;gap:0 10px;font-size:14px;color:var(--text-muted)">
+        <a href="/solutions" style="display:inline-flex;align-items:center;min-height:44px;color:var(--text-muted);text-decoration:none" style-hover="color:var(--text-heading)">Solutions</a>
+        <span aria-hidden="true">/</span><span aria-current="page" style="color:var(--text-heading)">{{ s.name }}</span>
+        
+      </nav>
+      <h1 style="margin:clamp(24px,3.4vw,56px) 0 0;max-width:{{ titleMax }};font-size:{{ titleSize }};line-height:.96;letter-spacing:-.055em;font-weight:600;color:var(--text-heading);text-wrap:balance">{{ s.title }}</h1>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));column-gap:calc(var(--grid-gutter) * 2);row-gap:40px;margin-top:clamp(32px,4vw,64px);align-items:start">
+        <div style="display:flex;flex-direction:column;gap:28px">
+          <p style="margin:0;max-width:44ch;font-size:clamp(18px,.5vw + 15px,22px);line-height:1.5;font-weight:300;color:var(--text-heading)">{{ s.lead }}</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px">
+            <a href="/#contact" style="display:inline-flex;align-items:center;gap:24px;text-decoration:none;color:var(--text-heading)" style-hover="color:var(--accent-text)" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:4px"><span aria-hidden="true" style="display:grid;place-items:center;width:64px;height:64px;flex:none;border:1px solid currentColor;border-radius:50%"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span><span style="padding:6px 0 10px;font-size:clamp(18px,1.4vw,22px);font-weight:500;border-bottom:3px solid var(--accent)">{{ s.cta }}</span></a>
+            <a href="{{ s.secHref }}" style="display:inline-flex;align-items:center;min-height:44px;font-size:16px;text-decoration:none;color:var(--text-muted)" style-hover="color:var(--text-heading)">{{ s.secLabel }} →</a>
+          </div>
+        </div>
+        <sc-if value="{{ isCrm }}" hint-placeholder-val="{{ false }}">
+          <ul style="list-style:none;margin:0;padding:0;border-top:1px solid var(--border)">
+            <sc-for list="{{ crm.proof }}" as="p" hint-placeholder-count="5">
+              <li style="display:flex;gap:14px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--border);font-size:var(--fs-body);color:var(--text-heading)"><span aria-hidden="true" style="flex:none;width:14px;height:2px;background:var(--accent);transform:translateY(-5px)"></span>{{ p }}</li>
+            </sc-for>
+          </ul>
+        </sc-if>
+        <sc-if value="{{ notCrm }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-direction:column;gap:6px;padding-top:20px;border-top:1px solid var(--border)">
+            <span style="font-size:14px;color:var(--text-muted)">Starting at</span>
+            <span style="font-size:clamp(52px,5.4vw,88px);line-height:1;letter-spacing:-.055em;font-weight:600;color:var(--text-heading)">{{ s.priceBig }}</span>
+          </div>
+        </sc-if>
+      </div>
+    </section>
+
+    <sc-if value="{{ isCrm }}" hint-placeholder-val="{{ false }}">
+      <section data-screen-label="More than CRM" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin) 0">
+        <div style="display:grid;grid-template-columns:{{ headCols }};gap:20px var(--grid-gutter);align-items:end"><h2 style="margin:0;display:flex;align-items:baseline;gap:.28em;flex-wrap:wrap;font-size:clamp(40px,5.6vw,92px);line-height:1;letter-spacing:-.05em;font-weight:600;color:var(--text-heading);text-wrap:balance"><span style="color:var(--accent-text);font-weight:400">(</span>More than a traditional CRM<span style="color:var(--accent-text);font-weight:400">)</span></h2><p style="margin:0;max-width:44ch;font-size:clamp(16px,1.3vw,20px);line-height:1.55;font-weight:300;color:var(--text-muted);text-wrap:pretty">{{ crm.moreLead }}</p></div>
+        <ol style="list-style:none;margin:clamp(40px,4vw,64px) 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));column-gap:var(--grid-gutter);border-top:1px solid var(--border)">
+          <sc-for list="{{ crm.more }}" as="m" hint-placeholder-count="7">
+            <li style="display:flex;gap:16px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--border)"><span style="font-family:var(--font-mono);font-size:var(--fs-label);color:var(--accent-text)">{{ m.i }}</span><span style="font-size:17px;line-height:1.45;color:var(--text-heading)">{{ m.t }}</span></li>
+          </sc-for>
+        </ol>
+      </section>
+
+      <section data-screen-label="Platforms" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin) 0">
+        <div style="display:grid;grid-template-columns:{{ headCols }};gap:20px var(--grid-gutter);align-items:end"><h2 style="margin:0;display:flex;align-items:baseline;gap:.28em;flex-wrap:wrap;font-size:clamp(40px,5.6vw,92px);line-height:1;letter-spacing:-.05em;font-weight:600;color:var(--text-heading);text-wrap:balance"><span style="color:var(--accent-text);font-weight:400">(</span>CRM platforms we can build<span style="color:var(--accent-text);font-weight:400">)</span></h2><span></span></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));margin-top:clamp(40px,4vw,64px);border-top:1px solid var(--border);border-left:1px solid var(--border)">
+          <sc-for list="{{ crm.platforms }}" as="p" hint-placeholder-count="6">
+            <div style="display:flex;flex-direction:column;gap:14px;padding:28px 24px 32px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)">
+              <span style="font-size:14px;color:var(--accent-text)">{{ p.i }}</span>
+              <h3 style="margin:0;font-size:22px;line-height:1.2;letter-spacing:-.02em;font-weight:500;color:var(--text-heading)">{{ p.t }}</h3>
+              <p style="margin:0;font-size:var(--fs-body-sm);line-height:1.6;color:var(--text-muted)">{{ p.d }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+      <section data-screen-label="ArboStar" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin) 0">
+        <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:40px calc(var(--grid-gutter) * 2);padding:clamp(28px,5vw,72px);border:1px solid var(--border);border-radius:14px;background:var(--surface-featured);overflow:hidden">
+          <span aria-hidden="true" style="position:absolute;left:0;right:0;top:0;height:2px;background:var(--accent)"></span>
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <span style="font-size:14px;color:var(--accent-text)">03 · Featured experience</span>
+            <h2 style="margin:0;font-size:clamp(48px,6vw,96px);line-height:.95;letter-spacing:-.05em;font-weight:500;color:var(--text-heading)">ArboStar</h2>
+            <span style="font-family:var(--font-mono);font-size:var(--fs-meta);letter-spacing:var(--ls-meta);color:var(--text-muted)">{{ crm.arbostar.kicker }}</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:20px">
+            <p style="margin:0;font-size:var(--fs-body);line-height:var(--lh-body);color:var(--text-heading)">{{ crm.arbostar.body }}</p>
+            <p style="margin:0;padding-top:16px;border-top:1px solid var(--border);font-size:var(--fs-body-sm);line-height:1.6;color:var(--text-muted)">{{ crm.arbostar.note }}</p>
+            <div><a href="https://arbostar.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;min-height:44px;font-size:16px;text-decoration:none;color:var(--text-muted)" style-hover="color:var(--text-heading)">Explore ArboStar →</a></div>
+          </div>
+        </div>
+      </section>
+
+      <section data-screen-label="Modules" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin) 0">
+        <div style="display:grid;grid-template-columns:{{ headCols }};gap:20px var(--grid-gutter);align-items:end"><h2 style="margin:0;display:flex;align-items:baseline;gap:.28em;flex-wrap:wrap;font-size:clamp(40px,5.6vw,92px);line-height:1;letter-spacing:-.05em;font-weight:600;color:var(--text-heading);text-wrap:balance"><span style="color:var(--accent-text);font-weight:400">(</span>Modules and capabilities<span style="color:var(--accent-text);font-weight:400">)</span></h2><span></span></div>
+        <dl style="margin:clamp(40px,4vw,64px) 0 0;border-top:1px solid var(--border)">
+          <sc-for list="{{ crm.modules }}" as="m" hint-placeholder-count="7">
+            <div style="display:grid;grid-template-columns:{{ ledgerCols }};gap:8px var(--grid-gutter);padding:22px 0;border-bottom:1px solid var(--border);align-items:baseline">
+              <span style="font-family:var(--font-mono);font-size:var(--fs-label);color:var(--text-subtle)">{{ m.i }}</span>
+              <dt style="font-size:clamp(18px,1.6vw,26px);letter-spacing:-.02em;font-weight:500;color:var(--text-heading)">{{ m.t }}</dt>
+              <dd style="margin:0;max-width:58ch;font-size:var(--fs-body-sm);line-height:1.6;color:var(--text-muted)">{{ m.d }}</dd>
+            </div>
+          </sc-for>
+        </dl>
+      </section>
+
+      <section data-screen-label="Automation" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin) 0">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:40px calc(var(--grid-gutter) * 2);align-items:start">
+          <div style="display:flex;flex-direction:column;gap:18px;max-width:440px">
+            <span style="font-size:14px;color:var(--text-subtle)"><b style="font-weight:500;color:var(--accent-text);margin-right:12px">05</b>Automation</span>
+            <h2 style="margin:0;font-size:var(--fs-h2);line-height:var(--lh-h2);letter-spacing:var(--ls-h2);font-weight:500;color:var(--text-heading)">Business process automation</h2>
+            <p style="margin:0;font-size:var(--fs-body);line-height:var(--lh-body);color:var(--text-muted)">Reduce repetitive tasks without removing necessary human oversight. Examples include:</p>
+          </div>
+          <ul style="list-style:none;margin:0;padding:0;border-top:1px solid var(--border)">
+            <sc-for list="{{ crm.automation }}" as="a" hint-placeholder-count="6">
+              <li style="display:flex;gap:16px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--border);font-size:clamp(18px,1.3vw,21px);letter-spacing:-.01em;color:var(--text-heading)"><span aria-hidden="true" style="color:var(--accent-text)">→</span>{{ a }}</li>
+            </sc-for>
+          </ul>
+        </div>
+      </section>
+
+      <section data-screen-label="Surfaces" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin) 0">
+        <div style="display:grid;grid-template-columns:{{ headCols }};gap:20px var(--grid-gutter);align-items:end"><h2 style="margin:0;display:flex;align-items:baseline;gap:.28em;flex-wrap:wrap;font-size:clamp(40px,5.6vw,92px);line-height:1;letter-spacing:-.05em;font-weight:600;color:var(--text-heading);text-wrap:balance"><span style="color:var(--accent-text);font-weight:400">(</span>Web, mobile &amp; portals<span style="color:var(--accent-text);font-weight:400">)</span></h2><span></span></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));column-gap:var(--grid-gutter);margin-top:clamp(40px,4vw,64px)">
+          <sc-for list="{{ crm.surfaces }}" as="p" hint-placeholder-count="5">
+            <div style="display:flex;flex-direction:column;gap:12px;padding:20px 0 28px;border-top:2px solid var(--text-heading)">
+              <h3 style="margin:0;font-size:20px;letter-spacing:-.02em;font-weight:500;color:var(--text-heading)">{{ p.t }}</h3>
+              <p style="margin:0;font-size:var(--fs-body-sm);line-height:1.6;color:var(--text-muted)">{{ p.d }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+      <section data-screen-label="Integrations" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin) 0">
+        <div style="display:grid;grid-template-columns:{{ headCols }};gap:20px var(--grid-gutter);align-items:end"><h2 style="margin:0;display:flex;align-items:baseline;gap:.28em;flex-wrap:wrap;font-size:clamp(40px,5.6vw,92px);line-height:1;letter-spacing:-.05em;font-weight:600;color:var(--text-heading);text-wrap:balance"><span style="color:var(--accent-text);font-weight:400">(</span>CRM integrations &amp; migration<span style="color:var(--accent-text);font-weight:400">)</span></h2><p style="margin:0;max-width:44ch;font-size:clamp(16px,1.3vw,20px);line-height:1.55;font-weight:300;color:var(--text-muted);text-wrap:pretty">Data mapping, validation, history and access requirements are established before transfer.</p></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));column-gap:var(--grid-gutter);margin-top:clamp(40px,4vw,64px);border-top:1px solid var(--border)">
+          <sc-for list="{{ crm.integrations }}" as="p" hint-placeholder-count="6">
+            <div style="display:grid;grid-template-columns:36px minmax(0,1fr);gap:6px 12px;padding:22px 0;border-bottom:1px solid var(--border)">
+              <span style="grid-row:span 2;font-family:var(--font-mono);font-size:var(--fs-label);color:var(--accent-text);padding-top:4px">{{ p.i }}</span>
+              <h3 style="margin:0;font-size:19px;letter-spacing:-.02em;font-weight:500;color:var(--text-heading)">{{ p.t }}</h3>
+              <p style="margin:0;font-size:var(--fs-body-sm);line-height:1.6;color:var(--text-muted)">{{ p.d }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+      <section data-screen-label="Technology" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin) 0">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:40px calc(var(--grid-gutter) * 2);align-items:start">
+          <div style="display:flex;flex-direction:column;gap:18px;max-width:440px">
+            <span style="font-size:14px;color:var(--text-subtle)"><b style="font-weight:500;color:var(--accent-text);margin-right:12px">08</b>Stack</span>
+            <h2 style="margin:0;font-size:var(--fs-h2);line-height:var(--lh-h2);letter-spacing:var(--ls-h2);font-weight:500;color:var(--text-heading)">Technology &amp; architecture</h2>
+            <p style="margin:0;font-size:var(--fs-body);line-height:var(--lh-body);color:var(--text-muted)">{{ crm.techLead }}</p>
+          </div>
+          <dl style="margin:0;border-top:1px solid var(--border)">
+            <sc-for list="{{ crm.tech }}" as="t" hint-placeholder-count="4">
+              <div style="display:grid;grid-template-columns:minmax(110px,.35fr) minmax(0,1fr);gap:16px;padding:20px 0;border-bottom:1px solid var(--border)">
+                <dt style="font-size:14px;color:var(--text-subtle);padding-top:3px">{{ t.k }}</dt>
+                <dd style="margin:0;font-size:17px;line-height:1.55;color:var(--text-heading)">{{ t.v }}</dd>
+              </div>
+            </sc-for>
+          </dl>
+        </div>
+      </section>
+
+      <section data-screen-label="Roadmap" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin) 0">
+        <div style="display:grid;grid-template-columns:{{ headCols }};gap:20px var(--grid-gutter);align-items:end"><h2 style="margin:0;display:flex;align-items:baseline;gap:.28em;flex-wrap:wrap;font-size:clamp(40px,5.6vw,92px);line-height:1;letter-spacing:-.05em;font-weight:600;color:var(--text-heading);text-wrap:balance"><span style="color:var(--accent-text);font-weight:400">(</span>From CRM to business operating system<span style="color:var(--accent-text);font-weight:400">)</span></h2><p style="margin:0;max-width:44ch;font-size:clamp(16px,1.3vw,20px);line-height:1.55;font-weight:300;color:var(--text-muted);text-wrap:pretty">The actual roadmap follows your business priorities rather than a fixed template.</p></div>
+        <ol style="list-style:none;margin:clamp(40px,4vw,64px) 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:0">
+          <sc-for list="{{ crm.roadmap }}" as="r" hint-placeholder-count="5">
+            <li style="display:flex;flex-direction:column;gap:14px;padding:0 20px 28px 0">
+              <span style="display:flex;align-items:center;gap:10px"><span style="width:10px;height:10px;background:{{ r.dot }};flex:none"></span><span style="flex:1;height:1px;background:var(--border-strong)"></span></span>
+              <h3 style="margin:0;font-size:14px;font-weight:500;color:var(--accent-text)">Phase {{ r.n }}</h3>
+              <p style="margin:0;font-size:17px;line-height:1.45;letter-spacing:-.01em;color:var(--text-heading)">{{ r.t }}</p>
+            </li>
+          </sc-for>
+        </ol>
+      </section>
+
+      <section data-screen-label="Delivery" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin) 0">
+        <div style="display:grid;grid-template-columns:{{ headCols }};gap:20px var(--grid-gutter);align-items:end"><h2 style="margin:0;display:flex;align-items:baseline;gap:.28em;flex-wrap:wrap;font-size:clamp(40px,5.6vw,92px);line-height:1;letter-spacing:-.05em;font-weight:600;color:var(--text-heading);text-wrap:balance"><span style="color:var(--accent-text);font-weight:400">(</span>How we deliver<span style="color:var(--accent-text);font-weight:400">)</span></h2><span></span></div>
+        <ol style="list-style:none;margin:clamp(40px,4vw,64px) 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));column-gap:var(--grid-gutter);row-gap:40px">
+          <sc-for list="{{ crm.delivery }}" as="d" hint-placeholder-count="6">
+            <li style="display:flex"><x-import component-from-global-scope="WebArtWorkDesignSystem_3241df.Step" number="{{ d.i }}" title="{{ d.t }}" description="{{ d.d }}" style="display:flex;flex:1" hint-size="100%,180px"></x-import></li>
+          </sc-for>
+        </ol>
+      </section>
+
+      <section data-screen-label="Why" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin) 0">
+        <div style="display:grid;grid-template-columns:{{ headCols }};gap:20px var(--grid-gutter);align-items:end"><h2 style="margin:0;display:flex;align-items:baseline;gap:.28em;flex-wrap:wrap;font-size:clamp(40px,5.6vw,92px);line-height:1;letter-spacing:-.05em;font-weight:600;color:var(--text-heading);text-wrap:balance"><span style="color:var(--accent-text);font-weight:400">(</span>Why Web Art Work?<span style="color:var(--accent-text);font-weight:400">)</span></h2><span></span></div>
+        <dl style="margin:clamp(40px,4vw,64px) 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));border-top:1px solid var(--border)">
+          <sc-for list="{{ crm.why }}" as="y" hint-placeholder-count="4">
+            <div style="display:flex;flex-direction:column;gap:12px;padding:24px 24px 28px 0;border-bottom:1px solid var(--border)">
+              <dt style="font-size:20px;line-height:1.25;letter-spacing:-.02em;font-weight:500;color:var(--text-heading)">{{ y.t }}</dt>
+              <dd style="margin:0;font-size:var(--fs-body-sm);line-height:1.6;color:var(--text-muted)">{{ y.d }}</dd>
+            </div>
+          </sc-for>
+        </dl>
+      </section>
+
+      <section id="faq" data-screen-label="FAQ" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin) 0">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));column-gap:calc(var(--grid-gutter) * 3);row-gap:40px;align-items:start">
+          <div style="display:flex;flex-direction:column;gap:18px;max-width:420px">
+            <span style="font-size:14px;color:var(--text-subtle)"><b style="font-weight:500;color:var(--accent-text);margin-right:12px">12</b>FAQ</span>
+            <h2 style="margin:0;font-size:var(--fs-h2);line-height:var(--lh-h2);letter-spacing:var(--ls-h2);font-weight:500;color:var(--text-heading)">Frequently asked questions</h2>
+          </div>
+          <x-import component-from-global-scope="WebArtWorkDesignSystem_3241df.Accordion" items="{{ crm.faq }}" default-open="{{ 0 }}" style="display:block;min-width:0" hint-size="100%,640px"></x-import>
+        </div>
+      </section>
+    </sc-if>
+
+    <section data-screen-label="Related" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin) 0">
+      <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:var(--text-subtle)"><span>{{ relTitle }}</span><span style="flex:1;height:1px;background:var(--border)"></span></div>
+      <ul style="list-style:none;margin:20px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:4px 0">
+        <sc-for list="{{ related }}" as="r" hint-placeholder-count="6">
+          <li style="display:flex;align-items:baseline">
+            <a href="{{ r.href }}" style="display:inline-flex;align-items:center;min-height:44px;font-size:clamp(24px,2.6vw,40px);line-height:1.2;letter-spacing:-.035em;font-weight:500;color:var(--text-heading);text-decoration:none" style-hover="color:var(--accent-text)">{{ r.name }}</a>
+            <span aria-hidden="true" style="padding:0 .4em;font-size:clamp(24px,2.6vw,40px);font-weight:300;color:var(--text-subtle)">/</span>
+          </li>
+        </sc-for>
+      </ul>
+    </section>
+
+    <section data-screen-label="CTA" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:32px;align-items:end;padding-top:40px;border-top:1px solid var(--border)">
+        <h2 style="margin:0;max-width:16ch;font-size:clamp(36px,4.4vw,72px);line-height:1.02;letter-spacing:-.05em;font-weight:600;color:var(--text-heading);text-wrap:balance">{{ s.closeTitle }}</h2>
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <p style="margin:0;max-width:44ch;font-size:clamp(16px,1.3vw,20px);line-height:1.55;font-weight:300;color:var(--text-muted)">{{ s.closeLead }}</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px">
+            <a href="/#contact" style="display:inline-flex;align-items:center;gap:24px;text-decoration:none;color:var(--text-heading)" style-hover="color:var(--accent-text)" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:4px"><span aria-hidden="true" style="display:grid;place-items:center;width:64px;height:64px;flex:none;border:1px solid currentColor;border-radius:50%"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span><span style="padding:6px 0 10px;font-size:clamp(18px,1.4vw,22px);font-weight:500;border-bottom:3px solid var(--accent)">{{ s.cta }}</span></a>
+            <a href="/pricing" style="display:inline-flex;align-items:center;min-height:44px;font-size:16px;text-decoration:none;color:var(--text-muted)" style-hover="color:var(--text-heading)">See pricing →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <dc-import name="WawFooter" current="Solutions" quote-href="/#contact" style="display:block" hint-size="100%,620px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;solutionId&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;crm&quot;,&quot;website&quot;,&quot;market&quot;,&quot;virtual-tour&quot;,&quot;app&quot;,&quot;unity&quot;,&quot;ai&quot;,&quot;blockchain&quot;,&quot;quantum&quot;],&quot;default&quot;:&quot;crm&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Preview&quot;}}">
+class Component extends DCLogic {
+  state = { mode: 'dark', w: window.innerWidth, ok: !!window.WAW_SITE };
+  componentDidMount() {
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener('resize', this.onResize);
+    const boot = () => this.setState({ ok: true, mode: window.WAW_SITE.theme.get() });
+    if (window.WAW_SITE) boot(); else this.t = setInterval(() => { if (window.WAW_SITE) { clearInterval(this.t); boot(); } }, 60);
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this.onResize); clearInterval(this.t); }
+  renderVals() {
+    const S = window.WAW_SITE;
+    if (!S) return { s: {}, crm: { proof: [], more: [], platforms: [], modules: [], automation: [], surfaces: [], integrations: [], tech: [], roadmap: [], delivery: [], why: [], faq: [], arbostar: {} }, related: [], isCrm: false, notCrm: true, isMobile: false, mode: this.state.mode, setMode: () => {} };
+    const w = this.state.w, pad = n => String(n).padStart(2, '0');
+    const id = S.param('id') || this.props.solutionId || 'crm';
+    const sol = S.solutions.find(x => x.id === id) || S.solutions[2];
+    const isCrm = sol.id === 'crm', C = S.crm;
+    const priceText = sol.price ? 'From ' + sol.price : 'On request';
+    S.meta(sol.name + ' | Web Art Work', sol.name + ' by Web Art Work: ' + sol.desc + (sol.price ? '' : ' Pricing on request.'));
+    const s = isCrm
+      ? { ...sol, title: C.title, lead: C.lead, cta: 'Discuss your CRM project', secLabel: 'Explore our experience', secHref: '#faq', secArrow: 'down', closeTitle: C.closeTitle, closeLead: C.closeLead }
+      : { ...sol, title: sol.name, lead: sol.desc, cta: 'Discuss your project', priceBig: sol.price || 'On request',
+          secLabel: sol.pricing ? 'Compare website packages' : 'Full page on webart.work', secHref: sol.pricing ? '/pricing' : 'https://webart.work/' + sol.id, secArrow: sol.pricing ? 'right' : 'up-right',
+          closeTitle: 'Tell us about your ' + sol.name.toLowerCase() + ' project', closeLead: 'Describe what you need and we will reply with a plain answer and a phased estimate, with a free consultation.' };
+    s.priceText = priceText;
+    const pairs = a => a.map(([t, d], i) => ({ i: pad(i + 1), t, d }));
+    const related = isCrm ? C.related.map(([name, href]) => ({ name, href })) : S.solutions.filter(x => x.id !== sol.id).map(x => ({ name: x.name, href: '/' + x.id }));
+    return {
+      headCols: (this.state.w || window.innerWidth) >= 1024 ? 'minmax(0,7fr) minmax(0,5fr)' : 'minmax(0,1fr)',
+      mode: this.state.mode,
+      setMode: m => { S.theme.set(m); this.setState({ mode: m }); },
+      isMobile: w < 768, isCrm, notCrm: !isCrm, s,
+      titleMax: isCrm ? '18ch' : '14ch',
+      titleSize: isCrm ? 'clamp(40px,5.6vw,92px)' : 'clamp(52px,8vw,136px)',
+      ledgerCols: w >= 900 ? '56px minmax(0,5fr) minmax(0,6fr)' : '36px minmax(0,1fr)',
+      crm: {
+        ...C,
+        more: C.more.map((t, i) => ({ i: pad(i + 1), t })),
+        platforms: pairs(C.platforms), modules: pairs(C.modules), surfaces: pairs(C.surfaces), integrations: pairs(C.integrations), delivery: pairs(C.delivery), why: pairs(C.why),
+        tech: C.tech.map(([k, v]) => ({ k, v })),
+        roadmap: C.roadmap.map((t, i) => ({ n: i + 1, t, dot: i === 0 ? 'var(--accent)' : 'var(--border-strong)' })),
+        faq: C.faq.map(([q, a]) => ({ q, a }))
+      },
+      relTitle: isCrm ? 'Related services' : 'Other solutions',
+      related,
+      footSolutions: S.footer.solutions, footCompany: S.footer.company
+    };
+  }
+}
+</script>
+</body>
+</html>

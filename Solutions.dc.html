@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Solutions We Build: Websites, Apps, CRM and More</title>
+  <meta name="description" content="Websites, marketplaces, CRM, mobile apps, Unity games, 360° tours, AI, blockchain and quantum computing, each with its own page of examples and process.">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/layout.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/shape.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/legacy.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/base.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/actions/actions.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/pricing/pricing.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/content/content.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/navigation/navigation.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/styles.css">
+  <script src="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/_ds_bundle.js"></script>
+  <script src="site.js"></script>
+  <style>
+    html{scroll-behavior:smooth;scroll-padding-top:96px}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:0s!important}}
+    body{margin:0;background:var(--bg);color:var(--text-body);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+    a{color:var(--text-heading)}
+    a:hover{color:var(--accent-text)}
+  </style>
+</helmet>
+
+<div style="background:var(--bg);color:var(--text-body);min-height:100vh;overflow-x:clip">
+  <dc-import name="WawHeader" current="Solutions" quote-href="/#contact" style="position:sticky;top:0;z-index:60;display:block" hint-size="100%,72px"></dc-import>
+  <main>
+    <section data-screen-label="Hero" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(40px,5vw,80px) var(--page-margin) 0">
+      <nav aria-label="Breadcrumb" style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-muted)"><a href="/" style="display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:var(--text-muted)" style-hover="color:var(--text-heading)">Home</a><span aria-hidden="true">/</span><span aria-current="page" style="color:var(--text-heading)">Solutions</span></nav>
+      <div style="display:grid;grid-template-columns:{{ heroCols }};gap:28px var(--grid-gutter);align-items:end;margin-top:clamp(16px,2.4vw,40px)">
+        <h1 style="margin:0;font-size:clamp(64px,10.5vw,176px);line-height:.92;letter-spacing:-.055em;font-weight:600;color:var(--text-heading)">Solutions<span style="color:var(--accent)">.</span></h1>
+        <div style="display:flex;flex-direction:column;gap:20px;padding-bottom:clamp(6px,1vw,18px)">
+          <p style="margin:0;max-width:40ch;font-size:clamp(17px,1.4vw,22px);line-height:1.5;font-weight:300;color:var(--text-heading);text-wrap:pretty">What we build in depth. Each solution has its own page with examples, process and answers to common questions.</p>
+          <p style="margin:0;font-size:15px;font-weight:300;color:var(--text-muted)"><span style="color:var(--accent-text)">(</span> 9 solutions <span style="color:var(--accent-text)">)</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section data-screen-label="Index" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(56px,7vw,112px) var(--page-margin) 0">
+      <ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:{{ cardCols }};gap:clamp(16px,1.6vw,24px)">
+        <sc-for list="{{ solutions }}" as="s" hint-placeholder-count="9">
+          <li style="grid-column:{{ s.span }};display:flex">
+            <article style="position:relative;flex:1;display:grid;grid-template-columns:{{ s.inner }};border:1px solid var(--border);border-radius:8px;background:var(--surface-1);overflow:hidden;transition:border-color .25s cubic-bezier(.25,.8,.25,1),transform .25s cubic-bezier(.25,.8,.25,1)" style-hover="border-color:var(--accent);transform:translateY(-4px)">
+              <a href="{{ s.href }}" tabindex="-1" aria-hidden="true" style="position:relative;display:block;aspect-ratio:{{ s.ratio }};min-height:{{ s.minH }};overflow:hidden;background:var(--surface-2);border-bottom:{{ s.mediaBb }}">
+                <img src="{{ s.img }}" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+              </a>
+              <div style="display:flex;flex-direction:column;gap:12px;padding:clamp(20px,2vw,32px);min-width:0">
+                <span style="font-size:15px;font-weight:300;color:var(--text-muted)"><span style="color:var(--accent-text)">(</span> {{ s.priceText }} <span style="color:var(--accent-text)">)</span></span>
+                <h2 style="margin:0;font-size:{{ s.nameFs }};line-height:1.02;letter-spacing:-.045em;font-weight:600"><a href="{{ s.href }}" style="color:var(--text-heading);text-decoration:none" style-hover="color:var(--accent-text)" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:2px">{{ s.name }}</a></h2>
+                <p style="margin:0;max-width:44ch;font-size:15px;line-height:1.6;font-weight:300;color:var(--text-muted);text-wrap:pretty">{{ s.desc }}</p>
+                <div style="display:flex;flex-wrap:wrap;align-items:center;gap:0 24px;margin-top:auto;padding-top:8px">
+                  <a href="{{ s.href }}" style="display:inline-flex;align-items:center;min-height:44px;font-size:15px;font-weight:500;color:var(--text-heading);text-decoration:none" style-hover="color:var(--accent-text)">Learn more →</a>
+                  <a href="/#contact" style="display:inline-flex;align-items:center;min-height:44px;font-size:15px;font-weight:300;color:var(--text-muted);text-decoration:none" style-hover="color:var(--text-heading)">Get a quote ↗</a>
+                </div>
+              </div>
+            </article>
+          </li>
+        </sc-for>
+      </ul>
+    </section>
+
+    <section data-screen-label="CTA" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin) clamp(80px,9vw,140px)">
+      <div style="display:grid;grid-template-columns:{{ heroCols }};gap:40px var(--grid-gutter);align-items:end;padding-top:clamp(40px,4vw,64px);border-top:1px solid var(--border)">
+        <h2 style="margin:0;max-width:16ch;font-size:clamp(36px,4.4vw,72px);line-height:1.02;letter-spacing:-.05em;font-weight:600;color:var(--text-heading);text-wrap:balance">Not sure which solution fits<span style="color:var(--accent)">?</span></h2>
+        <div style="display:flex;flex-direction:column;gap:28px">
+          <p style="margin:0;max-width:40ch;font-size:clamp(16px,1.3vw,20px);line-height:1.55;font-weight:300;color:var(--text-muted)">Describe what you need and we will point you to the right starting point, with a free consultation.</p>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px 40px">
+            <a href="/#contact" style="display:inline-flex;align-items:center;gap:24px;text-decoration:none;color:var(--text-heading)" style-hover="color:var(--accent-text)" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:4px">
+              <span aria-hidden="true" style="display:grid;place-items:center;width:64px;height:64px;flex:none;border:1px solid currentColor;border-radius:50%"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+              <span style="padding:6px 0 10px;font-size:clamp(18px,1.4vw,22px);font-weight:500;border-bottom:3px solid var(--accent)">Start your project</span>
+            </a>
+            <a href="/pricing" style="display:inline-flex;align-items:center;min-height:44px;font-size:16px;text-decoration:none;color:var(--text-muted)" style-hover="color:var(--text-heading)">Website pricing →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <dc-import name="WawFooter" current="Solutions" quote-href="/#contact" style="display:block" hint-size="100%,620px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { mode: 'dark', w: window.innerWidth, ok: !!window.WAW_SITE };
+  componentDidMount() {
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener('resize', this.onResize);
+    const boot = () => this.setState({ ok: true, mode: window.WAW_SITE.theme.get() });
+    if (window.WAW_SITE) boot(); else this.t = setInterval(() => { if (window.WAW_SITE) { clearInterval(this.t); boot(); } }, 60);
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this.onResize); clearInterval(this.t); }
+  renderVals() {
+    const S = window.WAW_SITE || { solutions: [], footer: {} };
+    const w = this.state.w, pad = n => String(n).padStart(2, '0');
+    const wide = w >= 960;
+    const nc = w >= 1100 ? 3 : w >= 700 ? 2 : 1;
+    const IMG = {"website":"assets/mq-web.png","market":"https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&auto=format&fit=crop","crm":"assets/mq-crm.png","virtual-tour":"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80&auto=format&fit=crop","app":"assets/mq-mobile.png","unity":"https://images.unsplash.com/photo-1622737133809-d95047b9e673?w=1200&q=80&auto=format&fit=crop","ai":"https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&q=80&auto=format&fit=crop","blockchain":"assets/mq-blockchain.png","quantum":"https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80&auto=format&fit=crop"};
+    return {
+      mode: this.state.mode,
+      setMode: m => { S.theme && S.theme.set(m); this.setState({ mode: m }); },
+      isMobile: w < 768, wide,
+      heroCols: w >= 1024 ? 'minmax(0,7fr) minmax(0,5fr)' : 'minmax(0,1fr)',
+      rowCols: wide ? 'clamp(56px,6vw,96px) minmax(0,5fr) minmax(0,4fr) auto 48px' : '44px minmax(0,1fr)',
+      rowAreas: wide ? '"i n d p a"' : '"i n" ". d" ". p"', arrowDisp: wide ? 'grid' : 'none', priceAlign: wide ? 'end' : 'start',
+      cardCols: 'repeat(' + nc + ',minmax(0,1fr))',
+      solutions: S.solutions.map((s, i, arr) => {
+        const last = i === arr.length - 1, first = i === 0 && nc === 3;
+        const wideCard = (first || last) && nc > 1;
+        return { ...s, i: pad(i + 1), href: '/' + s.id, img: IMG[s.id], priceText: s.price ? 'From ' + s.price : 'On request',
+          span: last && nc > 1 ? 'span ' + nc : first ? 'span 2' : 'auto',
+          inner: wideCard ? (last && nc === 3 ? 'minmax(0,2fr) minmax(0,1fr)' : 'minmax(0,1fr) minmax(0,1fr)') : 'minmax(0,1fr)',
+          ratio: wideCard ? 'auto' : '16 / 10', minH: wideCard ? '320px' : '0', mediaBb: wideCard ? '0' : '1px solid var(--border)',
+          nameFs: wideCard ? 'clamp(32px,3.4vw,56px)' : 'clamp(24px,2vw,32px)' };
+      }),
+      footSolutions: S.footer.solutions, footCompany: S.footer.company
+    };
+  }
+}
+</script>
+</body>
+</html>

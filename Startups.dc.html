@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Startups Built by Web Art Work</title>
+  <meta name="description" content="Marketplaces, SaaS tools, games and regional IT portals that Web Art Work builds and grows in-house, alongside client delivery.">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/layout.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/shape.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/legacy.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/base.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/actions/actions.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/content/content.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/navigation/navigation.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/styles.css">
+  <script src="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/_ds_bundle.js"></script>
+  <script src="site.js"></script>
+  <style>
+    html{scroll-behavior:smooth;scroll-padding-top:96px}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:0s!important}}
+    body{margin:0;background:var(--bg);color:var(--text-body);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+    a{color:var(--text-heading)}
+    a:hover{color:var(--accent-text)}
+  </style>
+</helmet>
+
+<div style="background:var(--bg);color:var(--text-body);min-height:100vh;overflow-x:clip">
+  <dc-import name="WawHeader" current="Startups" quote-href="/#contact" style="position:sticky;top:0;z-index:60;display:block" hint-size="100%,72px"></dc-import>
+  <main>
+    <section data-screen-label="Hero" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(40px,5vw,80px) var(--page-margin) 0">
+      <nav aria-label="Breadcrumb" style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-muted)"><a href="/" style="display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:var(--text-muted)" style-hover="color:var(--text-heading)">Home</a><span aria-hidden="true">/</span><span aria-current="page" style="color:var(--text-heading)">Startups</span></nav>
+      <div style="display:grid;grid-template-columns:{{ heroCols }};gap:28px var(--grid-gutter);align-items:end;margin-top:clamp(16px,2.4vw,40px)">
+        <h1 style="margin:0;font-size:clamp(64px,10.5vw,176px);line-height:.92;letter-spacing:-.055em;font-weight:600;color:var(--text-heading)">Startups<span style="color:var(--accent)">.</span></h1>
+        <div style="display:flex;flex-direction:column;gap:20px;padding-bottom:clamp(6px,1vw,18px)">
+          <p style="margin:0;max-width:38ch;font-size:clamp(17px,1.4vw,22px);line-height:1.5;font-weight:300;color:var(--text-heading);text-wrap:pretty">Alongside client delivery, we build and grow our own products. Here is what we are working on.</p>
+          <p style="margin:0;font-size:15px;font-weight:300;color:var(--text-muted)"><span style="color:var(--accent-text)">(</span> {{ count }} products built in-house <span style="color:var(--accent-text)">)</span></p>
+        </div>
+      </div>
+    </section>
+
+    <sc-for list="{{ groups }}" as="g" hint-placeholder-count="3">
+      <section id="{{ g.id }}" data-screen-label="{{ g.name }}" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(80px,9vw,140px) var(--page-margin) 0">
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px 40px;flex-wrap:wrap">
+          <div style="display:flex;align-items:flex-end;gap:clamp(16px,2vw,32px)">
+            <span aria-hidden="true" style="font-size:clamp(48px,5.2vw,84px);line-height:.8;font-weight:200;letter-spacing:-.04em;color:var(--text-subtle)">{{ g.i }}</span>
+            <h2 style="margin:0;font-size:clamp(30px,3vw,48px);line-height:1;letter-spacing:-.045em;font-weight:600;color:var(--text-heading)">{{ g.name }}</h2>
+          </div>
+          
+        </div>
+        <ul style="list-style:none;margin:clamp(32px,3.2vw,48px) 0 0;padding:0;display:grid;grid-template-columns:{{ cardCols }};gap:clamp(16px,1.6vw,24px)">
+          <sc-for list="{{ g.items }}" as="s" hint-placeholder-count="6">
+            <li style="grid-column:{{ s.span }};display:flex">
+              <article style="position:relative;flex:1;display:grid;grid-template-columns:{{ s.inner }};border:1px solid var(--border);border-radius:8px;background:var(--surface-1);overflow:hidden;transition:border-color .25s cubic-bezier(.25,.8,.25,1),transform .25s cubic-bezier(.25,.8,.25,1)" style-hover="border-color:var(--accent);transform:translateY(-4px)">
+                <a href="{{ s.href }}" tabindex="-1" aria-hidden="true" style="position:relative;display:block;aspect-ratio:{{ s.ratio }};overflow:hidden;background:var(--surface-2);border-bottom:{{ s.mediaBb }}">
+                  <sc-if value="{{ s.hasPhoto }}" hint-placeholder-val="{{ false }}">
+                    <img src="{{ s.photo }}" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+                  </sc-if>
+                  <sc-if value="{{ s.noPhoto }}" hint-placeholder-val="{{ true }}">
+                    <span style="position:absolute;inset:0;display:grid;place-items:center;font-size:clamp(96px,9vw,160px);line-height:1;font-weight:600;letter-spacing:-.06em;color:var(--text-subtle)">{{ s.mono }}<span style="color:var(--accent)">.</span></span>
+                  </sc-if>
+                  
+                </a>
+                <div style="display:flex;flex-direction:column;gap:12px;padding:clamp(20px,2vw,32px);min-width:0">
+                  <span style="font-size:14px;font-weight:400;color:var(--accent-text)">{{ s.tagline }}</span>
+                  <h3 style="margin:0;font-size:{{ s.nameFs }};line-height:1.02;letter-spacing:-.045em;font-weight:600"><a href="{{ s.href }}" style="color:var(--text-heading);text-decoration:none" style-hover="color:var(--accent-text)" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:2px">{{ s.name }}</a></h3>
+                  <p style="margin:0;font-size:15px;line-height:1.6;font-weight:300;color:var(--text-muted);text-wrap:pretty;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:{{ s.clamp }};overflow:hidden">{{ s.desc }}</p>
+                  <div style="display:flex;flex-wrap:wrap;align-items:center;gap:0 24px;margin-top:auto;padding-top:8px">
+                    <a href="{{ s.href }}" style="display:inline-flex;align-items:center;min-height:44px;font-size:15px;font-weight:500;color:var(--text-heading);text-decoration:none" style-hover="color:var(--accent-text)">Details →</a>
+                    <sc-if value="{{ s.hasUrl }}" hint-placeholder-val="{{ true }}">
+                      <a href="{{ s.url }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;min-height:44px;font-size:15px;font-weight:300;color:var(--text-muted);text-decoration:none" style-hover="color:var(--text-heading)">Visit website ↗</a>
+                    </sc-if>
+                  </div>
+                </div>
+              </article>
+            </li>
+          </sc-for>
+        </ul>
+      </section>
+    </sc-for>
+
+    <section data-screen-label="CTA" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin) clamp(80px,9vw,140px)">
+      <div style="display:grid;grid-template-columns:{{ heroCols }};gap:40px var(--grid-gutter);align-items:end">
+        <h2 style="margin:0;max-width:16ch;font-size:clamp(36px,4.4vw,72px);line-height:1.02;letter-spacing:-.05em;font-weight:600;color:var(--text-heading);text-wrap:balance">Building a product of your own<span style="color:var(--accent)">?</span></h2>
+        <div style="display:flex;flex-direction:column;gap:28px">
+          <p style="margin:0;max-width:40ch;font-size:clamp(16px,1.3vw,20px);line-height:1.55;font-weight:300;color:var(--text-muted)">The same team that builds these platforms can scope and deliver yours, with a free consultation.</p>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px 40px">
+            <a href="/#contact" style="display:inline-flex;align-items:center;gap:24px;text-decoration:none;color:var(--text-heading)" style-hover="color:var(--accent-text)" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:4px">
+              <span aria-hidden="true" style="display:grid;place-items:center;width:64px;height:64px;flex:none;border:1px solid currentColor;border-radius:50%"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+              <span style="padding:6px 0 10px;font-size:clamp(18px,1.4vw,22px);font-weight:500;border-bottom:3px solid var(--accent)">Start your project</span>
+            </a>
+            <a href="/services" style="display:inline-flex;align-items:center;min-height:44px;font-size:16px;text-decoration:none;color:var(--text-muted)" style-hover="color:var(--text-heading)">Our services →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <dc-import name="WawFooter" current="Startups" quote-href="/#contact" style="display:block" hint-size="100%,620px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { mode: 'dark', w: window.innerWidth, ok: !!window.WAW_SITE };
+  componentDidMount() {
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener('resize', this.onResize);
+    const boot = () => this.setState({ ok: true, mode: window.WAW_SITE.theme.get() });
+    if (window.WAW_SITE) boot(); else this.t = setInterval(() => { if (window.WAW_SITE) { clearInterval(this.t); boot(); } }, 60);
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this.onResize); clearInterval(this.t); }
+  renderVals() {
+    const S = window.WAW_SITE || { startups: [], startupGroups: [], footer: {} };
+    const w = this.state.w, pad = n => String(n).padStart(2, '0');
+    let n = 0;
+    const IMG = {"agriculture":"https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&q=80&auto=format&fit=crop","bodycare":"https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&q=80&auto=format&fit=crop","healthcare":"https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=1200&q=80&auto=format&fit=crop","fashion":"https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1200&q=80&auto=format&fit=crop","conference":"https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80&auto=format&fit=crop","meetka":"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&q=80&auto=format&fit=crop","kp-sup-kp":"https://images.unsplash.com/photo-1530053969600-caed2596d242?w=1200&q=80&auto=format&fit=crop","neryxomka":"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80&auto=format&fit=crop","waiter-cloud":"https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=80&auto=format&fit=crop","robotics":"https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&q=80&auto=format&fit=crop","play":"https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&q=80&auto=format&fit=crop","todo":"https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&q=80&auto=format&fit=crop","vinhub":"https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1200&q=80&auto=format&fit=crop","legal":"https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&q=80&auto=format&fit=crop","finance":"https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&auto=format&fit=crop","sports":"https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1200&q=80&auto=format&fit=crop","pets":"https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1200&q=80&auto=format&fit=crop","energy":"https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&q=80&auto=format&fit=crop","ternopil-space":"https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&q=80&auto=format&fit=crop","uman-it-space":"https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&q=80&auto=format&fit=crop","volyn-it-space":"https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&q=80&auto=format&fit=crop","vinnytsia-it-space":"https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?w=1200&q=80&auto=format&fit=crop","frankivsk-space":"https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1200&q=80&auto=format&fit=crop","chernivtsi-space":"https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80&auto=format&fit=crop","london-it-space":"https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1200&q=80&auto=format&fit=crop","greece-it-space":"https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1200&q=80&auto=format&fit=crop","team":"https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&q=80&auto=format&fit=crop","uag":"https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80&auto=format&fit=crop","coin":"https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=1200&q=80&auto=format&fit=crop"};
+    const mins = { product: '340px', regional: '280px', ecosystem: '340px' };
+    return {
+      mode: this.state.mode,
+      setMode: m => { S.theme && S.theme.set(m); this.setState({ mode: m }); },
+      isMobile: w < 768,
+      count: String(S.startups.length),
+      heroCols: w >= 1024 ? 'minmax(0,7fr) minmax(0,5fr)' : 'minmax(0,1fr)',
+      jumpCols: w >= 768 ? 'repeat(3,minmax(0,1fr))' : 'minmax(0,1fr)',
+      catCols: w >= 1024 ? 'minmax(0,4fr) minmax(0,8fr)' : 'minmax(0,1fr)', stickyPos: w >= 1024 ? 'sticky' : 'static',
+      cardCols: 'repeat(' + (w >= 1100 ? 3 : w >= 700 ? 2 : 1) + ',minmax(0,1fr))',
+      rowCols: w >= 768 ? 'minmax(0,4fr) minmax(0,6fr)' : 'minmax(0,1fr)',
+      groups: S.startupGroups.map((g, gi) => {
+        const nc = w >= 1100 ? 3 : w >= 700 ? 2 : 1;
+        const items = S.startups.filter(s => s.group === g.id).map((s, k) => { const feat = k === 0 && nc > 1; const hasPhoto = !!IMG[s.id]; return { ...s, i: pad(++n), href: '/startup/' + s.id, hasUrl: !!s.url, hasPhoto, noPhoto: !hasPhoto, photo: IMG[s.id], mono: (s.name || '?').trim()[0], span: feat ? 'span 2' : 'auto', inner: feat ? 'minmax(0,1fr) minmax(0,1fr)' : 'minmax(0,1fr)', ratio: feat ? 'auto' : '16 / 10', mediaBb: feat ? '0' : '1px solid var(--border)', nameFs: feat ? 'clamp(32px,3.4vw,56px)' : 'clamp(24px,2vw,32px)', clamp: feat ? '6' : '3' }; });
+        const first = w < 768 || gi === 0;
+        return { ...g, i: pad(gi + 1), anchor: '#' + g.id, count: pad(items.length), items, min: mins[g.id], bl: first ? '0' : '1px solid var(--border)', padL: first ? '0' : 'clamp(16px,1.6vw,24px)' };
+      }),
+      footSolutions: S.footer.solutions, footCompany: S.footer.company
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Web Art Work: Web &amp; Mobile App Development in Ukraine</title>
+  <meta name="description" content="Ukrainian freelance community building websites, web and mobile apps for clients and our own startups. Over 10 years of delivery and a free consultation.">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/layout.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/shape.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/legacy.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/base.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/actions/actions.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/pricing/pricing.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/content/content.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/navigation/navigation.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/styles.css">
+  <script src="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/_ds_bundle.js"></script>
+  <script src="site.js"></script>
+  <style>
+    html{scroll-behavior:smooth;scroll-padding-top:96px}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:0s!important;animation-duration:0s!important}}
+    body{margin:0;background:var(--bg);color:var(--text-body);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+    a{color:var(--text-heading)}
+    a:hover{color:var(--accent-text)}
+    ::placeholder{color:var(--text-subtle)}
+  </style>
+</helmet>
+
+<div style="background:var(--bg);color:var(--text-body);min-height:100vh;overflow-x:clip">
+  <x-import component-from-global-scope="WebArtWorkDesignSystem_3241df.SiteHeader" current="Home" mode="{{ mode }}" on-mode-change="{{ setMode }}" quote-href="#contact" style="position:sticky;top:0;z-index:50;display:block" hint-size="100%,72px"></x-import>
+
+  <main>
+    <!-- Hero -->
+    <section data-screen-label="Hero" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(48px,6vw,104px) var(--page-margin) 0">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--text-subtle)">
+        <span style="color:var(--accent-text)">Web Art Work</span>
+        <span>IT Solutions</span>
+        <span style="flex:1 1 40px;height:1px;background:var(--border)"></span>
+        <span>Kamianets-Podilskyi, Ukraine</span>
+      </div>
+      <h1 style="margin:clamp(28px,4vw,64px) 0 0;font-size:clamp(56px,9.4vw,152px);line-height:.92;letter-spacing:-.055em;font-weight:500;color:var(--text-heading)">
+        <span style="display:block">Weaving digital</span>
+        <span style="display:block;padding-left:{{ heroIndent }}">excellence<span style="color:var(--accent-text)">.</span></span>
+      </h1>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));column-gap:calc(var(--grid-gutter) * 2);row-gap:48px;margin-top:clamp(48px,6vw,96px);align-items:end">
+        <div style="display:flex;flex-direction:column;gap:28px;max-width:520px">
+          <p style="margin:0;font-size:clamp(19px,.6vw + 15px,23px);line-height:1.45;font-weight:300;color:var(--text-heading);text-wrap:pretty">Web freelancer's community based in Ukraine with over 10 years in app and web development. Working to create products with the "Waw!" aftertaste.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px">
+            <x-import component-from-global-scope="WebArtWorkDesignSystem_3241df.Button" variant="primary" size="lg" arrow="down" href="#services" hint-size="180px,52px">Our services</x-import>
+            <x-import component-from-global-scope="WebArtWorkDesignSystem_3241df.Button" variant="secondary" size="lg" arrow="down" href="#workflow" hint-size="220px,52px">See how we deliver</x-import>
+          </div>
+        </div>
+        <dl style="margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--border-strong)">
+          <sc-for list="{{ stats }}" as="s" hint-placeholder-count="3">
+            <div style="display:flex;flex-direction:column;gap:10px;padding:20px 16px 0 0">
+              <dd style="margin:0;order:1;font-size:clamp(36px,3.4vw,60px);line-height:1;letter-spacing:-.045em;font-weight:500;color:var(--text-heading)">{{ s.n }}</dd>
+              <dt style="order:2;font-family:var(--font-mono);font-size:var(--fs-meta);letter-spacing:var(--ls-meta);line-height:1.5;color:var(--text-muted)">{{ s.l }}</dt>
+            </div>
+          </sc-for>
+        </dl>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));margin-top:clamp(72px,8vw,128px);border-top:1px solid var(--border)">
+        <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="3">
+          <div style="display:flex;flex-direction:column;gap:14px;padding:28px 28px 28px 0;border-bottom:1px solid var(--border)">
+            <span style="font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:var(--ls-label);color:var(--accent-text)">{{ p.i }}</span>
+            <h2 style="margin:0;font-size:22px;line-height:1.2;letter-spacing:-.02em;font-weight:500;color:var(--text-heading)">{{ p.t }}</h2>
+            <p style="margin:0;max-width:34ch;font-size:var(--fs-body-sm);line-height:1.6;color:var(--text-muted)">{{ p.d }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <!-- 01 Services -->
+    <section id="services" data-screen-label="Services" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:var(--section-y) var(--page-margin) 0">
+      <x-import component-from-global-scope="WebArtWorkDesignSystem_3241df.SectionHeader" index="01" eyebrow="Our services" title="Services we provide" lead="Comprehensive digital delivery across product, engineering, design, operations, and growth support." hint-size="100%,160px"></x-import>
+      <div style="margin-top:clamp(40px,4vw,64px);border-top:1px solid var(--border-strong)">
+        <sc-for list="{{ featured }}" as="s" hint-placeholder-count="4">
+          <a href="{{ s.href }}" style="display:grid;grid-template-columns:{{ rowCols }};align-items:baseline;gap:12px 24px;padding:clamp(22px,2.4vw,36px) 0;border-bottom:1px solid var(--border);text-decoration:none;color:var(--text-body);transition:background-color .25s cubic-bezier(.25,.8,.25,1)" style-hover="background:var(--surface-1)" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:2px">
+            <span style="font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:var(--ls-label);color:var(--text-subtle)">{{ s.i }}</span>
+            <span style="font-size:clamp(28px,3vw,48px);line-height:1.05;letter-spacing:-.04em;font-weight:500;color:var(--text-heading)">{{ s.name }}</span>
+            <span style="max-width:44ch;font-size:var(--fs-body-sm);line-height:1.6;color:var(--text-muted)">{{ s.desc }}</span>
+            <span aria-hidden="true" style="display:flex;justify-self:end;color:var(--accent-text)"><x-import component-from-global-scope="WebArtWorkDesignSystem_3241df.Icon" name="arrow-up-right" hint-size="20px,20px"></x-import></span>
+          </a>
+        </sc-for>
+      </div>
+      <div style="display:flex;justify-content:flex-end;margin-top:24px">
+        <x-import component-from-global-scope="WebArtWorkDesignSystem_3241df.Button" variant="text" arrow="right" href="/services" hint-size="200px,44px">View all 24 services</x-import>
+      </div>
+    </section>
+
+    <!-- 02 Solutions -->
+    <section id="solutions" data-screen-label="Solutions" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:var(--section-y) var(--page-margin) 0">
+      <x-import component-from-global-scope="WebArtWorkDesignSystem_3241df.SectionHeader" index="02" eyebrow="Solutions" title="What we build in depth" lead="Each solution has its own page with examples, process and answers to common questions." hint-size="100%,160px"></x-import>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));margin-top:clamp(40px,4vw,64px);border-top:1px solid var(--border-strong);border-left:1px solid var(--border)">
+        <sc-for list="{{ solutions }}" as="s" hint-placeholder-count="9">
+          <a href="{{ s.href }}" style="display:flex;flex-direction:column;gap:14px;min-height:220px;padding:24px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);text-decoration:none;color:var(--text-body);transition:background-color .25s cubic-bezier(.25,.8,.25,1)" style-hover="background:var(--surface-1)" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:-3px">
+            <span style="display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--text-subtle)"><span>{{ s.i }}</span><span style="color:var(--accent-text)">{{ s.priceText }}</span></span>
+            <span style="margin-top:auto;font-size:clamp(22px,1.6vw,28px);line-height:1.15;letter-spacing:-.03em;font-weight:500;color:var(--text-heading)">{{ s.name }}</span>
+            <span style="font-size:var(--fs-body-sm);line-height:1.55;color:var(--text-muted)">{{ s.desc }}</span>
+          </a>
+        </sc-for>
+      </div>
+    </section>
+
+    <!-- 03 Tech stack -->
+    <section id="tech" data-screen-label="Tech stack" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:var(--section-y) var(--page-margin) 0">
+      <div style="display:flex;align-items:center;gap:12px;font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--text-subtle)"><b style="font-weight:500;color:var(--accent-text)">03</b><span>Tech stack</span><span style="flex:1;height:1px;background:var(--border)"></span></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));column-gap:calc(var(--grid-gutter) * 2);row-gap:40px;margin-top:clamp(32px,3vw,48px);align-items:start">
+        <div style="display:flex;flex-direction:column;gap:20px;max-width:440px;position:sticky;top:120px">
+          <h2 style="margin:0;font-size:var(--fs-h2);line-height:var(--lh-h2);letter-spacing:var(--ls-h2);font-weight:500;color:var(--text-heading)">Cutting-edge technologies</h2>
+          <p style="margin:0;font-size:var(--fs-body);line-height:var(--lh-body);color:var(--text-muted)">We use current frameworks, proven infrastructure, and pragmatic tooling to ship faster without sacrificing maintainability.</p>
+        </div>
+        <dl style="margin:0;border-top:1px solid var(--border-strong)">
+          <sc-for list="{{ tech }}" as="t" hint-placeholder-count="6">
+            <div style="display:grid;grid-template-columns:minmax(120px,.4fr) minmax(0,1fr);gap:16px;padding:20px 0;border-bottom:1px solid var(--border)">
+              <dt style="font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--text-subtle);padding-top:3px">{{ t.k }}</dt>
+              <dd style="margin:0;font-size:17px;line-height:1.55;letter-spacing:-.005em;color:var(--text-heading)">{{ t.v }}</dd>
+            </div>
+          </sc-for>
+        </dl>
+      </div>
+
+      <div style="margin-top:clamp(72px,8vw,128px)">
+        <div style="font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--text-subtle)">Our technology philosophy</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:var(--grid-gutter);margin-top:24px;align-items:start">
+          <sc-for list="{{ philosophy }}" as="p" hint-placeholder-count="3">
+            <figure style="margin:0;display:flex;flex-direction:column;gap:18px;padding-top:{{ p.offset }}">
+              <img src="{{ p.img }}" alt="{{ p.t }}" loading="lazy" style="display:block;width:100%;aspect-ratio:{{ p.ratio }};object-fit:cover;border-radius:4px;background:var(--surface-1);filter:grayscale(.35)">
+              <figcaption style="display:flex;flex-direction:column;gap:8px">
+                <span style="font-size:20px;letter-spacing:-.02em;font-weight:500;color:var(--text-heading)">{{ p.t }}</span>
+                <span style="max-width:36ch;font-size:var(--fs-body-sm);line-height:1.6;color:var(--text-muted)">{{ p.d }}</span>
+              </figcaption>
+            </figure>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 Process -->
+    <section id="workflow" data-screen-label="Process" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:var(--section-y) var(--page-margin) 0">
+      <x-import component-from-global-scope="WebArtWorkDesignSystem_3241df.SectionHeader" index="04" eyebrow="Our process" title="How we deliver" lead="A clear sequence from discovery through support, tuned for lean collaboration and production-ready outcomes." hint-size="100%,160px"></x-import>
+      <ol style="list-style:none;margin:clamp(40px,4vw,64px) 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));column-gap:var(--grid-gutter)">
+        <sc-for list="{{ process }}" as="p" hint-placeholder-count="6">
+          <li style="display:grid;grid-template-columns:72px minmax(0,1fr);gap:8px 16px;padding:28px 0 32px;border-top:1px solid var(--border)">
+            <span style="grid-row:span 3;font-size:44px;line-height:.9;letter-spacing:-.05em;font-weight:500;color:var(--accent-text)">{{ p.i }}</span>
+            <h3 style="margin:0;font-size:22px;line-height:1.2;letter-spacing:-.02em;font-weight:500;color:var(--text-heading)">{{ p.t }}</h3>
+            <p style="margin:0;max-width:40ch;font-size:var(--fs-body-sm);line-height:1.6;color:var(--text-muted)">{{ p.d }}</p>
+            <span style="font-family:var(--font-mono);font-size:var(--fs-meta);letter-spacing:var(--ls-meta);line-height:1.6;color:var(--text-subtle)">{{ p.b }}</span>
+          </li>
+        </sc-for>
+      </ol>
+    </section>
+
+    <!-- 05 Partners -->
+    <section id="partners" data-screen-label="Partners" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:var(--section-y) var(--page-margin) 0">
+      <div style="display:flex;align-items:center;gap:12px;font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--text-subtle)"><b style="font-weight:500;color:var(--accent-text)">05</b><span>Trusted with</span><span style="flex:1;height:1px;background:var(--border)"></span><a href="/partners" style="display:inline-flex;align-items:center;min-height:44px;color:var(--text-heading);text-decoration:none" style-hover="color:var(--accent-text)">View all partners</a></div>
+      <h2 style="margin:clamp(24px,3vw,40px) 0 0;font-size:var(--fs-h2);line-height:var(--lh-h2);letter-spacing:var(--ls-h2);font-weight:500;color:var(--text-heading)">Our partners</h2>
+      <ul style="list-style:none;margin:32px 0 0;padding:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 0">
+        <sc-for list="{{ partners }}" as="p" hint-placeholder-count="4">
+          <li style="display:flex;align-items:baseline">
+            <a href="{{ p.href }}" style="font-size:clamp(30px,4.4vw,72px);line-height:1.1;letter-spacing:-.045em;font-weight:500;color:var(--text-heading);text-decoration:none;transition:color .15s cubic-bezier(.25,.8,.25,1)" style-hover="color:var(--accent-text)">{{ p.name }}</a>
+            <span aria-hidden="true" style="padding:0 .35em;font-size:clamp(30px,4.4vw,72px);line-height:1.1;font-weight:300;color:var(--text-subtle)">/</span>
+          </li>
+        </sc-for>
+      </ul>
+    </section>
+
+    <!-- 06 Startups -->
+    <section id="startups" data-screen-label="Startups" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:var(--section-y) var(--page-margin) 0">
+      <x-import component-from-global-scope="WebArtWorkDesignSystem_3241df.SectionHeader" index="06" eyebrow="Built in-house" title="Our startups" lead="Alongside client delivery, we build and grow our own products." hint-size="100%,160px"></x-import>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));column-gap:var(--grid-gutter);margin-top:clamp(40px,4vw,64px)">
+        <sc-for list="{{ startups }}" as="s" hint-placeholder-count="3">
+          <a href="{{ s.href }}" style="display:flex;flex-direction:column;gap:14px;padding:24px 0 28px;border-top:2px solid var(--text-heading);text-decoration:none;color:var(--text-body)" style-hover="border-top-color:var(--accent)">
+            <span style="font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--text-subtle)">{{ s.tagline }}</span>
+            <span style="font-size:clamp(30px,2.6vw,42px);line-height:1.05;letter-spacing:-.04em;font-weight:500;color:var(--text-heading)">{{ s.name }}</span>
+            <span style="max-width:40ch;font-size:var(--fs-body-sm);line-height:1.6;color:var(--text-muted)">{{ s.desc }}</span>
+          </a>
+        </sc-for>
+      </div>
+      <div style="display:flex;justify-content:flex-end;margin-top:16px">
+        <x-import component-from-global-scope="WebArtWorkDesignSystem_3241df.Button" variant="text" arrow="right" href="/startups" hint-size="200px,44px">View all startups</x-import>
+      </div>
+    </section>
+
+    <!-- 07 Contact -->
+    <section id="contact" data-screen-label="Contact" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:var(--section-y) var(--page-margin)">
+      <div style="display:flex;align-items:center;gap:12px;font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--text-subtle)"><b style="font-weight:500;color:var(--accent-text)">07</b><span>Get in touch</span><span style="flex:1;height:1px;background:var(--border)"></span></div>
+      <h2 style="margin:clamp(28px,3vw,48px) 0 0;max-width:12ch;font-size:clamp(48px,6vw,104px);line-height:.95;letter-spacing:-.05em;font-weight:500;color:var(--text-heading)">Let's start building.</h2>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));column-gap:calc(var(--grid-gutter) * 2);row-gap:56px;margin-top:clamp(40px,5vw,80px);align-items:start">
+        <div style="display:flex;flex-direction:column;gap:32px">
+          <p style="margin:0;max-width:40ch;font-size:var(--fs-body);line-height:var(--lh-body);color:var(--text-muted)">Ready to transform your ideas into reality? Our team is here to help you navigate your digital journey.</p>
+          <figure style="margin:0;display:grid;grid-template-columns:120px minmax(0,1fr);gap:20px;align-items:end">
+            <img src="https://webart.work/landing/den.jpg" alt="Web Art Work team" loading="lazy" style="display:block;width:120px;aspect-ratio:4/5;object-fit:cover;border-radius:4px;background:var(--surface-1)">
+            <figcaption style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-size:18px;font-weight:500;letter-spacing:-.01em;color:var(--text-heading)">Meet our team</span>
+              <span style="font-size:var(--fs-body-sm);line-height:1.5;color:var(--text-muted)">Expert developers ready to bring your vision to life</span>
+            </figcaption>
+          </figure>
+          <dl style="margin:0;border-top:1px solid var(--border-strong)">
+            <div style="display:grid;grid-template-columns:110px minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:1px solid var(--border);align-items:baseline">
+              <dt style="font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--text-subtle)">Call</dt>
+              <dd style="margin:0;display:flex;flex-direction:column;gap:2px"><a href="tel:+380971862487" style="font-size:20px;font-weight:500;letter-spacing:-.01em;text-decoration:none;color:var(--text-heading)" style-hover="color:var(--accent-text)">+38 097 18 62 487</a><span style="font-size:var(--fs-body-sm);color:var(--text-muted)">Mon–Fri, 9–18</span></dd>
+            </div>
+            <div style="display:grid;grid-template-columns:110px minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:1px solid var(--border);align-items:baseline">
+              <dt style="font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--text-subtle)">Visit</dt>
+              <dd style="margin:0;display:flex;flex-direction:column;gap:2px"><span style="font-size:var(--fs-body);line-height:1.5;color:var(--text-heading)">Ohiyenka Street, 63, Kamianets-Podilskyi, Khmelnytskyi Region, 32301</span><span style="font-size:var(--fs-body-sm);color:var(--text-muted)">Our headquarters</span></dd>
+            </div>
+            <div style="display:grid;grid-template-columns:110px minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:1px solid var(--border);align-items:baseline">
+              <dt style="font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--text-subtle)">Hours</dt>
+              <dd style="margin:0;display:flex;flex-direction:column;gap:2px"><span style="font-size:var(--fs-body);color:var(--text-heading)">Mon–Fri: 9–18</span><span style="font-size:var(--fs-body-sm);color:var(--text-muted)">Weekend support available</span></dd>
+            </div>
+          </dl>
+        </div>
+
+        <div style="position:relative;border:1px solid var(--border);border-radius:8px;background:var(--surface-1);padding:clamp(24px,3vw,40px)">
+          <span aria-hidden="true" style="position:absolute;left:0;right:0;top:0;height:2px;background:var(--accent);border-radius:8px 8px 0 0"></span>
+          <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+            <form novalidate="" onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:22px">
+              <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap">
+                <h3 style="margin:0;font-size:24px;letter-spacing:-.02em;font-weight:500;color:var(--text-heading)">Send us a message</h3>
+                <span style="font-family:var(--font-mono);font-size:var(--fs-meta);letter-spacing:var(--ls-meta);color:var(--text-subtle)">We'll respond within 24 hours</span>
+              </div>
+              <sc-if value="{{ hasPkg }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;border:1px solid var(--accent);border-radius:4px">
+                  <span style="font-size:var(--fs-body-sm);color:var(--text-heading)"><span style="font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--accent-text);margin-right:10px">Package</span>{{ pkgLabel }}</span>
+                  <button type="button" onClick="{{ clearPkg }}" style="min-height:44px;padding:0 8px;background:none;border:0;font:inherit;font-size:var(--fs-body-sm);color:var(--text-muted);cursor:pointer;text-decoration:underline" style-hover="color:var(--text-heading)" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:2px">Remove</button>
+                </div>
+              </sc-if>
+              <label style="display:flex;flex-direction:column;gap:8px">
+                <span style="font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--text-muted)">Full name *</span>
+                <input name="name" autocomplete="name" value="{{ form.name }}" onChange="{{ onName }}" aria-invalid="{{ err.nameInvalid }}" style="min-height:48px;padding:0 0 0 0;background:transparent;border:0;border-bottom:1px solid {{ err.nameBorder }};color:var(--text-heading);font:inherit;font-size:18px;outline:none;border-radius:0" style-focus="border-bottom-color:var(--accent)">
+                <span role="alert" style="font-size:13px;color:var(--text-heading)">{{ err.name }}</span>
+              </label>
+              <label style="display:flex;flex-direction:column;gap:8px">
+                <span style="font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--text-muted)">Email address *</span>
+                <input name="email" type="email" autocomplete="email" value="{{ form.email }}" onChange="{{ onEmail }}" aria-invalid="{{ err.emailInvalid }}" style="min-height:48px;background:transparent;border:0;border-bottom:1px solid {{ err.emailBorder }};color:var(--text-heading);font:inherit;font-size:18px;outline:none;border-radius:0" style-focus="border-bottom-color:var(--accent)">
+                <span role="alert" style="font-size:13px;color:var(--text-heading)">{{ err.email }}</span>
+              </label>
+              <label style="display:flex;flex-direction:column;gap:8px">
+                <span style="font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--text-muted)">Project details *</span>
+                <textarea name="details" rows="5" value="{{ form.details }}" onChange="{{ onDetails }}" aria-invalid="{{ err.detailsInvalid }}" placeholder="What are you building, and by when?" style="padding:12px 0;background:transparent;border:0;border-bottom:1px solid {{ err.detailsBorder }};color:var(--text-heading);font:inherit;font-size:17px;line-height:1.55;outline:none;resize:vertical;border-radius:0" style-focus="border-bottom-color:var(--accent)"></textarea>
+                <span role="alert" style="font-size:13px;color:var(--text-heading)">{{ err.details }}</span>
+              </label>
+              <div>
+                <x-import component-from-global-scope="WebArtWorkDesignSystem_3241df.Button" variant="primary" size="lg" arrow="up-right" type="submit" block="{{ true }}" hint-size="100%,52px">Send message</x-import>
+              </div>
+            </form>
+          </sc-if>
+          <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+            <div role="status" style="display:flex;flex-direction:column;gap:16px;min-height:360px;justify-content:center">
+              <span style="font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--accent-text)">Message ready</span>
+              <h3 style="margin:0;font-size:32px;line-height:1.1;letter-spacing:-.03em;font-weight:500;color:var(--text-heading)">Thank you, {{ form.name }}.</h3>
+              <p style="margin:0;font-size:var(--fs-body);line-height:var(--lh-body);color:var(--text-muted)">We'll respond within 24 hours at {{ form.email }}.</p>
+              <div><x-import component-from-global-scope="WebArtWorkDesignSystem_3241df.Button" variant="text" arrow="right" on-click="{{ reset }}" hint-size="200px,44px">Send another message</x-import></div>
+            </div>
+          </sc-if>
+          <dl style="margin:28px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--border)">
+            <div style="padding-top:14px"><dd style="margin:0;font-size:20px;font-weight:500;letter-spacing:-.02em;color:var(--text-heading)">24h</dd><dt style="font-family:var(--font-mono);font-size:var(--fs-meta);letter-spacing:var(--ls-meta);color:var(--text-subtle)">Response time</dt></div>
+            <div style="padding-top:14px"><dd style="margin:0;font-size:20px;font-weight:500;letter-spacing:-.02em;color:var(--text-heading)">100%</dd><dt style="font-family:var(--font-mono);font-size:var(--fs-meta);letter-spacing:var(--ls-meta);color:var(--text-subtle)">Confidential</dt></div>
+            <div style="padding-top:14px"><dd style="margin:0;font-size:20px;font-weight:500;letter-spacing:-.02em;color:var(--text-heading)">Free</dd><dt style="font-family:var(--font-mono);font-size:var(--fs-meta);letter-spacing:var(--ls-meta);color:var(--text-subtle)">Consultation</dt></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <x-import component-from-global-scope="WebArtWorkDesignSystem_3241df.SiteFooter" solutions="{{ footSolutions }}" company="{{ footCompany }}" style="display:block" hint-size="100%,520px"></x-import>
+  <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+    <x-import component-from-global-scope="WebArtWorkDesignSystem_3241df.MobileTabBar" current="" hint-size="100%,64px"></x-import>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { mode: 'dark', w: window.innerWidth, ok: !!window.WAW_SITE, form: { name: '', email: '', details: '' }, err: {}, sent: false, pkg: null };
+  componentDidMount() {
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener('resize', this.onResize);
+    const boot = () => {
+      const S = window.WAW_SITE;
+      const pkg = S.param('package');
+      const P = { basic: 'Basic, $200', pro: 'Pro, $500', extended: 'Extended, $900' };
+      const topic = S.param('topic');
+      const details = P[pkg] ? "I'd like to start with the " + P[pkg].split(',')[0] + ' package.' : topic === 'call' ? "I'd like to book a free 15-minute call." : '';
+      this.setState({ ok: true, mode: S.theme.get(), pkg: P[pkg] ? P[pkg] : null, form: { ...this.state.form, details } });
+      if (location.hash) setTimeout(() => { const el = document.getElementById(location.hash.slice(1)); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + scrollY - 88 }); }, 300);
+    };
+    if (window.WAW_SITE) boot(); else this.t = setInterval(() => { if (window.WAW_SITE) { clearInterval(this.t); boot(); } }, 60);
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this.onResize); clearInterval(this.t); }
+  validate(f) {
+    const e = {};
+    if (!f.name.trim()) e.name = 'Enter your name';
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email.trim())) e.email = f.email.trim() ? 'Check the email address' : 'Enter your email';
+    if (f.details.trim().length < 10) e.details = 'Tell us a little about the project (10+ characters)';
+    return e;
+  }
+  renderVals() {
+    const S = window.WAW_SITE || { stats: [], pillars: [], services: [], featuredServices: [], solutions: [], tech: [], philosophy: [], process: [], partners: [], startups: [], footer: {} };
+    const { w, form, err, sent, pkg } = this.state;
+    const pad = n => String(n).padStart(2, '0');
+    const set = k => ev => { const v = ev.target.value; this.setState(s => { const f = { ...s.form, [k]: v }; const e = { ...s.err }; if (e[k]) { const n = this.validate(f); e[k] = n[k]; } return { form: f, err: e }; }); };
+    const field = k => ({ [k]: err[k] || '', [k + 'Invalid']: err[k] ? 'true' : 'false', [k + 'Border']: err[k] ? 'var(--text-heading)' : 'var(--border-strong)' });
+    const ratios = ['4/5', '1/1', '4/3'], offs = ['0px', w >= 900 ? '96px' : '0px', w >= 900 ? '32px' : '0px'];
+    return {
+      mode: this.state.mode,
+      setMode: m => { S.theme && S.theme.set(m); this.setState({ mode: m }); },
+      isMobile: w < 768,
+      heroIndent: w >= 900 ? '16.6%' : '0px',
+      rowCols: w >= 900 ? '56px minmax(0,1.1fr) minmax(0,1fr) 24px' : '40px minmax(0,1fr)',
+      stats: S.stats.map(([n, l]) => ({ n, l })),
+      pillars: S.pillars.map(([t, d], i) => ({ i: pad(i + 1), t, d })),
+      featured: S.featuredServices.map((id, i) => { const s = S.services.find(x => x.id === id); return { ...s, i: pad(i + 1), href: '/service/' + id }; }),
+      solutions: S.solutions.map((s, i) => ({ ...s, i: pad(i + 1), href: '/' + s.id, priceText: s.price ? 'From ' + s.price : 'On request' })),
+      tech: S.tech.map(([k, v]) => ({ k, v })),
+      philosophy: S.philosophy.map(([t, d, img], i) => ({ t, d, img, ratio: ratios[i], offset: offs[i] })),
+      process: S.process.map(([t, d, b], i) => ({ i: pad(i + 1), t, d, b: b.split('|').join('  ·  ') })),
+      partners: S.partners.slice(0, 4).map(p => ({ ...p, href: '/partner/' + p.id })),
+      startups: S.startups.slice(0, 3).map(s => ({ ...s, href: '/startup/' + s.id })),
+      form, err: { ...field('name'), ...field('email'), ...field('details') },
+      onName: set('name'), onEmail: set('email'), onDetails: set('details'),
+      hasPkg: !!pkg, pkgLabel: pkg || '',
+      clearPkg: () => this.setState({ pkg: null }),
+      submit: ev => { ev.preventDefault(); const e = this.validate(form); this.setState({ err: e, sent: !Object.keys(e).length }); },
+      reset: () => this.setState({ sent: false, form: { name: '', email: '', details: '' }, err: {}, pkg: null }),
+      sent, notSent: !sent,
+      footSolutions: S.footer.solutions, footCompany: S.footer.company
+    };
+  }
+}
+</script>
+</body>
+</html>

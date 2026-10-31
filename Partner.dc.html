@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Partner case study | Web Art Work</title>
+  <meta name="description" content="Technology partner case study by Web Art Work.">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/layout.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/shape.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/legacy.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/base.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/actions/actions.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/content/content.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/navigation/navigation.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/styles.css">
+  <script src="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/_ds_bundle.js"></script>
+  <script src="site.js"></script>
+  <style>
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:0s!important;animation-duration:0s!important}}
+    body{margin:0;background:var(--bg);color:var(--text-body);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+    a{color:var(--text-heading)}
+    a:hover{color:var(--accent-text)}
+  </style>
+</helmet>
+<div style="background:var(--bg);color:var(--text-body);min-height:100vh;overflow-x:clip">
+  <dc-import name="WawHeader" current="Partners" quote-href="/#contact" style="position:sticky;top:0;z-index:60;display:block" hint-size="100%,72px"></dc-import>
+  <main>
+    <section data-screen-label="Identity" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(40px,5vw,80px) var(--page-margin) 0">
+      <nav aria-label="Breadcrumb" style="display:flex;flex-wrap:wrap;align-items:center;gap:0 12px;font-size:14px;color:var(--text-muted)">
+        <a href="/partners" style="display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:var(--text-muted)" style-hover="color:var(--text-heading)">Partners</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page" style="color:var(--text-heading)">{{ p.name }}</span>
+      </nav>
+      <div style="display:grid;grid-template-columns:{{ heroCols }};gap:32px var(--grid-gutter);align-items:end;margin-top:clamp(24px,4vw,64px);padding-bottom:clamp(32px,4vw,56px);border-bottom:1px solid var(--border)">
+        <div style="display:flex;flex-direction:column;gap:20px;min-width:0">
+          <span style="font-size:clamp(17px,.5vw + 14px,21px);font-weight:300;color:var(--text-muted)"><span style="color:var(--accent-text)">(</span> {{ p.kicker }} <span style="color:var(--accent-text)">)</span></span>
+          <h1 style="margin:0;font-size:clamp(56px,10vw,168px);line-height:.88;letter-spacing:-.055em;font-weight:600;color:var(--text-heading);overflow-wrap:anywhere">{{ p.name }}<span style="color:var(--accent)">.</span></h1>
+        </div>
+        <figure style="margin:0;display:flex;align-items:center;justify-content:center;aspect-ratio:1;max-width:{{ logoMax }};width:100%;justify-self:end;border-radius:14px;overflow:hidden;background:var(--surface-1);border:1px solid var(--border)">
+          <div role="img" aria-label="{{ p.logoAlt }}" style="width:62%;height:62%;background-image:{{ p.bg }};background-size:contain;background-repeat:no-repeat;background-position:center"></div>
+        </figure>
+      </div>
+      <ul aria-label="{{ p.name }} channels" style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:{{ linkCols }};border-bottom:1px solid var(--border)">
+        <sc-for list="{{ p.links }}" as="l" hint-placeholder-count="2">
+          <li style="border-right:{{ linkSep }}">
+            <a href="{{ l.href }}" target="_blank" rel="noopener" style="display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:64px;padding:12px {{ linkPad }} 12px 0;text-decoration:none;color:var(--text-heading)" style-hover="color:var(--accent-text)">
+              <span style="display:flex;flex-direction:column;gap:2px;min-width:0"><span style="font-size:14px;color:var(--text-subtle)">{{ l.k }}</span><span style="font-size:17px;font-weight:500;overflow-wrap:anywhere">{{ l.v }}</span></span>
+              <span aria-hidden="true" style="display:grid;place-items:center;width:40px;height:40px;flex:none;border:1px solid var(--border-strong);border-radius:50%"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"></path></svg></span>
+            </a>
+          </li>
+        </sc-for>
+      </ul>
+    </section>
+
+    <section data-screen-label="Story" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(56px,7vw,112px) var(--page-margin) 0">
+      <div style="display:grid;grid-template-columns:{{ storyCols }};gap:40px var(--grid-gutter)">
+        <h2 style="margin:0;display:flex;align-items:center;gap:14px;font-size:16px;font-weight:500;color:var(--text-heading)"><span aria-hidden="true" style="width:28px;height:2px;background:var(--accent)"></span>Our role</h2>
+        <p style="margin:0;max-width:34ch;font-size:clamp(22px,1.4vw + 14px,36px);line-height:1.3;letter-spacing:-.02em;font-weight:400;color:var(--text-heading);text-wrap:pretty">{{ p.role }}</p>
+      </div>
+      <div style="display:grid;grid-template-columns:{{ storyCols }};gap:24px var(--grid-gutter);margin-top:clamp(48px,6vw,96px)">
+        <h2 style="margin:0;display:flex;align-items:center;gap:14px;font-size:16px;font-weight:500;color:var(--text-heading)"><span aria-hidden="true" style="width:28px;height:2px;background:var(--accent)"></span>What we delivered</h2>
+        <ol style="list-style:none;margin:0;padding:0;border-top:1px solid var(--border)">
+          <sc-for list="{{ scope }}" as="s" hint-placeholder-count="5">
+            <li style="display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--border)">
+              <span aria-hidden="true" style="font-size:clamp(22px,2vw,32px);line-height:1;font-weight:200;letter-spacing:-.04em;color:var(--text-subtle)">{{ s.i }}</span>
+              <span style="font-size:clamp(20px,1.2vw + 12px,28px);letter-spacing:-.02em;font-weight:500;color:var(--text-heading)">{{ s.t }}</span>
+            </li>
+          </sc-for>
+        </ol>
+      </div>
+      <div style="display:grid;grid-template-columns:{{ storyCols }};gap:24px var(--grid-gutter);margin-top:clamp(48px,6vw,96px)">
+        <h2 style="margin:0;display:flex;align-items:center;gap:14px;font-size:16px;font-weight:500;color:var(--text-heading)"><span aria-hidden="true" style="width:28px;height:2px;background:var(--accent)"></span>About {{ p.aboutName }}</h2>
+        <p style="margin:0;max-width:62ch;font-size:var(--fs-body);line-height:1.7;color:var(--text-muted);text-wrap:pretty">{{ p.about }}</p>
+      </div>
+    </section>
+
+    <nav aria-label="More partners" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(72px,8vw,136px) var(--page-margin) clamp(56px,6vw,96px)">
+      <div style="display:grid;grid-template-columns:{{ pnCols }};border-top:1px solid var(--border)">
+        <a href="{{ prev.href }}" style="display:flex;flex-direction:column;gap:8px;padding:24px 0;text-decoration:none;color:var(--text-heading)" style-hover="color:var(--accent-text)">
+          <span style="font-size:14px;color:var(--text-subtle)">← Previous</span>
+          <span style="font-size:clamp(28px,3vw,48px);letter-spacing:-.045em;font-weight:500">{{ prev.name }}</span>
+        </a>
+        <a href="{{ next.href }}" style="display:flex;flex-direction:column;align-items:{{ nextAlign }};gap:8px;padding:24px 0;text-decoration:none;color:var(--text-heading);border-top:{{ nextSep }}" style-hover="color:var(--accent-text)">
+          <span style="font-size:14px;color:var(--text-subtle)">Next →</span>
+          <span style="font-size:clamp(28px,3vw,48px);letter-spacing:-.045em;font-weight:500">{{ next.name }}</span>
+        </a>
+      </div>
+      <p style="display:flex;flex-wrap:wrap;align-items:center;gap:0 .4em;margin:clamp(40px,5vw,72px) 0 0;font-size:clamp(20px,1vw + 14px,28px);line-height:1.4;font-weight:300;color:var(--text-heading)">Building something similar? <a href="/#contact" style="display:inline-flex;align-items:center;min-height:44px;font-weight:500;text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:6px">Tell us about it ↗</a></p>
+    </nav>
+  </main>
+  <dc-import name="WawFooter" current="Partners" quote-href="/#contact" style="display:block" hint-size="100%,620px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;id&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;demchuk-denys&quot;,&quot;silver-virgi&quot;,&quot;panianka&quot;,&quot;tpotier&quot;,&quot;vr-arena&quot;,&quot;salon-leather&quot;,&quot;potier-cake&quot;,&quot;ua-code&quot;],&quot;default&quot;:&quot;panianka&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { w: window.innerWidth, ok: !!window.WAW_SITE };
+  componentDidMount() {
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    addEventListener('resize', this.onResize);
+    if (!window.WAW_SITE) this.t = setInterval(() => { if (window.WAW_SITE) { clearInterval(this.t); this.setState({ ok: true }); } }, 50);
+  }
+  componentWillUnmount() { removeEventListener('resize', this.onResize); clearInterval(this.t); }
+  renderVals() {
+    const S = window.WAW_SITE;
+    const empty = { i: '', name: '', kicker: '', img: '', links: [], role: '', about: '', aboutName: '' };
+    if (!S) return { p: empty, scope: [], prev: {}, next: {}, hasImg: false };
+    const pad = n => String(n).padStart(2, '0'), w = this.state.w;
+    const all = S.partners, id = S.param('id') || this.props.id || all[0].id;
+    let idx = all.findIndex(x => x.id === id); if (idx < 0) idx = 0;
+    const cur = all[idx], prev = all[(idx - 1 + all.length) % all.length], next = all[(idx + 1) % all.length];
+    S.meta(cur.name + ': Technology Partner Case Study | Web Art Work', cur.role.split('. ').slice(0, 2).join('. ') + '.');
+    const wide = w >= 1024, mid = w >= 768;
+    return {
+      p: { ...cur, i: pad(idx + 1), bg: 'url("' + cur.img + '")', logoAlt: cur.name + ' logo' },
+      scope: cur.scope.map((t, i) => ({ t, i: pad(i + 1) })),
+      prev: { name: prev.name, href: '/partner/' + prev.id },
+      next: { name: next.name, href: '/partner/' + next.id },
+      heroCols: wide ? 'minmax(0,8fr) minmax(0,4fr)' : 'minmax(0,1fr)',
+      logoMax: wide ? '360px' : '200px',
+      linkCols: mid ? 'repeat(' + cur.links.length + ',minmax(0,1fr))' : 'minmax(0,1fr)',
+      linkSep: mid ? '1px solid var(--border)' : '0',
+      linkPad: mid ? '20px' : '0',
+      storyCols: wide ? 'minmax(0,3fr) minmax(0,9fr)' : 'minmax(0,1fr)',
+      pnCols: mid ? 'minmax(0,1fr) minmax(0,1fr)' : 'minmax(0,1fr)',
+      nextAlign: mid ? 'flex-end' : 'flex-start',
+      nextSep: mid ? '0' : '1px solid var(--border)'
+    };
+  }
+}
+</script>
+</body>
+</html>

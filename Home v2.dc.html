@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Web Art Work: Web &amp; Mobile App Development in Ukraine</title>
+  <meta name="description" content="Ukrainian freelance community building websites, web and mobile apps for clients and our own startups. Over 10 years of delivery and a free consultation.">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/layout.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/shape.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/legacy.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/base.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/actions/actions.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/content/content.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/navigation/navigation.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/styles.css">
+  <script src="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/_ds_bundle.js"></script>
+  <script src="site.js"></script>
+  <style>
+    html{scroll-behavior:smooth;scroll-padding-top:80px}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:0s!important;animation-duration:0s!important}}
+    body{margin:0;background:var(--bg);color:var(--text-body);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+    a{color:var(--text-heading)}
+    a:hover{color:var(--accent-text)}
+    ::placeholder{color:var(--text-subtle)}
+    ::selection{background:var(--accent);color:var(--on-accent)}
+      :root{--hero-veil:6,6,8;--hero-photo-filter:contrast(1.12) saturate(1.05) brightness(.9)}
+    [data-mode="light"]{--hero-veil:243,244,247;--hero-photo-filter:grayscale(.2)}
+  </style>
+  <style>@keyframes wawflow{to{stroke-dashoffset:-48}}@media (prefers-reduced-motion:reduce){#tech path{animation:none!important}}</style>
+  <style>a[data-sol]:hover [data-arrow],a[data-sol]:focus-visible [data-arrow],a[data-reg]:hover [data-arrow],a[data-reg]:focus-visible [data-arrow]{background:var(--accent)!important;border-color:var(--accent)!important;color:#0b0b0f!important}</style>
+</helmet>
+
+<div style="background:var(--bg);color:var(--text-body);min-height:100vh;overflow-x:clip">
+
+  <sc-if value="{{ loading }}" hint-placeholder-val="{{ true }}">
+    <div data-pl="" aria-hidden="true" style="position:fixed;inset:0;z-index:200;display:grid;grid-template-rows:auto 1fr auto;padding:24px var(--gx);background:var(--bg);color:var(--text-heading)">
+      <div style="display:flex;justify-content:space-between;gap:16px;font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--text-subtle)"><span>Web Art Work</span><span>index.html</span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px">
+        <span style="font-family:var(--font-mono);font-size:clamp(40px,6vw,88px);letter-spacing:-.02em;color:var(--text-heading)">[ <span data-pl-num="">00</span> ]</span>
+        <span style="display:block;width:min(320px,60vw);height:1px;background:var(--border)"><span data-pl-bar="" style="display:block;height:1px;background:var(--accent);transform-origin:0 50%;transform:scaleX(0)"></span></span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;font-family:var(--font-mono);font-size:var(--fs-meta);letter-spacing:var(--ls-meta);text-transform:uppercase;color:var(--text-subtle)"><span>IT Solutions</span><span>Home</span><span>Web / Mobile / Software</span><span style="text-align:right">2026</span></div>
+    </div>
+  </sc-if>
+
+  <dc-import name="WawHeader" current="Home" quote-href="#contact" style="position:sticky;top:0;z-index:60;display:block" hint-size="100%,72px"></dc-import>
+
+  <main style="overflow-x:clip">
+    <!-- HERO -->
+    <section data-screen-label="Hero" style="position:relative;overflow:hidden;min-height:max(100svh,640px);margin-top:-88px;display:flex;flex-direction:column;padding:calc(88px + clamp(16px,4svh,48px)) var(--gx) 0;box-sizing:border-box;background:#050505;color:#ffffff">
+      <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;overflow:hidden">
+        <sc-if value="{{ heroV3 }}" hint-placeholder-val="{{ true }}"><span data-hero-bg="" data-iw="3548" data-ih="1772" data-cx="2306" data-cy="886" style="position:absolute;inset:-3%;background:#050505 url('assets/hero-bg-v5.png') {{ heroBgPos }} / cover no-repeat;transform-origin:{{ heroBgPos }};will-change:transform"></span></sc-if>
+        <sc-if value="{{ heroV2 }}" hint-placeholder-val="{{ false }}"><span data-hero-bg="" data-cx="1430" data-cy="445" style="position:absolute;inset:-3%;background:url('assets/hero-web-v2.png') {{ heroBgPos }} / cover no-repeat;transform-origin:{{ heroBgPos }};will-change:transform"></span></sc-if>
+        <sc-if value="{{ heroV1 }}" hint-placeholder-val="{{ false }}"><span data-hero-bg="" data-cx="1000" data-cy="420" style="position:absolute;inset:-3%;background:url('assets/hero-web.png') {{ heroBgPos }} / cover no-repeat;transform-origin:{{ heroBgPos }};will-change:transform"></span></sc-if>
+        <span data-web-glow="" style="display:none;position:absolute;left:0;top:0;width:420px;height:420px;margin:-210px 0 0 -210px;border-radius:50%;background:radial-gradient(closest-side,rgba(230,240,40,.55),rgba(215,215,29,.18) 45%,rgba(215,215,29,0) 100%);mix-blend-mode:screen;opacity:.7;will-change:transform,opacity"></span>
+        <canvas data-web-fx="" style="display:none;position:absolute;inset:0;width:100%;height:100%;mix-blend-mode:screen"></canvas>
+        <span style="position:absolute;inset:0;background:{{ heroVeil }}"></span>
+        <span style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,5,5,.35) 0%,transparent 22%,transparent 72%,rgba(5,5,5,.85) 100%)"></span>
+      </div>
+      <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0">Web Art Work: weaving digital excellence</h1>
+
+      <div style="position:relative;flex:1 0 auto;display:grid;grid-template-columns:{{ heroCols }};gap:clamp(36px,5svh,56px) var(--grid-gutter);align-items:{{ heroAlign }};padding:clamp(48px,7svh,88px) 0 clamp(28px,5svh,56px)">
+        <div style="display:flex;flex-direction:column;align-items:flex-start;min-width:0">
+          <span aria-hidden="true" style="display:flex;flex-direction:column;overflow:hidden;padding:0 .08em .05em 0;margin-top:0;font-size:{{ heroTitleFs }};line-height:.86;letter-spacing:-.045em;font-weight:800">
+            <span data-ch="" style="display:block;color:#ffffff">WEB</span>
+            <span data-ch="" style="display:block;color:#ffffff">ART</span>
+            <span data-ch="" style="display:flex;align-items:flex-end"><span style="color:#ffffff">WORK</span><span style="flex:none;width:.2em;height:.2em;margin:0 0 .06em .06em;border-radius:50%;background:#d7d71d"></span></span>
+          </span>
+          <p data-hi="" style="margin:clamp(28px,4.4svh,48px) 0 0;max-width:30ch;font-size:clamp(17px,1.4vw,22px);line-height:1.35;font-weight:400;letter-spacing:-.01em;color:rgba(255,255,255,.86);text-wrap:pretty">Weaving digital excellence. Products with the “Waw!” aftertaste, from a web freelancer’s community in Ukraine.</p>
+          <ul data-hi="" aria-label="Web Art Work in numbers" style="list-style:none;margin:auto 0 0;padding:clamp(40px,6svh,72px) 0 0;display:flex">
+            <sc-for list="{{ heroStats }}" as="st" hint-placeholder-count="3">
+              <li style="display:flex;flex-direction:column;padding:0 {{ st.pr }} 0 {{ st.pl }};border-left:{{ st.rule }}">
+                <span aria-hidden="true" style="width:30px;height:3px;margin-bottom:clamp(18px,3svh,28px);background:#d7d71d"></span>
+                <span style="font-size:clamp(34px,3vw,52px);line-height:1;letter-spacing:-.05em;font-weight:600;color:#ffffff">{{ st.n }}</span>
+                <span style="margin-top:12px;max-width:11ch;font-size:clamp(14px,1.15vw,19px);line-height:1.3;font-weight:400;color:rgba(255,255,255,.86)">{{ st.t }}</span>
+              </li>
+            </sc-for>
+          </ul>
+        </div>
+
+        <div data-hi="" style="position:relative;isolation:isolate;justify-self:{{ heroRightAlign }};width:100%;max-width:{{ heroRightW }};display:flex;flex-direction:column;justify-content:space-between;gap:clamp(40px,6svh,72px)">
+          <span aria-hidden="true" style="position:absolute;inset:-56px -72px -64px -64px;z-index:-1;pointer-events:none;border-radius:56px;backdrop-filter:blur(18px) brightness(.7);-webkit-backdrop-filter:blur(18px) brightness(.7);-webkit-mask-image:radial-gradient(closest-side,#000 72%,transparent 100%);mask-image:radial-gradient(closest-side,#000 72%,transparent 100%)"></span>
+          <span aria-hidden="true" style="position:absolute;inset:-80px -100px -90px -90px;z-index:-1;pointer-events:none;border-radius:64px;background:radial-gradient(closest-side,rgba(3,3,3,.97) 62%,rgba(3,3,3,.85) 80%,rgba(3,3,3,0) 100%);filter:blur(8px)"></span>
+          <ul style="list-style:none;margin:0;padding:0;border-top:{{ heroListTop }}">
+            <sc-for list="{{ heroList }}" as="l" hint-placeholder-count="8">
+              <li style="position:relative"><span aria-hidden="true" style="position:absolute;left:0;bottom:0;width:30px;height:3px;background:#d7d71d;display:{{ l.rule }}"></span><a href="{{ l.href }}" style="display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:clamp(50px,6.8svh,66px);font-size:clamp(15px,1.25vw,20px);font-weight:400;letter-spacing:-.01em;text-decoration:none;color:#ffffff;transition:color .25s,padding .35s cubic-bezier(.16,1,.3,1)" style-hover="color:#d7d71d;padding-left:6px" style-focus="outline:3px solid #d7d71d;outline-offset:2px">{{ l.name }}<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M7 17L17 7M8 7h9v9"></path></svg></a></li>
+            </sc-for>
+          </ul>
+          <a href="#contact" style="display:inline-flex;align-items:center;gap:clamp(20px,2vw,32px);align-self:flex-start;text-decoration:none;color:#ffffff" style-hover="color:#d7d71d" style-focus="outline:3px solid #d7d71d;outline-offset:4px">
+            <span aria-hidden="true" style="display:grid;place-items:center;width:clamp(64px,4.8vw,80px);height:clamp(64px,4.8vw,80px);flex:none;border:1px solid currentColor;border-radius:50%"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+            <span style="padding:8px 0 12px;font-size:clamp(17px,1.4vw,22px);font-weight:500;letter-spacing:-.01em;border-bottom:3px solid #d7d71d">Start your project</span>
+          </a>
+        </div>
+      </div>
+
+      <div aria-hidden="true" data-hi="" style="min-height:clamp(72px,10svh,96px)"></div>
+    </section>
+
+    <!-- MARQUEE -->
+    <section aria-label="Capabilities" style="position:relative;overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgb(var(--hero-veil))">
+      <div data-mq="" data-mq-dur="60000" style="display:flex;width:max-content">
+        <sc-for list="{{ mqItems }}" as="m" hint-placeholder-count="6">
+          <div style="position:relative;flex:none;display:flex;flex-direction:column;border-right:1px solid var(--border-subtle)">
+            <div aria-hidden="true" style="position:relative;height:clamp(72px,7.4vw,108px);margin:0 {{ m.imgInsetR }} 0 {{ m.imgInsetL }};clip-path:polygon(12% 0,100% 0,88% 100%,0 100%);background-image:{{ m.bg }};background-size:cover;background-position:{{ m.pos }}">
+              <span style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(var(--hero-veil),0) 0%,rgba(var(--hero-veil),.25) 55%,rgb(var(--hero-veil)) 100%)"></span>
+            </div>
+            <div style="display:flex;align-items:center;gap:clamp(14px,1.4vw,22px);padding:clamp(4px,.6vw,10px) clamp(28px,2.6vw,44px) 0;white-space:nowrap">
+              <span style="margin-top:-.2em;font-size:clamp(32px,3.4vw,56px);line-height:1.1;letter-spacing:-.045em;font-weight:600;text-transform:uppercase;color:var(--text-heading)">{{ m.a }}</span>
+              <span style="font-size:clamp(15px,1.1vw,17px);font-weight:300;color:var(--text-muted)">( {{ m.b }} )</span>
+              <span aria-hidden="true" style="flex:none;width:12px;height:12px;margin-left:clamp(4px,.8vw,14px);border-radius:50%;background:var(--accent)"></span>
+            </div>
+            <ul style="list-style:none;margin:0;display:flex;align-items:center;padding:clamp(18px,2vw,30px) clamp(28px,2.6vw,44px) clamp(18px,1.8vw,26px);font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.16em;text-transform:uppercase;white-space:nowrap">
+              <sc-for list="{{ m.tags }}" as="t" hint-placeholder-count="4">
+                <li style="position:relative;display:flex;align-items:center">
+                  <span aria-hidden="true" style="display:{{ t.sep }};width:1px;height:12px;margin:0 clamp(14px,1.4vw,24px);background:var(--border-strong)"></span>
+                  <span style="position:relative;padding-bottom:10px;color:{{ t.color }}">{{ t.t }}<span aria-hidden="true" style="position:absolute;left:0;bottom:-8px;width:36px;height:2px;background:var(--accent);opacity:{{ t.on }}"></span></span>
+                </li>
+              </sc-for>
+            </ul>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <!-- WHO WE ARE -->
+    <section id="about" data-screen-label="Who we are" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin) 0">
+      <div data-r="">
+        <h2 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Who we are</h2>
+        <p data-words="" style="margin:0;font-size:clamp(28px,3.4vw,54px);line-height:1.18;letter-spacing:-.035em;font-weight:500;color:var(--text-heading);text-wrap:pretty">
+          <sc-for list="{{ whoWords }}" as="w" hint-placeholder-count="40"><span data-w="" style="transition:opacity .3s linear">{{ w }} </span></sc-for>
+        </p>
+      </div>
+      
+      <div style="position:relative;margin-top:clamp(64px,7vw,120px);padding-bottom:clamp(96px,11vw,180px)">
+        
+        <div style="position:relative;display:grid;grid-template-columns:{{ pillarGrid }}">
+          <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="3">
+            <div data-r="" style="display:grid;grid-template-columns:minmax(0,1fr) auto;align-content:start;gap:0 16px;padding:{{ p.pad }};border-left:{{ p.bl }};min-height:100%">
+              <div style="display:flex;flex-direction:column;gap:clamp(12px,1vw,16px)">
+                <div style="display:flex;align-items:center;gap:20px">
+                  <span style="font-size:13px;font-weight:400;color:var(--text-muted)">{{ p.i }}</span>
+                  <span aria-hidden="true" style="width:clamp(28px,2.6vw,38px);height:2px;background:var(--accent)"></span>
+                </div>
+                <h3 style="margin:0;font-size:clamp(24px,2.2vw,34px);line-height:1.05;letter-spacing:-.045em;font-weight:600;color:var(--text-heading);text-wrap:balance">{{ p.t }}</h3>
+              </div>
+              <span aria-hidden="true" style="width:clamp(48px,4.4vw,64px);aspect-ratio:1;margin-top:2px;border-radius:8px;border:1px solid var(--border);background:var(--surface-1);display:flex;align-items:center;justify-content:center;color:var(--accent-text)">
+                <svg viewBox="0 0 40 40" width="44%" height="44%" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="{{ p.ic }}"></path></svg>
+              </span>
+              <p style="grid-column:1 / -1;margin:clamp(14px,1.2vw,20px) 0 0;max-width:34ch;font-size:clamp(15px,1.1vw,17px);line-height:1.6;font-weight:400;color:var(--text-muted);text-wrap:pretty">{{ p.d }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <div data-band="deep" style="background:#1f1f21;--surface-1:#262628;--surface-2:#2c2c2e;--border-subtle:rgba(255,255,255,.06);color:var(--text-body);padding-bottom:clamp(96px,11vw,180px)">
+    <!-- SERVICES -->
+    <section id="services" data-screen-label="Services" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin) 0">
+      <div data-r="" style="display:flex;flex-direction:column;align-items:flex-start;gap:clamp(16px,1.8vw,28px)">
+        
+        <h2 style="margin:0;display:flex;align-items:baseline;gap:.28em;flex-wrap:wrap;font-size:clamp(40px,5.6vw,92px);line-height:1;letter-spacing:-.05em;font-weight:600;color:var(--text-heading)"><span style="color:var(--accent-text);font-weight:400">(</span>Services we provide<span style="color:var(--accent-text);font-weight:400">)</span></h2>
+        <p style="margin:0;max-width:54ch;font-size:clamp(16px,1.3vw,20px);line-height:1.5;font-weight:300;color:var(--text-muted);text-wrap:balance">Comprehensive digital delivery across product, engineering, design, operations, and growth support.</p>
+      </div>
+      <ol onMouseLeave="{{ leaveCat }}" style="list-style:none;margin:clamp(48px,5vw,80px) 0 0;padding:0;border-top:1px solid var(--border)">
+        <sc-for list="{{ cats }}" as="c" hint-placeholder-count="4">
+          <li data-r="" onMouseEnter="{{ c.enter }}" onFocus="{{ c.enter }}" style="display:grid;grid-template-columns:{{ catCols }};border-bottom:1px solid var(--border)">
+            <span aria-hidden="true" style="display:{{ numDisp }};padding-top:clamp(32px,3.4vw,52px);font-size:clamp(48px,5.2vw,84px);line-height:1;font-weight:200;letter-spacing:-.04em;color:var(--text-subtle)">{{ c.i }}</span>
+            <div style="padding:clamp(28px,3.2vw,48px) 0 clamp(28px,3.2vw,48px) {{ catIndent }};border-left:{{ catRule }};margin:clamp(20px,2vw,32px) 0">
+              <a href="{{ c.href }}" style="display:flex;align-items:center;justify-content:space-between;gap:16px 24px;flex-wrap:wrap;min-height:48px;text-decoration:none;color:{{ c.color }};transition:color .3s" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:4px">
+                <span style="display:flex;align-items:center;gap:clamp(16px,2vw,32px)">
+                  <span style="font-size:clamp(34px,4.6vw,72px);line-height:1;letter-spacing:-.05em;font-weight:700;text-transform:uppercase">{{ c.short }}</span>
+                  <span aria-hidden="true" style="width:clamp(28px,3vw,44px);height:4px;background:var(--accent)"></span>
+                </span>
+                <span style="font-size:clamp(15px,1.1vw,17px);font-weight:300;color:var(--text-muted);white-space:nowrap"><span style="color:var(--accent-text)">(</span> {{ c.count }} services <span style="color:var(--accent-text)">)</span></span>
+              </a>
+              <div style="display:grid;grid-template-rows:{{ c.rows }};transition:grid-template-rows .6s cubic-bezier(.16,1,.3,1)">
+                <div style="overflow:hidden">
+                  <ul style="list-style:none;margin:0;padding:clamp(24px,2.6vw,36px) 0 2px;display:grid;grid-template-columns:{{ c.cols }};gap:12px">
+                    <sc-for list="{{ c.items }}" as="s" hint-placeholder-count="4">
+                      <li style="display:flex"><a href="{{ s.href }}" style="flex:1;display:flex;align-items:center;gap:14px;min-height:60px;padding:12px 18px;border:1px solid var(--border);border-radius:8px;background:var(--surface-1);font-size:15px;line-height:1.3;text-decoration:none;color:var(--text-heading);transition:border-color .25s,background .25s" style-hover="border-color:var(--accent);background:var(--surface-2)" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:2px"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="{{ s.icon }}"></path></svg>{{ s.name }}</a></li>
+                    </sc-for>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </sc-for>
+      </ol>
+      <div data-r="" style="display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:20px;font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--text-subtle)">
+        <span>24 services · 4 disciplines</span>
+        <a href="/services" style="display:inline-flex;align-items:center;gap:8px;min-height:44px;text-decoration:none;color:var(--text-heading)" style-hover="color:var(--accent-text)">View all services →</a>
+      </div>
+    </section>
+    </div>
+
+    <!-- TECH FIELD -->
+    <section id="tech" data-screen-label="Tech stack" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin) clamp(96px,11vw,180px)">
+      <div style="display:grid;grid-template-columns:{{ techCols }};gap:40px clamp(40px,4.4vw,80px);align-items:center">
+        <div data-r="" style="display:flex;flex-direction:column;gap:clamp(20px,2.4vw,36px);position:relative;z-index:1">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <span aria-hidden="true" style="width:36px;height:3px;background:var(--accent)"></span>
+            <span style="font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:var(--accent-text)">Tech stack</span>
+            <span aria-live="polite" style="font-size:15px;font-weight:300;color:var(--text-muted)">( {{ techLabel }} )</span>
+          </div>
+          <h2 style="margin:0;font-size:clamp(40px,3.9vw,64px);line-height:1;letter-spacing:-.045em;font-weight:600;color:var(--text-heading)">Cutting-edge technologies</h2>
+          <p style="margin:0;max-width:32ch;font-size:clamp(15px,1.1vw,17px);line-height:1.55;font-weight:300;color:var(--text-muted)">Current frameworks, proven infrastructure, and pragmatic tooling to ship faster without sacrificing maintainability.</p>
+        </div>
+        <sc-if value="{{ graphOn }}" hint-placeholder-val="{{ true }}">
+          <div ref="{{ techRef }}" onMouseMove="{{ techMove }}" onMouseLeave="{{ leaveTech }}" style="position:relative;width:100%;aspect-ratio:1000/720">
+            <svg aria-hidden="true" viewBox="0 0 1000 720" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;overflow:visible">
+              <sc-for list="{{ edges }}" as="e" hint-placeholder-count="56">
+                <path d="{{ e.d }}" fill="none" stroke="{{ e.stroke }}" stroke-width="{{ e.w }}" stroke-opacity="{{ e.op }}" stroke-dasharray="{{ e.dash }}" vector-effect="non-scaling-stroke" style="transition:stroke .4s,stroke-opacity .4s;animation:{{ e.anim }}"></path>
+              </sc-for>
+            </svg>
+            <sc-for list="{{ dots }}" as="d" hint-placeholder-count="57">
+              <span aria-hidden="true" style="position:absolute;left:{{ d.x }};top:{{ d.y }};width:{{ d.s }};height:{{ d.s }};margin:{{ d.m }};border-radius:50%;background:{{ d.fill }};box-shadow:{{ d.glow }};opacity:{{ d.op }};transition:background .4s,opacity .4s,box-shadow .4s"></span>
+            </sc-for>
+            <sc-for list="{{ leafLabels }}" as="l" hint-placeholder-count="50">
+              <span style="position:absolute;left:{{ l.x }};top:{{ l.y }};transform:{{ l.tf }};font-size:{{ leafFs }};line-height:1;white-space:nowrap;color:{{ l.color }};opacity:{{ l.op }};transition:color .4s,opacity .4s;pointer-events:none">{{ l.t }}</span>
+            </sc-for>
+            <sc-for list="{{ hubs }}" as="u" hint-placeholder-count="6">
+              <button type="button" onMouseEnter="{{ u.enter }}" onFocus="{{ u.enter }}" onBlur="{{ leaveTech }}" aria-pressed="{{ u.on }}" style="position:absolute;left:{{ u.x }};top:{{ u.y }};transform:{{ u.tf }};min-height:44px;padding:0 6px;border:0;background:transparent;cursor:pointer;font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.16em;text-transform:uppercase;font-size:{{ hubFs }};font-weight:600;letter-spacing:.16em;white-space:nowrap;color:{{ u.color }};opacity:{{ u.op }};transition:color .4s,opacity .4s" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:2px">{{ u.t }}</button>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ graphOff }}" hint-placeholder-val="{{ false }}">
+          <ul style="list-style:none;margin:0;padding:0;border-top:1px solid var(--border)">
+            <sc-for list="{{ techList }}" as="g" hint-placeholder-count="6">
+              <li style="display:flex;flex-direction:column;gap:10px;padding:20px 0;border-bottom:1px solid var(--border)">
+                <span style="display:flex;align-items:center;gap:12px;font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--text-heading)"><span aria-hidden="true" style="width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)"></span>{{ g.t }}</span>
+                <span style="font-size:15px;line-height:1.6;color:var(--text-muted)">{{ g.list }}</span>
+              </li>
+            </sc-for>
+          </ul>
+        </sc-if>
+      </div>
+    </section>
+
+    <div data-band="deep" style="background:#1f1f21;--surface-1:#262628;--surface-2:#2c2c2e;--border-subtle:rgba(255,255,255,.06);color:var(--text-body);padding-bottom:clamp(96px,11vw,180px)">
+    <!-- SOLUTIONS REGISTRY -->
+    <section id="solutions" data-screen-label="Solutions" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin) 0">
+      <div data-r="" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:24px 40px">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <span aria-hidden="true" style="width:36px;height:3px;background:var(--accent)"></span>
+          <span style="font-family:var(--font-mono);font-size:var(--fs-label);text-transform:uppercase;letter-spacing:.16em;font-weight:500;color:var(--accent-text)">Solutions registry</span>
+          <span style="font-size:15px;font-weight:300;color:var(--text-muted)">( {{ solCount }} entries )</span>
+        </div>
+        <h2 style="margin:0;font-size:clamp(40px,5.6vw,92px);line-height:1;letter-spacing:-.05em;font-weight:600;color:var(--text-heading);text-align:right">What we build in depth</h2>
+      </div>
+      <ol style="list-style:none;margin:clamp(40px,5vw,72px) 0 0;padding:0;display:flex;flex-direction:column;gap:10px">
+        <sc-for list="{{ solutions }}" as="s" hint-placeholder-count="9">
+          <li data-r="">
+            <a href="{{ s.href }}" aria-label="{{ s.aria }}" data-sol="" style="display:grid;grid-template-columns:{{ regCols }};grid-template-areas:{{ regAreas }};align-items:center;gap:{{ regGap }};padding:{{ regPad }};border:1px solid var(--border-subtle);border-radius:8px;background:var(--surface-1);text-decoration:none;color:var(--text-heading);transition:border-color .3s,background-color .3s" style-hover="border-color:var(--border-strong);background:var(--surface-2)" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:2px">
+              <span aria-hidden="true" style="grid-area:ic;display:flex;align-items:center;justify-content:center;width:{{ icBox }};height:{{ icBox }};border:1px solid var(--border-subtle);border-radius:8px;background:var(--bg)"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--accent-text)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="{{ s.icon }}"></path></svg></span>
+              <span style="grid-area:t;display:flex;flex-direction:column;gap:8px;min-width:0">
+                <span style="font-size:clamp(18px,1.6vw,26px);line-height:1.2;letter-spacing:-.01em;font-weight:600;text-transform:uppercase;text-wrap:balance">{{ s.name }}</span>
+                <span style="font-family:var(--font-mono);font-size:var(--fs-label);text-transform:uppercase;letter-spacing:.16em;color:var(--text-muted)">{{ s.sub }}</span>
+              </span>
+              <span aria-hidden="true" style="grid-area:rule;display:{{ ruleDisp }};width:1px;height:56px;background:var(--border-strong)"></span>
+              <span style="grid-area:d;max-width:36ch;font-size:clamp(15px,1.1vw,17px);line-height:1.55;font-weight:300;color:var(--text-muted)">{{ s.desc }}</span>
+              <span style="grid-area:p;display:flex;align-items:baseline;gap:clamp(16px,2.4vw,40px);white-space:nowrap">
+                <span style="font-family:var(--font-mono);font-size:var(--fs-label);text-transform:uppercase;font-size:13px;letter-spacing:.04em;color:var(--text-muted)">{{ s.from }}</span>
+                <span style="font-size:clamp(18px,1.6vw,26px);font-weight:600;letter-spacing:-.01em;color:var(--accent-text)">{{ s.price }}</span>
+              </span>
+              <span aria-hidden="true" data-arrow="" style="grid-area:go;justify-self:end;display:flex;align-items:center;justify-content:center;width:{{ goBox }};height:{{ goBox }};border:1px solid var(--border-strong);border-radius:50%;color:var(--accent-text);transition:background-color .3s,border-color .3s,color .3s"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+            </a>
+          </li>
+        </sc-for>
+      </ol>
+    </section>
+    </div>
+
+    <!-- PROCESS (pinned horizontal) -->
+    <section id="workflow" data-screen-label="Process" data-pin="" style="position:relative;margin-top:0">
+      <div style="position:{{ pinPos }};top:0;height:{{ pinH }};display:flex;flex-direction:column;justify-content:center;overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+        <div style="display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;padding:clamp(48px,5vw,72px) var(--gx) 0">
+          <div style="display:flex;flex-direction:column;gap:6px">
+            
+            <h2 style="margin:0;font-size:clamp(40px,5.6vw,92px);line-height:1;letter-spacing:-.05em;font-weight:600;color:var(--text-heading)"><span style="font-weight:400">(</span> How we deliver <span style="font-weight:400">)</span></h2>
+          </div>
+          <p style="margin:0;max-width:40ch;align-self:center;font-size:clamp(15px,1.1vw,17px);line-height:1.6;font-weight:300;color:var(--text-muted)">A clear sequence from discovery through support, tuned for lean collaboration and production-ready outcomes.</p>
+        </div>
+        <div style="padding:clamp(32px,4vw,64px) 0 clamp(72px,7vw,104px);overflow-x:clip">
+          <ol data-track="" style="list-style:none;margin:0;padding:0 var(--gx);display:flex;flex-direction:{{ trackDir }};flex-wrap:{{ trackWrap }};gap:{{ trackGap }};width:{{ trackW }};box-sizing:border-box;will-change:transform">
+            <sc-for list="{{ process }}" as="p" hint-placeholder-count="6">
+              <li style="position:relative;flex:none;width:{{ stepW }};display:flex;flex-direction:column">
+                <div aria-hidden="true" style="position:relative;height:{{ vizH }};display:{{ vizDisp }}">
+                  <svg viewBox="0 0 100 150" preserveAspectRatio="none" style="position:absolute;left:{{ iconX }};top:0;width:{{ waveW }};height:150px;overflow:visible;display:{{ p.waveDisp }}"><path d="{{ p.wave }}" fill="none" stroke="var(--accent)" stroke-opacity=".75" stroke-width="1.4" vector-effect="non-scaling-stroke"></path></svg>
+                  <span style="position:absolute;left:{{ iconX }};top:44px;width:88px;height:88px;margin:-44px 0 0 -44px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--surface-2);box-shadow:0 0 0 1px var(--border-subtle),0 0 40px rgba(215,215,29,.07)"><span style="display:block;width:46px;height:46px;border-radius:0px;background:url({{ p.img }}) center / cover no-repeat"></span></span>
+                  <span style="position:absolute;left:{{ iconX }};top:88px;width:1px;height:{{ p.stem }};background:linear-gradient(var(--border-strong),transparent)"></span>
+                  <span style="position:absolute;left:{{ iconX }};top:{{ p.dotY }};width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)"></span>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:14px;padding-left:{{ textX }}">
+                  <span style="font-size:clamp(56px,5.4vw,92px);line-height:.9;letter-spacing:-.05em;font-weight:600;color:var(--text-heading)">{{ p.i }}<span style="display:inline-block;width:.16em;height:.16em;margin-left:.04em;border-radius:50%;background:var(--accent)"></span></span>
+                  <h3 style="margin:0;font-size:clamp(18px,1.6vw,26px);line-height:1.2;letter-spacing:-.02em;font-weight:500;color:var(--text-heading)">{{ p.t }}</h3>
+                  <p style="margin:0;max-width:34ch;font-size:clamp(15px,1.1vw,17px);line-height:1.55;font-weight:300;color:var(--text-muted)">{{ p.d }}</p>
+                  <ul style="list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px">
+                    <sc-for list="{{ p.b }}" as="b" hint-placeholder-count="3"><li style="padding:9px 16px;border:1px solid var(--border-strong);border-radius:4px;font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted)">{{ b }}</li></sc-for>
+                  </ul>
+                </div>
+              </li>
+            </sc-for>
+          </ol>
+        </div>
+        <div style="position:absolute;left:0;right:0;bottom:0;display:{{ pinBarShow }};align-items:center;gap:16px;padding:0 var(--gx) 28px;font-family:var(--font-mono);font-size:var(--fs-meta);color:var(--text-subtle)">
+          <span>01</span><span style="flex:1;height:1px;background:var(--border)"><span data-pin-bar="" style="display:block;height:1px;background:var(--accent);transform-origin:0 50%;transform:scaleX(0)"></span></span><span>06</span>
+        </div>
+      </div>
+    </section>
+
+    <div data-band="deep" style="background:#1f1f21;--surface-1:#262628;--surface-2:#2c2c2e;--border-subtle:rgba(255,255,255,.06);color:var(--text-body);padding-bottom:clamp(96px,11vw,180px)">
+    <!-- REGISTRY: partners + startups -->
+    <section id="partners" data-screen-label="Partners and startups" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin) 0">
+      <div data-r="" style="display:grid;grid-template-columns:{{ regHeadCols }};align-items:end;gap:20px 40px">
+        <span aria-hidden="true" style="display:{{ regSide }}"></span>
+        <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px">
+          <span style="font-family:var(--font-mono);font-size:var(--fs-label);text-transform:uppercase;letter-spacing:.16em;color:var(--text-muted)">Recognition &amp; capabilities index</span>
+          <h2 style="margin:0;font-size:clamp(40px,5.6vw,92px);line-height:1;letter-spacing:-.05em;font-weight:600;color:var(--text-heading);white-space:nowrap"><span style="font-weight:300">(</span> Who we build with <span style="font-weight:300">)</span></h2>
+        </div>
+        <p style="margin:0;max-width:34ch;justify-self:{{ regLeadAlign }};font-size:15px;line-height:1.6;font-weight:300;color:var(--text-muted);text-align:{{ regLeadText }}">From long-term partners to internal products and early-stage startups, we build across industries and ideas that move people forward.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:{{ regGrid }};gap:56px 0;margin-top:clamp(48px,5vw,80px)">
+        <div data-r="">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding-bottom:16px;border-bottom:1px solid var(--border)"><span style="display:flex;align-items:center;gap:14px;font-family:var(--font-mono);font-size:var(--fs-label);text-transform:uppercase;font-weight:500;letter-spacing:.16em;color:var(--text-heading)"><span aria-hidden="true" style="font-size:18px;letter-spacing:0;font-style:italic;color:var(--accent-text)">//</span>Partner registry</span><a href="/partners" data-allbtn="" style="display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 20px;border:1px solid var(--accent);border-radius:4px;font-family:var(--font-mono);font-size:var(--fs-label);text-transform:uppercase;font-weight:600;letter-spacing:.16em;text-decoration:none;color:var(--accent-text);transition:background-color .3s,color .3s" style-hover="background:var(--accent);color:#0b0b0f" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:2px">All partners<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+          <ol style="list-style:none;margin:0;padding:0">
+            <sc-for list="{{ partners }}" as="p" hint-placeholder-count="8">
+              <li><a href="{{ p.href }}" data-reg="" style="display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:clamp(16px,2.2vw,32px);padding:14px 4px;border-bottom:{{ p.bb }};text-decoration:none;color:var(--text-heading);transition:background-color .3s" style-hover="background:var(--surface-1)" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:2px">
+                <span aria-hidden="true" style="display:block;width:54px;height:54px;padding:3px;border-radius:8px;border:1px solid var(--border-strong);background:var(--surface-1)"><span style="display:block;width:46px;height:46px;border-radius:4px;background:url({{ p.logo }}) center / cover no-repeat"></span></span>
+                <span style="display:flex;flex-direction:column;gap:4px;min-width:0">
+                  <span style="font-size:17px;font-weight:500;letter-spacing:.01em;text-transform:uppercase;overflow-wrap:anywhere">{{ p.code }}</span>
+                  <span style="font-size:15px;font-weight:300;color:var(--text-muted)">{{ p.name }}</span>
+                </span>
+                <span aria-hidden="true" data-arrow="" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;border:1px solid var(--border-strong);color:var(--accent-text);transition:background-color .3s,border-color .3s,color .3s"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+              </a></li>
+            </sc-for>
+          </ol>
+        </div>
+        <div aria-hidden="true" style="display:{{ regSide }};position:relative;justify-self:center;width:1px;margin:24px 0;background:var(--border)"><span style="position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1px solid var(--border);background:var(--bg)"><img src="assets/logo.svg" alt="" style="width:40px;height:auto;display:block"></span></div>
+        <div data-r="">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding-bottom:16px;border-bottom:1px solid var(--border)"><span style="display:flex;align-items:center;gap:14px;font-family:var(--font-mono);font-size:var(--fs-label);text-transform:uppercase;font-weight:500;letter-spacing:.16em;color:var(--text-heading)"><span aria-hidden="true" style="font-size:18px;letter-spacing:0;font-style:italic;color:var(--accent-text)">//</span>In-house products</span><a href="/startups" data-allbtn="" style="display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 20px;border:1px solid var(--accent);border-radius:4px;font-family:var(--font-mono);font-size:var(--fs-label);text-transform:uppercase;font-weight:600;letter-spacing:.16em;text-decoration:none;color:var(--accent-text);transition:background-color .3s,color .3s" style-hover="background:var(--accent);color:#0b0b0f" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:2px">All products<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+          <ol style="list-style:none;margin:0;padding:0">
+            <sc-for list="{{ startups }}" as="s" hint-placeholder-count="8">
+              <li><a href="{{ s.href }}" data-reg="" style="display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:clamp(16px,2.2vw,32px);padding:14px 4px;border-bottom:{{ s.bb }};text-decoration:none;color:var(--text-heading);transition:background-color .3s" style-hover="background:var(--surface-1)" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:2px">
+                <span aria-hidden="true" style="display:block;width:54px;height:54px;padding:3px;border-radius:8px;border:1px solid var(--border-strong);background:var(--surface-1)"><span style="display:block;width:46px;height:46px;border-radius:4px;background:url({{ s.photo }}) center / cover no-repeat"></span></span>
+                <span style="display:flex;flex-direction:column;gap:4px;min-width:0">
+                  <span style="font-size:17px;font-weight:500;letter-spacing:.01em;text-transform:uppercase;overflow-wrap:anywhere">{{ s.code }}</span>
+                  <span style="font-size:15px;font-weight:300;color:var(--text-muted)">{{ s.tagline }}</span>
+                </span>
+                <span aria-hidden="true" data-arrow="" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;border:1px solid var(--border-strong);color:var(--accent-text);transition:background-color .3s,border-color .3s,color .3s"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+              </a></li>
+            </sc-for>
+          </ol>
+        </div>
+      </div>
+    </section>
+    </div>
+
+    <!-- CONTACT -->
+    <section id="contact" data-screen-label="Contact" style="position:relative;max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin) clamp(80px,8vw,140px)">
+      <div style="position:relative;display:grid;grid-template-columns:{{ contactCols }};column-gap:clamp(32px,3vw,48px);row-gap:56px;align-items:stretch">
+        <div data-r="" style="display:flex;flex-direction:column;gap:clamp(24px,2.4vw,36px)">
+          <h2 style="margin:0;font-size:clamp(56px,6.8vw,112px);line-height:.92;letter-spacing:-.05em;font-weight:600;color:var(--text-heading)">Let's start<br>building<span aria-hidden="true" style="display:inline-block;width:.16em;height:.16em;margin-left:.08em;border-radius:50%;background:var(--accent)"></span></h2>
+          <p style="margin:0;max-width:34ch;font-size:clamp(17px,1.4vw,22px);line-height:1.5;font-weight:300;color:var(--text-muted)">Ready to transform your ideas into reality? Our team is here to help you navigate your digital journey.</p>
+          <ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:{{ featCols }};gap:16px 20px">
+            <li style="display:flex;align-items:center;gap:14px"><span aria-hidden="true" style="flex:none;display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:var(--surface-1);border:1px solid var(--border-subtle)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-text)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"></path></svg></span><span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:15px;font-weight:500;color:var(--text-heading)">Fast response</span><span style="font-size:13px;color:var(--text-muted)">Within 24 hours</span></span></li>
+            <li style="display:flex;align-items:center;gap:14px"><span aria-hidden="true" style="flex:none;display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:var(--surface-1);border:1px solid var(--border-subtle)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-text)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11h12v10H6zM8.5 11V8a3.5 3.5 0 0 1 7 0v3M12 15v2"></path></svg></span><span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:15px;font-weight:500;color:var(--text-heading)">Confidential</span><span style="font-size:13px;color:var(--text-muted)">Your ideas stay private</span></span></li>
+            <li style="display:flex;align-items:center;gap:14px"><span aria-hidden="true" style="flex:none;display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:var(--surface-1);border:1px solid var(--border-subtle)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-text)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v15H4zM4 10h16M8 3v5M16 3v5M8 14h3"></path></svg></span><span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:15px;font-weight:500;color:var(--text-heading)">Free consultation</span><span style="font-size:13px;color:var(--text-muted)">Discuss your project</span></span></li>
+          </ul>
+          <div style="display:flex;flex-direction:column;gap:24px;padding:clamp(20px,2vw,28px);border:1px solid var(--border);border-radius:14px;background:var(--surface-1)">
+            <figure style="margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(18px,2vw,28px);align-items:center">
+              <img src="https://webart.work/landing/den.jpg" alt="Web Art Work team member" loading="lazy" style="display:block;width:clamp(104px,10vw,144px);aspect-ratio:1;object-fit:cover;border-radius:8px;background:var(--surface-2)">
+              <figcaption style="display:flex;flex-direction:column;gap:10px"><span style="font-family:var(--font-mono);font-size:var(--fs-label);text-transform:uppercase;font-weight:500;letter-spacing:.16em;color:var(--accent-text)">Meet our team</span><span style="font-size:clamp(17px,1.4vw,22px);line-height:1.35;font-weight:500;letter-spacing:-.01em;color:var(--text-heading);text-wrap:balance">Expert developers ready to bring your vision to life.</span></figcaption>
+            </figure>
+            <div style="display:grid;grid-template-columns:{{ cardCols }};gap:20px 28px;padding-top:22px;border-top:1px solid var(--border)">
+              <div style="display:flex;gap:14px;align-items:flex-start"><span aria-hidden="true" style="flex:none;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--bg);border:1px solid var(--border-subtle)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-text)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"></path></svg></span><span style="display:flex;flex-direction:column;gap:4px"><span style="font-family:var(--font-mono);font-size:var(--fs-label);text-transform:uppercase;letter-spacing:.16em;color:var(--text-muted)">Call us</span><a href="tel:+380971862487" style="display:inline-flex;align-items:center;min-height:44px;font-size:clamp(18px,1.4vw,22px);font-weight:600;text-decoration:none;color:var(--text-heading)" style-hover="color:var(--accent-text)">+38 097 18 62 487</a><span style="font-size:13px;line-height:1.5;color:var(--text-muted)">Mon–Fri, 9–18 · Weekend support available</span></span></div>
+              <div style="display:flex;gap:14px;align-items:flex-start"><span aria-hidden="true" style="flex:none;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--bg);border:1px solid var(--border-subtle)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-text)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></span><span style="display:flex;flex-direction:column;gap:6px"><span style="font-family:var(--font-mono);font-size:var(--fs-label);text-transform:uppercase;letter-spacing:.16em;color:var(--text-muted)">Visit us</span><span style="font-size:15px;line-height:1.5;font-weight:500;color:var(--text-heading)">Ohiyenka Street, 63, Kamianets-Podilskyi, Khmelnytskyi Region, 32301</span><span style="font-size:13px;color:var(--text-muted)">Our headquarters</span></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div data-r="" style="display:flex;flex-direction:column;padding:clamp(24px,2.6vw,40px);border:1px solid var(--border);border-radius:14px;background:var(--surface-1)">
+          <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+            <form novalidate="" onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:22px">
+              <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px 16px;flex-wrap:wrap;margin-bottom:8px">
+                <h3 style="margin:0;font-size:clamp(26px,2.2vw,34px);letter-spacing:-.035em;font-weight:600;color:var(--text-heading)">Send us a message</h3>
+                <span style="font-size:13px;color:var(--text-muted)">24h · Confidential · Free consultation</span>
+              </div>
+              <sc-if value="{{ hasPkg }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:6px 6px 6px 16px;border:1px solid var(--accent);border-radius:8px">
+                  <span style="font-size:15px;color:var(--text-heading)"><span style="font-family:var(--font-mono);font-size:var(--fs-label);text-transform:uppercase;letter-spacing:.16em;color:var(--accent-text);margin-right:10px">Package</span>{{ pkgLabel }}</span>
+                  <button type="button" onClick="{{ clearPkg }}" style="min-height:44px;padding:0 12px;background:none;border:0;font:inherit;font-size:14px;color:var(--text-muted);cursor:pointer;text-decoration:underline" style-hover="color:var(--text-heading)" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:2px">Remove</button>
+                </div>
+              </sc-if>
+              <label style="display:flex;flex-direction:column;gap:10px">
+                <span style="font-family:var(--font-mono);font-size:var(--fs-label);text-transform:uppercase;font-weight:500;letter-spacing:.16em;color:var(--text-heading)">Full name *</span>
+                <input name="name" autocomplete="name" placeholder="Your name" value="{{ form.name }}" onChange="{{ onName }}" aria-invalid="{{ err.nameInvalid }}" style="width:100%;box-sizing:border-box;background:var(--bg);border-radius:8px;color:var(--text-heading);font:inherit;font-size:16px;outline:none;transition:border-color .25s,box-shadow .25s;height:60px;padding:0 20px;border:1px solid {{ err.nameBorder }}" style-focus="border-color:var(--accent);box-shadow:0 0 0 3px rgba(215,215,29,.15)">
+                <span role="alert" style="font-size:13px;color:var(--text-heading)">{{ err.name }}</span>
+              </label>
+              <label style="display:flex;flex-direction:column;gap:10px">
+                <span style="font-family:var(--font-mono);font-size:var(--fs-label);text-transform:uppercase;font-weight:500;letter-spacing:.16em;color:var(--text-heading)">Email address *</span>
+                <input name="email" type="email" autocomplete="email" placeholder="you@example.com" value="{{ form.email }}" onChange="{{ onEmail }}" aria-invalid="{{ err.emailInvalid }}" style="width:100%;box-sizing:border-box;background:var(--bg);border-radius:8px;color:var(--text-heading);font:inherit;font-size:16px;outline:none;transition:border-color .25s,box-shadow .25s;height:60px;padding:0 20px;border:1px solid {{ err.emailBorder }}" style-focus="border-color:var(--accent);box-shadow:0 0 0 3px rgba(215,215,29,.15)">
+                <span role="alert" style="font-size:13px;color:var(--text-heading)">{{ err.email }}</span>
+              </label>
+              <label style="display:flex;flex-direction:column;gap:10px">
+                <span style="font-family:var(--font-mono);font-size:var(--fs-label);text-transform:uppercase;font-weight:500;letter-spacing:.16em;color:var(--text-heading)">Project details *</span>
+                <textarea name="details" rows="5" value="{{ form.details }}" onChange="{{ onDetails }}" aria-invalid="{{ err.detailsInvalid }}" placeholder="What are you building, and by when?" style="width:100%;box-sizing:border-box;background:var(--bg);border-radius:8px;color:var(--text-heading);font:inherit;font-size:16px;outline:none;transition:border-color .25s,box-shadow .25s;min-height:150px;padding:18px 20px;line-height:1.5;resize:vertical;border:1px solid {{ err.detailsBorder }}" style-focus="border-color:var(--accent);box-shadow:0 0 0 3px rgba(215,215,29,.15)"></textarea>
+                <span role="alert" style="font-size:13px;color:var(--text-heading)">{{ err.details }}</span>
+              </label>
+              <button type="submit" style="display:flex;align-items:center;justify-content:center;gap:12px;height:60px;margin-top:4px;border:0;border-radius:8px;background:var(--accent);color:#0b0b0f;font:inherit;font-size:17px;font-weight:600;cursor:pointer;transition:filter .2s,transform .15s" style-hover="filter:brightness(.92)" style-active="transform:translateY(1px)" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:3px">Send message<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"></path></svg></button>
+            </form>
+          </sc-if>
+          <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+            <div role="status" style="display:flex;flex-direction:column;gap:16px;min-height:380px;justify-content:center">
+              <span style="font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--accent-text)">Message ready</span>
+              <h3 style="margin:0;font-size:clamp(32px,3vw,48px);line-height:1.05;letter-spacing:-.04em;font-weight:500;color:var(--text-heading)">Thank you, {{ form.name }}.</h3>
+              <p style="margin:0;font-size:var(--fs-body);line-height:var(--lh-body);color:var(--text-muted)">We'll respond within 24 hours at {{ form.email }}.</p>
+              <div><x-import component-from-global-scope="WebArtWorkDesignSystem_3241df.Button" variant="text" arrow="right" on-click="{{ reset }}" hint-size="200px,44px">Send another message</x-import></div>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dc-import name="WawFooter" current="Home" quote-href="#contact" style="display:block" hint-size="100%,620px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroBg&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Web v3&quot;,&quot;Web v2&quot;,&quot;Web v1&quot;],&quot;default&quot;:&quot;Web v3&quot;,&quot;tsType&quot;:&quot;'Web v3' | 'Web v2' | 'Web v1'&quot;,&quot;section&quot;:&quot;Hero&quot;}}">
+class Component extends DCLogic {
+  state = { mode: 'dark', w: window.innerWidth, ok: !!window.WAW_SITE, loading: true, menu: false, slide: 0, hoverCat: -1, hoverTech: null, form: { name: '', email: '', details: '' }, err: {}, sent: false, pkg: null };
+  E = 'cubic-bezier(.16,1,.3,1)';
+  componentDidMount() {
+    this.reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    setTimeout(() => this.webFx(), 60);
+    let seen = false; try { seen = !!sessionStorage.getItem('waw-pl'); } catch (e) {}
+    if (!this.reduce) document.querySelectorAll('[data-ch]').forEach(el => { el.style.transform = 'translateY(105%)'; });
+    if (!this.reduce) document.querySelectorAll('[data-hi]').forEach(el => { el.style.opacity = '0'; });
+    if (this.reduce || seen) { this.setState({ loading: false }); setTimeout(() => this.intro(), 30); } else setTimeout(() => this.preload(), 0);
+    this.onResize = () => { this.setState({ w: window.innerWidth }); setTimeout(() => this.layout(), 30); };
+    addEventListener('resize', this.onResize);
+    this.onScroll = () => { if (!this.raf) this.raf = requestAnimationFrame(() => { this.raf = 0; this.tick(); }); };
+    addEventListener('scroll', this.onScroll, { passive: true });
+    this.onKey = e => { if (e.key === 'Escape' && this.state.menu) this.setMenu(false); };
+    addEventListener('keydown', this.onKey);
+    this.timer = setInterval(() => { if (!this.paused && !this.reduce) this.setState(s => ({ slide: (s.slide + 1) % 3 })); }, 5000);
+    const boot = () => {
+      const S = window.WAW_SITE;
+      const P = { basic: 'Basic, $200', pro: 'Pro, $500', extended: 'Extended, $900' };
+      const pkg = S.param('package'), topic = S.param('topic');
+      const details = P[pkg] ? "I'd like to start with the " + P[pkg].split(',')[0] + ' package.' : topic === 'call' ? "I'd like to book a free 15-minute call." : '';
+      this.setState({ ok: true, mode: S.theme.get(), pkg: P[pkg] || null, form: { ...this.state.form, details } });
+      setTimeout(() => { this.setupReveals(); this.setupMotion(); this.layout(); this.tick(); if (location.hash) { const el = document.getElementById(location.hash.slice(1)); if (el) scrollTo({ top: el.getBoundingClientRect().top + scrollY - 72 }); } }, 80);
+    };
+    if (window.WAW_SITE) boot(); else this.t = setInterval(() => { if (window.WAW_SITE) { clearInterval(this.t); boot(); } }, 50);
+  }
+  componentWillUnmount() {
+    cancelAnimationFrame(this.webRaf); if (this.webRO) this.webRO.disconnect(); if (this.webResize) removeEventListener('resize', this.webResize);
+    removeEventListener('resize', this.onResize); removeEventListener('scroll', this.onScroll); removeEventListener('keydown', this.onKey);
+    clearInterval(this.timer); clearInterval(this.t); if (this.io) this.io.disconnect(); document.body.style.overflow = '';
+  }
+  componentDidUpdate() {
+    const { loading, w } = this.state;
+    if (this._pl && !loading) setTimeout(() => this.setupReveals(), 50);
+    if (this._pw !== undefined && this._pw !== w) setTimeout(() => this.layout(), 30);
+    this._pl = loading; this._pw = w;
+  }
+  preload() {
+    const root = document.querySelector('[data-pl]');
+    if (!root) { this.setState({ loading: false }); this.intro(); return; }
+    const num = root.querySelector('[data-pl-num]'), bar = root.querySelector('[data-pl-bar]');
+    const t0 = Date.now(), D = 1300;
+    let done = false;
+    const finish = () => {
+      if (done) return; done = true; clearInterval(iv);
+      try { sessionStorage.setItem('waw-pl', '1'); } catch (e) {}
+      try { root.animate([{ transform: 'none' }, { transform: 'translateY(-100%)' }], { duration: 1000, easing: 'cubic-bezier(.77,0,.18,1)', fill: 'forwards' }); } catch (e) {}
+      setTimeout(() => this.intro(), 380);
+      setTimeout(() => this.setState({ loading: false }), 1000);
+    };
+    const iv = setInterval(() => {
+      const p = Math.min(1, (Date.now() - t0) / D), e = 1 - Math.pow(1 - p, 3);
+      if (num) num.textContent = String(Math.round(e * 100)).padStart(2, '0');
+      if (bar) bar.style.transform = 'scaleX(' + e + ')';
+      if (p >= 1) finish();
+    }, 16);
+    setTimeout(finish, 1800);
+  }
+  intro() {
+    if (this.introDone) return; this.introDone = true;
+    const ch = document.querySelectorAll('[data-ch]'), hi = document.querySelectorAll('[data-hi]');
+    if (!this.reduce) {
+      ch.forEach((el, i) => { try { el.animate([{ transform: 'translateY(105%)' }, { transform: 'none' }], { duration: 1300, delay: i * 55, easing: this.E }); } catch (e) {} el.style.transform = ''; });
+      hi.forEach((el, i) => { try { el.animate([{ opacity: 0, transform: 'translateY(16px)' }, { opacity: 1, transform: 'none' }], { duration: 1000 + i * 90, easing: this.E }); } catch (e) {} el.style.opacity = ''; });
+    }
+  }
+  setupReveals() {
+    if (this.reduce || this.state.loading) return;
+    if (!this.io) this.io = new IntersectionObserver(es => es.forEach(en => {
+      if (!en.isIntersecting) return;
+      const el = en.target; this.io.unobserve(el);
+      el.style.opacity = '';
+      try { el.animate([{ opacity: 0, transform: 'translateY(48px)' }, { opacity: 1, transform: 'none' }], { duration: 1100, easing: this.E }); } catch (e) {}
+    }), { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('[data-r]:not([data-rd])').forEach(el => {
+      el.setAttribute('data-rd', '');
+      if (el.getBoundingClientRect().top < innerHeight * .92) return;
+      el.style.opacity = '0'; this.io.observe(el);
+    });
+  }
+  setupMotion() {
+    if (this.reduce) return;
+    document.querySelectorAll('[data-mq]').forEach(el => {
+      if (el._a) return;
+      const rev = el.hasAttribute('data-mq-rev');
+      el._a = el.animate([{ transform: rev ? 'translateX(-50%)' : 'none' }, { transform: rev ? 'none' : 'translateX(-50%)' }], { duration: +el.getAttribute('data-mq-dur') || 40000, iterations: Infinity });
+      el.parentElement.addEventListener('mouseenter', () => el._a.updatePlaybackRate(.25));
+      el.parentElement.addEventListener('mouseleave', () => el._a.updatePlaybackRate(1));
+    });
+    document.querySelectorAll('[data-blink]').forEach((el, i) => el.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 1000, delay: i * 230, iterations: Infinity, easing: 'steps(1,end)' }));
+  }
+  webFx() {
+    const cv = document.querySelector('[data-web-fx]'), bg = document.querySelector('[data-hero-bg]'), glow = document.querySelector('[data-web-glow]');
+    if (!cv || !bg) return;
+    const hero = cv.closest('section'), ctx = cv.getContext('2d'), IW = +bg.dataset.iw || 1672, IH = +bg.dataset.ih || 940, CXr = (+bg.dataset.cx || 1000) / IW, CYr = (+bg.dataset.cy || 420) / IH;
+    let W = 0, H = 0, cx = 0, cy = 0, sc = 1, dpr = Math.min(2, devicePixelRatio || 1), mx = 0, my = 0, tx = 0, ty = 0;
+    const strands = [-152, -128, -103, -72, -38, -8, 18, 44, 63, 112, 148, 172].map(d => d * Math.PI / 180);
+    const size = () => {
+      const r = hero.getBoundingClientRect(); W = r.width; H = r.height;
+      cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const bw = bg.offsetWidth || W * 1.06, bh = bg.offsetHeight || H * 1.06, ox = bg.offsetWidth ? bg.offsetLeft : -W * .03, oy = bg.offsetHeight ? bg.offsetTop : -H * .03; sc = Math.max(bw / IW, bh / IH);
+      const px = parseFloat(getComputedStyle(bg).backgroundPositionX) / 100 || .58, py = parseFloat(getComputedStyle(bg).backgroundPositionY) / 100 || .45;
+      cx = ox + (bw - IW * sc) * px + CXr * IW * sc; cy = oy + (bh - IH * sc) * py + CYr * IH * sc;
+    };
+    size(); this.webResize = size; addEventListener('resize', size);
+    if (window.ResizeObserver) { this.webRO = new ResizeObserver(() => size()); this.webRO.observe(hero); }
+    if (this.reduce) { if (glow) glow.style.transform = 'translate(' + cx + 'px,' + cy + 'px)'; return; }
+    hero.addEventListener('pointermove', e => { const r = hero.getBoundingClientRect(); mx = (e.clientX - r.left) / r.width - .5; my = (e.clientY - r.top) / r.height - .5; });
+    const motes = Array.from({ length: 70 }, () => ({ a: Math.random() * 6.283, d: Math.random(), s: .2 + Math.random() * .8, r: .6 + Math.random() * 1.8, ph: Math.random() * 6.283 }));
+    const pulses = [];
+    const spawn = () => { pulses.push({ a: strands[(Math.random() * strands.length) | 0] + (Math.random() - .5) * .05, t: 0, v: .0025 + Math.random() * .003, w: .6 + Math.random() * .8 }); };
+    for (let i = 0; i < 4; i++) { spawn(); pulses[i].t = Math.random(); }
+    let last = performance.now(), acc = 0;
+    const tick = now => {
+      this.webRaf = requestAnimationFrame(tick);
+      const dt = Math.min(50, now - last); last = now; const T = now / 1000;
+      if (hero.getBoundingClientRect().bottom < 0) return;
+      tx += (mx - tx) * .04; ty += (my - ty) * .04;
+      const z = 1.03 + Math.sin(T * .18) * .03, rot = Math.sin(T * .11) * .9;
+      bg.style.transform = 'translate(' + (-tx * 18) + 'px,' + (-ty * 14) + 'px) scale(' + z + ') rotate(' + rot + 'deg)';
+      const ox = cx - tx * 18, oy = cy - ty * 14;
+      if (glow) { const p = .55 + Math.sin(T * 1.6) * .18 + Math.sin(T * 3.7) * .05; glow.style.opacity = p; glow.style.transform = 'translate(' + ox + 'px,' + oy + 'px) scale(' + (.9 + p * .35) + ')'; }
+      ctx.clearRect(0, 0, W, H);
+      const R = Math.hypot(W, H);
+      motes.forEach(m => {
+        m.d += m.s * dt * .00004; if (m.d > 1) { m.d = 0; m.a = Math.random() * 6.283; }
+        const dd = Math.pow(m.d, 1.4) * R * .75, x = ox + Math.cos(m.a + Math.sin(T * .3 + m.ph) * .04) * dd, y = oy + Math.sin(m.a) * dd * .9;
+        const al = Math.sin(m.d * Math.PI) * (.35 + .35 * Math.sin(T * 2 + m.ph));
+        ctx.fillStyle = 'rgba(225,235,60,' + al.toFixed(3) + ')'; ctx.beginPath(); ctx.arc(x, y, m.r * (1 + m.d), 0, 6.283); ctx.fill();
+      });
+      acc += dt; if (acc > 650) { acc = 0; if (pulses.length < 9) spawn(); }
+      for (let i = pulses.length - 1; i >= 0; i--) {
+        const p = pulses[i]; p.t += p.v * dt * .06 * 6; if (p.t > 1) { pulses.splice(i, 1); continue; }
+        const e = p.t * p.t, d1 = e * R * .7, d0 = Math.max(0, d1 - 90 - 160 * e);
+        const x1 = ox + Math.cos(p.a) * d1, y1 = oy + Math.sin(p.a) * d1, x0 = ox + Math.cos(p.a) * d0, y0 = oy + Math.sin(p.a) * d0;
+        const al = Math.sin(p.t * Math.PI);
+        const g = ctx.createLinearGradient(x0, y0, x1, y1); g.addColorStop(0, 'rgba(215,215,29,0)'); g.addColorStop(1, 'rgba(240,250,90,' + (al * .9).toFixed(3) + ')');
+        ctx.strokeStyle = g; ctx.lineWidth = p.w * (1 + e * 1.5); ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.stroke();
+        ctx.fillStyle = 'rgba(250,255,140,' + al.toFixed(3) + ')'; ctx.shadowColor = 'rgba(230,240,40,.9)'; ctx.shadowBlur = 12; ctx.beginPath(); ctx.arc(x1, y1, 1.6 + e * 2.4, 0, 6.283); ctx.fill(); ctx.shadowBlur = 0;
+      }
+    };
+    this.webRaf = requestAnimationFrame(tick);
+  }
+  pinOn() { return this.state.w >= 1024 && !this.reduce; }
+  layout() {
+    const pin = document.querySelector('[data-pin]'), track = document.querySelector('[data-track]');
+    if (pin && track) {
+      if (this.pinOn()) { pin.style.height = (innerHeight + Math.max(0, track.scrollWidth - innerWidth)) + 'px'; }
+      else { pin.style.height = ''; track.style.transform = ''; }
+    }
+    document.querySelectorAll('[data-fit]').forEach(el => {
+      el.style.fontSize = ''; const box = el.parentElement.clientWidth, cur = parseFloat(getComputedStyle(el).fontSize);
+      if (el.scrollWidth > 0) el.style.fontSize = (cur * box / el.scrollWidth) * .995 + 'px';
+    });
+    this.tick();
+  }
+  tick() {
+    const y = scrollY;
+    if (!this.reduce) {
+      const box = document.querySelector('[data-words]');
+      if (box) {
+        const r = box.getBoundingClientRect(), ws = box.querySelectorAll('[data-w]');
+        const p = Math.max(0, Math.min(1, (innerHeight * .8 - r.top) / (r.height + innerHeight * .3)));
+        const n = ws.length, lit = Math.round(p * n);
+        ws.forEach((w, i) => { w.style.opacity = i < lit ? '1' : '.16'; });
+      }
+    }
+    const pin = document.querySelector('[data-pin]'), track = document.querySelector('[data-track]'), bar = document.querySelector('[data-pin-bar]');
+    if (pin && track && this.pinOn()) {
+      const r = pin.getBoundingClientRect(), span = r.height - innerHeight;
+      const p = span > 0 ? Math.max(0, Math.min(1, -r.top / span)) : 0;
+      track.style.transform = 'translate3d(' + (-p * Math.max(0, track.scrollWidth - innerWidth)) + 'px,0,0)';
+      if (bar) bar.style.transform = 'scaleX(' + p + ')';
+    }
+  }
+  setMenu(open) {
+    document.body.style.overflow = open ? 'hidden' : '';
+    const hdr = document.querySelector('[data-hdr]'); if (hdr) hdr.style.transform = '';
+    this.setState({ menu: open });
+  }
+  validate(f) {
+    const e = {};
+    if (!f.name.trim()) e.name = 'Enter your name';
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email.trim())) e.email = f.email.trim() ? 'Check the email address' : 'Enter your email';
+    if (f.details.trim().length < 10) e.details = 'Tell us a little about the project (10+ characters)';
+    return e;
+  }
+  renderVals() {
+    const S = window.WAW_SITE || { stats: [], pillars: [], services: [], serviceCategories: [], solutions: [], tech: [], philosophy: [], process: [], partners: [], startups: [], social: [] };
+    const { w, form, err, sent, pkg, slide, hoverCat, hoverTech } = this.state;
+    const hb = this.props.heroBg ?? 'Web v3';
+const ci = (x, y, r) => 'M' + (x - r) + ' ' + y + 'a' + r + ' ' + r + ' 0 1 0 ' + 2 * r + ' 0a' + r + ' ' + r + ' 0 1 0 ' + -2 * r + ' 0';
+    const SVC_ICON = {
+      'web-development': 'M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5.5l-3 13',
+      'mobile-development': 'M8 3h8a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zM11 18h2',
+      'back-end-development': 'M12 3l8 4.5v9L12 21l-8-4.5v-9zM4 7.5l8 4.5 8-4.5M12 12v9',
+      'ui-ux-design': 'M4 20l3-9 7-7 6 6-7 7zM4 20l6-6' + ci(12, 12, 1.5),
+      'smart-contract-development': 'M13 3L5 14h6l-1 7 8-11h-6z',
+      'blockchain-solutions': 'M10 14l4-4M9 7.5l2-2a4 4 0 0 1 5.5 5.5l-2 2M15 16.5l-2 2A4 4 0 0 1 7.5 13l2-2',
+      'unity-development': 'M12 3l8 4.5v9L12 21l-8-4.5v-9zM12 7.5l4 2.25v4.5L12 16.5l-4-2.25v-4.5zM4 7.5l4 2.25M20 7.5l-4 2.25M12 21v-4.5',
+      'augmented-virtual-reality-solutions': 'M3 8h18v9h-6l-3-3-3 3H3z' + ci(7.5, 12.5, 1) + ci(16.5, 12.5, 1),
+      'devops-cloud-infrastructure': 'M7 18a4 4 0 0 1-.6-7.95 6 6 0 0 1 11.6 1.5A3.25 3.25 0 0 1 17.5 18z',
+      'system-integration': 'M4 9h14l-3.5-3.5M20 15H6l3.5 3.5',
+      'data-solutions': 'M5 20v-8M10 20V5M15 20v-6M20 20V9',
+      'cybersecurity': 'M12 3l7 3v5c0 5-3 8.2-7 10-4-1.8-7-5-7-10V6zM9 12l2 2 4-4',
+      'quality-assurance': ci(12, 12, 9) + 'M8 12l3 3 5-6',
+      'technical-support-services': 'M4 15v-3a8 8 0 0 1 16 0v3M4 14h3v6H4zM17 14h3v6h-3z',
+      'business-analysis-strategy': ci(12, 12, 9) + 'M15.5 8.5l-2 5-5 2 2-5z',
+      'it-consulting': 'M4 5h16v11h-9l-5 4v-4H4zM8.5 10.5h.01M12 10.5h.01M15.5 10.5h.01',
+      'chief-technology-officer-services': 'M12 3l9 5-9 5-9-5zM3 12.5l9 5 9-5M3 16.5l9 5 9-5',
+      'client-onboarding-implementation': 'M5 21V4M5 4h12l-2.5 4L17 12H5',
+      'human-resource': ci(9, 8, 3) + 'M3 20a6 6 0 0 1 12 0M16 5a3 3 0 0 1 0 6M18 14.5a5 5 0 0 1 3 5.5',
+      'corporate-training-development': 'M3 5h6a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H3zM21 5h-6a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h7z',
+      'digital-marketing': 'M3 12h4l3-7 4 14 3-7h4',
+      'search-engine-optimization': ci(11, 11, 7) + 'M16 16l5 5',
+      'social-media-marketing': ci(18, 6, 2.5) + ci(6, 12, 2.5) + ci(18, 18, 2.5) + 'M8.2 10.8l7.6-3.6M8.2 13.2l7.6 3.6',
+      'influencer-marketing': 'M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z'
+    };
+    const SOL_SUB = { website: 'Digital presence', market: 'Sales solutions', crm: 'Process automation', 'virtual-tour': 'Immersive experiences', app: 'iOS / Android / Web', unity: 'Games / AR / VR', ai: 'Agents / Chatbots / Workflows', blockchain: 'Smart contracts / dApps', quantum: 'IBM Quantum' };
+    const SOL_ICON = {
+      website: 'M3 4h18v12H3zM8 20h8M12 16v4',
+      market: 'M3 4h2.5l2.2 10.5h10.6L20.5 7H6.6' + ci(9, 19, 1.5) + ci(17, 19, 1.5),
+      crm: 'M12 3c4.4 0 8 1.3 8 3s-3.6 3-8 3-8-1.3-8-3 3.6-3 8-3zM4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6',
+      'virtual-tour': 'M12 3l8 4.5v9L12 21l-8-4.5v-9zM4 7.5l8 4.5 8-4.5M12 12v9',
+      app: 'M8 3h8a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zM11 18h2',
+      unity: 'M7 7h10a4 4 0 0 1 4 4v3.5a3 3 0 0 1-5.4 1.8L14.5 15h-5l-1.1 1.3A3 3 0 0 1 3 14.5V11a4 4 0 0 1 4-4zM7 10v3M5.5 11.5h3M15.5 11h.01M17.5 13h.01',
+      ai: 'M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z',
+      blockchain: 'M4 4h6v6H4zM14 14h6v6h-6zM10 7h4a3 3 0 0 1 3 3v4M14 17h-4a3 3 0 0 1-3-3v-4',
+      quantum: ci(12, 12, 1.5) + 'M12 3c2.5 0 3.5 4 3.5 9s-1 9-3.5 9-3.5-4-3.5-9 1-9 3.5-9zM4.2 7.5c1.2-2.2 5.3-1.1 9.6 1.4s7.2 5.6 6 7.6-5.3 1.1-9.6-1.4-7.2-5.6-6-7.6z'
+    };
+    const P_ICON = ['M12 3l1.8 7.2L21 12l-7.2 1.8L12 21l-1.8-7.2L3 12l7.2-1.8z', 'M5 6c0-1.1 3.1-2 7-2s7 .9 7 2-3.1 2-7 2-7-.9-7-2zM5 6v4c0 1.1 3.1 2 7 2s7-.9 7-2V6M5 10v4c0 1.1 3.1 2 7 2s7-.9 7-2v-4M5 14v4c0 1.1 3.1 2 7 2s7-.9 7-2v-4', ci(9, 12, 5.5) + ci(15, 12, 5.5), 'M12 4l9 16H3z', 'M12 3l8 4.5v9L12 21l-8-4.5v-9zM4 7.5l8 4.5 8-4.5M12 12v9', ci(8.5, 8.5, 3.5) + ci(15.5, 8.5, 3.5) + ci(8.5, 15.5, 3.5) + ci(15.5, 15.5, 3.5), 'M12 3l9 5-9 5-9-5zM3 12.5l9 5 9-5M3 16.5l9 5 9-5', 'M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z'];
+    const ST_ICON = ['M12 21v-9M12 12c0-4 3-7 7-7 0 4-3 7-7 7zM12 14c0-3.3-2.7-6-6-6 0 3.3 2.7 6 6 6z', 'M12 20s-7.5-4.5-7.5-10A4.3 4.3 0 0 1 12 7.3 4.3 4.3 0 0 1 19.5 10c0 5.5-7.5 10-7.5 10z', 'M9 3h6v6h6v6h-6v6H9v-6H3V9h6z', 'M12 8a2 2 0 1 1 2-2M12 8v2.5L3 18h18l-9-7.5', ci(8, 8, 2.5) + ci(16, 8, 2.5) + 'M3 19a5 5 0 0 1 10 0M11 19a5 5 0 0 1 10 0', 'M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5zM16 10h1.5a2.5 2.5 0 0 1 0 5H16M8 3.5v2M11 3v2.5M14 3.5v2', 'M3 9c1.5 0 1.5-1.5 3-1.5S7.5 9 9 9s1.5-1.5 3-1.5S13.5 9 15 9s1.5-1.5 3-1.5S19.5 9 21 9M3 13.5c1.5 0 1.5-1.5 3-1.5s1.5 1.5 3 1.5 1.5-1.5 3-1.5 1.5 1.5 3 1.5 1.5-1.5 3-1.5 1.5 1.5 3 1.5M3 18c1.5 0 1.5-1.5 3-1.5S7.5 18 9 18s1.5-1.5 3-1.5 1.5 1.5 3 1.5 1.5-1.5 3-1.5S19.5 18 21 18', 'M6 4h12l3 5-9 11L3 9zM3 9h18M9 4l3 16M15 4l-3 16'];
+    const pad = n => String(n).padStart(2, '0');
+    const wide = w >= 1024, mid = w >= 768;
+    const set = k => ev => { const v = ev.target.value; this.setState(s => { const f = { ...s.form, [k]: v }; const e = { ...s.err }; if (e[k]) e[k] = this.validate(f)[k]; return { form: f, err: e }; }); };
+    const field = k => ({ [k]: err[k] || '', [k + 'Invalid']: err[k] ? 'true' : 'false', [k + 'Border']: err[k] ? 'var(--text-heading)' : 'var(--border-strong)' });
+    const snake = s => s.toUpperCase().replace(/&/g, 'AND').replace(/[^A-Z0-9$,.]+/g, '_').replace(/^_|_$/g, '');
+    const shortCat = { development: 'Product', infrastructure: 'Infrastructure', consulting: 'Consulting', marketing: 'Growth' };
+    const nav = [['Home', '/', 'Start here'], ['Services', '/services', '24 services'], ['Solutions', '/solutions', '9 solutions'], ['Partners', '/partners', 'Who we build for'], ['Startups', '/startups', 'Built in-house'], ['Pricing', '/pricing', 'From $200'], ['Contact', '#contact', 'Free consultation']];
+    const heroIds = ['website', 'market', 'crm', 'app', 'unity', 'ai', 'blockchain', 'quantum'];
+    // tech field
+    const techWords = [];
+    S.tech.forEach(([cat, list]) => list.split(', ').forEach(t => techWords.push({ cat, t })));
+    const cols = wide ? 6 : mid ? 4 : 2;
+    const field_ = techWords.map((x, i) => {
+      const big = i % 7 === 3, on = hoverTech === x.cat;
+      return { t: x.t, pad: ((i * 37) % 5) * (wide ? 14 : 6) + 'px', font: big ? 'var(--font-sans)' : 'var(--font-mono)', size: big ? 'clamp(20px,2vw,32px)' : '12px', ls: big ? '-.03em' : '.06em', weight: big ? '500' : '400', case: big ? 'none' : 'uppercase',
+        color: on ? 'var(--accent-text)' : hoverTech ? 'var(--text-subtle)' : big ? 'var(--text-heading)' : 'var(--text-subtle)', enter: () => this.setState({ hoverTech: x.cat }) };
+    });
+    const graph = (() => {
+      const CX = 500, CY = 370, act = hoverTech;
+      const ang = [-122, -58, -4, 52, 108, 172];
+      const names = { 'Databases': 'Database' };
+      const mg = w >= 1440 ? 80 : w >= 768 ? 40 : 20, cw = Math.min(w, 1440) - 2 * mg;
+      const gW = wide ? cw * 8.4 / 12 - 20 : cw, u = gW / 1000;
+      const lfs = Math.max(10, Math.min(12.5, w * .0085)), hfs = Math.max(10, Math.min(12.5, w * .0085));
+      this._tfs = [lfs, hfs];
+      const edges = [], dots = [], leafLabels = [], hubs = [], H = [], L = [];
+      const X = v => (v / 10) + '%', Y = v => (v / 7.2) + '%';
+      const curve = (x1, y1, x2, y2, k) => { const mx = (x1 + x2) / 2, my = (y1 + y2) / 2, dx = x2 - x1, dy = y2 - y1; return 'M' + x1 + ' ' + y1 + 'Q' + (mx - dy * k).toFixed(1) + ' ' + (my + dx * k).toFixed(1) + ' ' + x2 + ' ' + y2; };
+      const tw = (t, f, k) => (t.length * f * k + 4) / u, th = lfs * 1.5 / u;
+      S.tech.forEach(([cat, list], i) => {
+        const a = ang[i] * Math.PI / 180;
+        const hx = Math.round(CX + Math.cos(a) * 192), hy = Math.round(CY + Math.sin(a) * 160);
+        const hl = hx > 780, hn = (names[cat] || cat).toUpperCase(), hw = tw(hn, hfs, 1.05) + 16 / u;
+        H.push({ cat, i, hx, hy, hl, hn, r: { x0: hl ? hx - 14 / u - hw : hx + 14 / u - 4, x1: hl ? hx - 14 / u + 4 : hx + 14 / u + hw, y0: hy - th * .9, y1: hy + th * .9 } });
+        const items = list.split(', '), n = items.length;
+        items.forEach((t, j) => {
+          const sp = (j - (n - 1) / 2) * (80 / Math.max(n - 1, 1)) * Math.PI / 180;
+          const r = 110 + (j % 3) * 55;
+          let lx = Math.round(Math.min(985, Math.max(15, hx + Math.cos(a + sp) * r * 1.3)));
+          let ly = Math.min(705, Math.max(15, hy + Math.sin(a + sp) * r));
+          const left = lx > 880 || lx < hx - 8 || (Math.abs(lx - hx) <= 8 && lx < CX);
+          const wv = tw(t, lfs, .6);
+          if (left) lx = Math.max(lx, Math.round(wv + 14 / u)); else lx = Math.min(lx, Math.round(1000 - wv - 14 / u));
+          L.push({ cat, t, hx, hy, j, lx, ly, left, wv });
+        });
+      });
+      const rect = l => { const g0 = 10 / u; return l.left ? { x0: l.lx - g0 - l.wv, x1: l.lx + 4 / u, y0: l.ly - th / 2, y1: l.ly + th / 2 } : { x0: l.lx - 4 / u, x1: l.lx + g0 + l.wv, y0: l.ly - th / 2, y1: l.ly + th / 2 }; };
+      const hit = (A, B) => A.x0 < B.x1 && B.x0 < A.x1 && A.y0 < B.y1 && B.y0 < A.y1;
+      for (let it = 0; it < 120; it++) {
+        let moved = false;
+        for (let p = 0; p < L.length; p++) {
+          const A = rect(L[p]);
+          for (let q = p + 1; q < L.length; q++) {
+            const B = rect(L[q]); if (!hit(A, B)) continue;
+            const ov = Math.min(A.y1 - B.y0, B.y1 - A.y0) / 2 + 1, s = L[p].ly <= L[q].ly ? -1 : 1;
+            L[p].ly += s * ov; L[q].ly -= s * ov; moved = true;
+          }
+          for (const hb of H) { const A2 = rect(L[p]); if (hit(A2, hb.r)) { const up = L[p].ly <= hb.hy; L[p].ly += up ? -(A2.y1 - hb.r.y0 + 2) : (hb.r.y1 - A2.y0 + 2); moved = true; } }
+          L[p].ly = Math.min(705, Math.max(15, L[p].ly));
+        }
+        if (!moved) break;
+      }
+      H.forEach(hb => {
+        const on = act === hb.cat, dim = act && !on;
+        edges.push({ d: curve(CX, CY, hb.hx, hb.hy, .12), stroke: 'var(--accent)', w: on ? 2 : 1.2, op: dim ? .18 : on ? 1 : .55, dash: '6 6', anim: 'wawflow ' + (on ? 1.2 : 3.2) + 's linear infinite' });
+      });
+      L.forEach(l => {
+        const on = act === l.cat, dim = act && !on, lx = l.lx, ly = Math.round(l.ly);
+        edges.push({ d: curve(l.hx, l.hy, lx, ly, l.j % 2 ? .18 : -.18), stroke: on ? 'var(--accent)' : 'var(--text-subtle)', w: on ? 1.1 : .8, op: dim ? .12 : on ? .9 : .35, dash: 'none', anim: 'none' });
+        dots.push({ x: X(lx), y: Y(ly), s: '6px', m: '-3px 0 0 -3px', fill: on ? 'var(--accent)' : 'var(--text-subtle)', glow: on ? '0 0 8px var(--accent)' : 'none', op: dim ? .35 : 1 });
+        leafLabels.push({ t: l.t, x: X(lx), y: Y(ly), tf: l.left ? 'translate(calc(-100% - 10px),-50%)' : 'translate(10px,-50%)', color: on ? 'var(--text-heading)' : 'var(--text-muted)', op: dim ? .35 : 1 });
+      });
+      H.forEach(hb => {
+        const on = act === hb.cat, dim = act && !on;
+        dots.push({ x: X(hb.hx), y: Y(hb.hy), s: on ? '14px' : '12px', m: on ? '-7px 0 0 -7px' : '-6px 0 0 -6px', fill: 'var(--accent)', glow: on ? '0 0 0 6px rgba(215,215,29,.18), 0 0 24px var(--accent)' : '0 0 14px rgba(215,215,29,.7)', op: dim ? .5 : 1 });
+        hubs.push({ t: names[hb.cat] || hb.cat, on: on ? 'true' : 'false', x: X(hb.hx), y: Y(hb.hy), tf: hb.hl ? 'translate(calc(-100% - 14px),-50%)' : 'translate(14px,-50%)', color: on ? 'var(--accent-text)' : 'var(--text-heading)', op: dim ? .45 : 1, enter: () => this.setState({ hoverTech: hb.cat }) });
+      });
+      dots.push({ x: X(CX), y: Y(CY), s: '16px', m: '-8px 0 0 -8px', fill: 'var(--accent)', glow: '0 0 0 8px rgba(215,215,29,.12), 0 0 40px var(--accent)', op: 1 });
+      return { edges, dots, leafLabels, hubs, lfs, hfs };
+    })();
+    const who = "Web Art Work is a web freelancer's community based in Ukraine with over 10 years in app and web development. We work to create products with the \"Waw!\" aftertaste: tailored engineering, remote-first collaboration and short feedback loops, delivered for founders and growing companies worldwide.";
+    const mqA = [['Web development', 'Angular · React'], ['Mobile apps', 'Capacitor'], ['Back-end', 'Node.js'], ['UI/UX design', 'Figma'], ['CRM & software', 'Business OS'], ['Blockchain', 'Cosmos SDK'], ['Unity & 3D', 'C#'], ['AI & automation', 'Agents']].map(([a, b]) => ({ a, b }));
+    const mqB = ['Strategy', 'Design', 'Development', 'Quality assurance', 'DevOps', 'Cloud', 'Integration', 'Data', 'Security', 'Support', 'SEO', 'Growth', 'Consulting', 'CTO services'];
+    return {
+      mode: this.state.mode,
+      toggleMode: () => { const m = this.state.mode === 'dark' ? 'light' : 'dark'; S.theme && S.theme.set(m); this.setState({ mode: m }); },
+      loading: this.state.loading,
+      menu: this.state.menu, menuAria: this.state.menu ? 'true' : 'false',
+      openMenu: () => this.setMenu(true), closeMenu: () => this.setMenu(false),
+      centerMeta: wide ? 'visible' : 'hidden', centerMax: wide ? 'none' : '0px',
+      hasSlides: S.philosophy.length > 0, contactLink: mid ? 'inline-flex' : 'none', navDesc: mid ? 'inline' : 'none',
+      menuCols: wide ? 'minmax(0,8fr) minmax(0,4fr)' : 'minmax(0,1fr)',
+      nav: nav.map(([label, href, note], i) => ({ i: pad(i), label, href, note })),
+      social: (S.social || []).map(([name, href]) => ({ name, href })),
+      heroCols: w >= 1024 ? 'minmax(0,1.25fr) minmax(0,1fr)' : 'minmax(0,1fr)',
+      heroV3: hb === 'Web v3', heroV2: hb === 'Web v2', heroV1: hb === 'Web v1',
+      heroBgInset: w >= 1024 ? '-3% -46% -3% -3%' : '-3%',
+      heroBgPos: hb === 'Web v3' ? (w >= 1024 ? '50% 50%' : '78% 50%') : hb === 'Web v2' ? (w >= 1024 ? '100% 50%' : '86% 40%') : (w >= 1024 ? '58% 45%' : '62% 30%'), heroVeil: w >= 1024 ? 'linear-gradient(90deg,rgba(5,5,5,.72) 0%,rgba(5,5,5,.35) 38%,rgba(5,5,5,.12) 55%,rgba(5,5,5,.7) 100%)' : 'linear-gradient(180deg,rgba(5,5,5,.55) 0%,rgba(5,5,5,.7) 100%)',
+      heroTitleFs: w >= 1024 ? 'clamp(72px,min(6.6vw,12.5svh),132px)' : 'clamp(64px,19vw,120px)',
+      heroAlign: wide ? 'stretch' : 'start', heroRightAlign: w >= 1024 ? 'end' : 'stretch', heroRightW: w >= 1024 ? '340px' : 'none', heroListTop: '0',
+      stripLine: w >= 1024 ? 'block' : 'none',
+      g: w >= 820 ? { web: '1 / 7', webRow: '1', list: '7 / 13', listRow: '1', slide: '1 / 7', slideRow: '2', art: '7 / 13', artRow: '2', work: '1 / 9', workRow: '3', stmt: '9 / 13', stmtRow: '3', stmtPad: 'clamp(0px,1.4vw,24px)', pad: 'clamp(28px,3.4vw,56px)', rule: '1px solid var(--border)', inset: 'clamp(0px,1.6vw,28px)' }
+              : { web: 'auto', webRow: 'auto', list: 'auto', listRow: 'auto', slide: 'auto', slideRow: 'auto', art: 'auto', artRow: 'auto', work: 'auto', workRow: 'auto', stmt: 'auto', stmtRow: 'auto', stmtPad: '0px', pad: '0px', rule: '0', inset: '0px' },
+      slideCols: w >= 600 ? 'minmax(0,1.15fr) minmax(0,1fr)' : 'minmax(0,1fr)',
+      slideDesc: (S.philosophy[slide] || ['', ''])[1],
+      slideTabs: S.philosophy.map(([t], i) => ({ label: t, sel: i === slide ? 'true' : 'false', flex: i === 2 ? '1' : '0 0 30px', h: i === slide ? '2px' : '1px', bg: i === slide ? 'var(--accent)' : 'var(--border-strong)', go: () => this.setState({ slide: i }) })),
+      heroStats: [['150+', 'IT specialists mentored'], ['50+', 'Startups accelerated'], ['10+', 'Years of experience']].map(([n, t], i) => ({ n, t, pl: i ? 'clamp(20px,2.8vw,48px)' : '0px', pr: 'clamp(16px,2.6vw,44px)', rule: '0' })),
+      listCols: w >= 1200 ? 'repeat(2,max-content)' : 'repeat(2,minmax(0,1fr))',
+      heroList: heroIds.map((id, i) => { const s = S.solutions.find(x => x.id === id) || { name: '' }; return { name: s.name, href: '/' + id, rule: i === heroIds.length - 1 ? 'none' : 'block' }; }),
+      slides: S.philosophy.map(([t, d, img], i) => ({ t, bg: 'url("' + img + '")', hidden: i === slide ? 'false' : 'true', op: i === slide ? 1 : 0, sc: i === slide ? 1 : 1.08 })),
+      slideNo: pad(slide + 1), slideTitle: (S.philosophy[slide] || [''])[0],
+      prevSlide: () => this.setState(s => ({ slide: (s.slide + 2) % 3 })), nextSlide: () => this.setState(s => ({ slide: (s.slide + 1) % 3 })),
+      pause: () => { this.paused = true; }, resume: () => { this.paused = false; },
+      stripCols: mid ? 'minmax(0,1fr) auto minmax(0,1fr)' : 'minmax(0,1fr) auto', downAlign: mid ? 'center' : 'end', stripSocial: mid ? 'flex' : 'none',
+      mqItems: (() => {
+        const map = { 'Web development': ['web', 'center 35%'], 'Mobile apps': ['mobile', 'center 45%'], 'Back-end': ['backend', 'center 40%'], 'UI/UX design': ['uiux', 'right 40%'], 'CRM & software': ['crm', 'center 40%'], 'Blockchain': ['blockchain', 'center 55%'], 'Unity & 3D': ['uiux', 'left 40%'], 'AI & automation': ['backend', 'right 30%'] };
+        const one = mqA.map(({ a, b }, i) => ({ a, b, bg: 'url("assets/mq-' + (map[a] || ['web'])[0] + '.png")', pos: (map[a] || [0, 'center'])[1], imgInsetL: ['18%', '30%', '8%', '24%'][i % 4], imgInsetR: ['14%', '22%', '30%', '10%'][i % 4],
+          tags: [0, 1, 2, 3].map(j => { const t = mqB[(i * 4 + j) % mqB.length]; const on = j === i % 4; return { t, sep: j ? 'block' : 'none', on: on ? '1' : '0', color: on || j === (i + 2) % 4 ? 'var(--text-heading)' : 'var(--text-subtle)' }; }) }));
+        return [...one, ...one];
+      })(),
+      splitCols: wide ? 'minmax(0,3fr) minmax(0,9fr)' : 'minmax(0,1fr)',
+      whoWords: who.split(' '),
+      statCols: w >= 1024 ? 'repeat(4,minmax(0,1fr))' : w >= 600 ? 'repeat(2,minmax(0,1fr))' : 'minmax(0,1fr)',
+      pillarCols: w >= 900 ? 'repeat(3,minmax(0,1fr))' : 'minmax(0,1fr)',
+      tokens: [['10+', 'Years of', 'experience'], ['150+', 'IT professionals', 'mentored'], ['50+', 'Startups', 'accelerated'], ['Based', 'Kamianets-Podilskyi', 'Ukraine']].map(([a, b1, b2], i) => {
+        const n = w >= 1024 ? 4 : w >= 600 ? 2 : 1; const first = i % n === 0;
+        return { a, b1, b2, c: i === 0 ? 'var(--accent-text)' : 'var(--text-heading)', bl: first ? '0' : '1px solid var(--border)', pad: (i >= n ? '32px ' : '0 ') + (first ? '0' : 'clamp(20px,2.8vw,48px)') + ' 0 ' + (first ? '0' : 'clamp(20px,2.8vw,48px)') };
+      }),
+      pillars: S.pillars.map(([t, d], i) => {
+        const row = w >= 1200; const first = !row || i === 0;
+        const ic = ['M14 13 7 20l7 7M26 13l7 7-7 7M22.5 10l-5 20', 'M20 5a15 15 0 1 0 0 30 15 15 0 1 0 0-30M5 20h30M20 5c-4.5 4-6.5 9-6.5 15s2 11 6.5 15M20 5c4.5 4 6.5 9 6.5 15s-2 11-6.5 15M7.5 12h25M7.5 28h25', 'M23 4 9 23h10l-2 13 14-19H21l2-13Z'][i % 3];
+        return { i: pad(i + 1), t, d, ic, bl: first ? '0' : '1px solid var(--border-subtle)', pad: row ? '4px clamp(24px,3.2vw,60px) 4px ' + (first ? '0' : 'clamp(24px,3.2vw,60px)') : (i ? '56px 0 0' : '0') };
+      }),
+      pillarGrid: w >= 1200 ? 'repeat(3,minmax(0,1fr))' : 'minmax(0,1fr)',
+      waves: (() => {
+        const base = [[-60, 150], [253, 193], [567, 59], [1115, 110], [1835, 107], [2135, 80]];
+        const out = [];
+        for (let k = 0; k < 14; k++) {
+          const s = (k - 6.5) / 6.5, pts = base.map(([x, y], j) => [x, y + s * (j % 2 ? 1 : -1) * (18 + j * 9) + (k % 3) * 6 * s]);
+          let d = 'M' + pts[0][0] + ' ' + pts[0][1];
+          for (let j = 1; j < pts.length; j++) { const [x0, y0] = pts[j - 1], [x1, y1] = pts[j], mx = (x1 - x0) * 0.5; d += ' C' + (x0 + mx) + ' ' + y0 + ' ' + (x1 - mx) + ' ' + y1 + ' ' + x1 + ' ' + y1; }
+          out.push({ d, o: (0.08 + 0.4 * (1 - Math.abs(s))).toFixed(2), sw: k === 7 ? 1.4 : 0.8 });
+        }
+        return out;
+      })(),
+      waveDots: [[253, 193], [567, 59], [1115, 110], [1835, 107]].map(([x, y]) => ({ l: (x / 2075 * 100).toFixed(2) + '%', t: ((y + 55) / 340 * 100).toFixed(2) + '%' })),
+      catCols: mid ? 'clamp(96px,11vw,170px) minmax(0,1fr)' : 'minmax(0,1fr)', catIndent: mid ? 'clamp(24px,4.4vw,72px)' : '0px', catRule: mid ? '1px solid var(--border)' : '0', numDisp: mid ? 'block' : 'none',
+      leaveCat: () => this.setState({ hoverCat: -1 }),
+      cats: S.serviceCategories.map((c, i) => {
+        const items = S.services.filter(s => s.cat === c.id).map(s => ({ name: s.name, href: '/service/' + s.id, icon: SVC_ICON[s.id] || '' }));
+        const nc = w >= 1100 ? (items.length % 4 === 0 ? 4 : 3) : w >= 600 ? 2 : 1;
+        const open = !mid || hoverCat === i;
+        return { i: pad(i + 1), short: shortCat[c.id], count: pad(items.length), href: '/services#' + c.id, items, cols: 'repeat(' + nc + ',minmax(0,1fr))', rows: open ? '1fr' : '0fr',
+          color: hoverCat === -1 || hoverCat === i ? 'var(--text-heading)' : 'var(--text-subtle)', enter: () => this.setState({ hoverCat: i }) };
+      }),
+      techLabel: hoverTech || (mid ? 'Hover to explore by discipline' : 'Grouped by discipline'),
+      leaveTech: () => this.setState({ hoverTech: null }),
+      fieldCols: cols, field: field_,
+      techCols: wide ? 'minmax(0,3.6fr) minmax(0,8.4fr)' : 'minmax(0,1fr)', graphOn: mid, graphOff: !mid,
+      leafFs: graph.lfs + 'px', hubFs: graph.hfs + 'px', edges: graph.edges, dots: graph.dots, leafLabels: graph.leafLabels, hubs: graph.hubs,
+      techList: S.tech.map(([t, list]) => ({ t, list: list.split(', ').join(' · ') })),
+      techRef: this.techRef || (this.techRef = React.createRef()),
+      techMove: e => {
+        const el = this.techRef && this.techRef.current; if (!el) return;
+        const r = el.getBoundingClientRect(), px = (e.clientX - r.left) / r.width * 1000, py = (e.clientY - r.top) / r.height * 720;
+        if (Math.hypot(px - 500, py - 370) < 40) return;
+        const a = Math.atan2(py - 370, px - 500) * 180 / Math.PI, ang = [-122, -58, -4, 52, 108, 172];
+        let best = 0, bd = 999; ang.forEach((g, i) => { let d = Math.abs(((a - g + 540) % 360) - 180); if (d < bd) { bd = d; best = i; } });
+        const cat = S.tech[best] && S.tech[best][0]; if (cat && cat !== this.state.hoverTech) this.setState({ hoverTech: cat });
+      },
+      phil: S.philosophy.map(([t, d], i) => { const row = w >= 900; return { i: pad(i + 1), t, d, bl: row && i ? '1px solid var(--border)' : '0', pad: row ? '0 clamp(20px,2.8vw,48px) 0 ' + (i ? 'clamp(20px,2.8vw,48px)' : '0') : (i ? '28px 0 0' : '0') }; }),
+      typing: S.philosophy.map(([t, d]) => ({ t: snake(t), d })),
+      regCols: wide ? 'auto minmax(0,4.2fr) 1px minmax(0,4fr) minmax(150px,auto) auto' : mid ? 'auto minmax(0,1fr) auto auto' : 'auto minmax(0,1fr) auto',
+      regAreas: wide ? '"ic t rule d p go"' : mid ? '"ic t p go" "ic d d go"' : '"ic t go" "d d d" "p p p"',
+      regGap: wide ? '12px clamp(20px,3vw,56px)' : '14px 20px', regPad: wide ? '12px 14px 12px 12px' : '14px',
+      icBox: mid ? '84px' : '64px', goBox: mid ? '60px' : '48px', ruleDisp: wide ? 'block' : 'none',
+      solCount: pad(S.solutions.length),
+      solutions: S.solutions.map((s, i) => ({ ...s, i: pad(i + 1), href: '/' + s.id, from: s.price ? 'From' : '', price: s.price || 'On request',
+        aria: s.name + ', ' + (s.price ? 'from ' + s.price : 'price on request'), sub: SOL_SUB[s.id] || '', icon: SOL_ICON[s.id] || '' })),
+      pinPos: this.pinOn() ? 'sticky' : 'relative', pinH: this.pinOn() ? '100vh' : 'auto', pinBarShow: this.pinOn() ? 'flex' : 'none',
+      trackDir: this.pinOn() || mid ? 'row' : 'column', trackW: this.pinOn() ? 'max-content' : 'auto', trackWrap: this.pinOn() ? 'nowrap' : 'wrap', trackGap: this.pinOn() ? '64px' : '40px 24px',
+      stepW: this.pinOn() ? 'clamp(320px,28vw,420px)' : mid ? 'calc(50% - 12px)' : 'auto',
+      vizDisp: mid ? 'block' : 'none', vizH: '200px', iconX: mid ? 'calc(clamp(0px,2vw,24px) + clamp(31px,2.97vw,51px))' : '44px', textX: mid ? 'clamp(0px,2vw,24px)' : '0',
+      waveW: this.pinOn() ? 'calc(100% + 64px)' : 'calc(100% + 24px)',
+      process: (() => { const PI = [ci(11, 11, 7) + 'M16 16l4.5 4.5', 'M6 3h12v18H6zM9 8h6M9 12h6M9 16h4', 'M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5.5l-3 13', ci(12, 12, 9) + 'M8 12.5l2.7 2.7L16 9.5', 'M12 3c3 2 5 5.5 5 9.5L15 16H9l-2-3.5C7 8.5 9 5 12 3zM9 16l-2 4M15 16l2 4M12 16v5' + ci(12, 9.5, 1.5), 'M20 12a8 8 0 1 1-2.3-5.7M20 4v4h-4'];
+        const Y = [124, 140], n = S.process.length, perRow = this.pinOn() ? n : mid ? 2 : 1;
+        return S.process.map(([t, d, b], i) => { const ya = Y[i % 2], yb = Y[(i + 1) % 2], up = ya > yb;
+          const wave = 'M0 ' + ya + ' C 30 ' + (ya - (up ? 70 : 50)) + ', 62 ' + (yb - (up ? 10 : 60)) + ', 100 ' + yb;
+          return { i: pad(i + 1), t, d, b: b.split('|'), icon: PI[i] || '', img: 'assets/icons/process-hq-0' + ((i % 6) + 1) + '.png', dotY: ya + 'px', stem: (ya - 94) + 'px', wave, waveDisp: (i + 1) % perRow === 0 || i === n - 1 ? 'none' : 'block' }; }); })(),
+      regHeadCols: wide ? 'minmax(0,1fr) auto minmax(0,1fr)' : 'minmax(0,1fr)', regSide: wide ? 'block' : 'none', regLeadAlign: wide ? 'end' : 'center', regLeadText: wide ? 'left' : 'center',
+      regGrid: wide ? 'minmax(0,1fr) clamp(64px,8vw,160px) minmax(0,1fr)' : 'minmax(0,1fr)',
+      partners: S.partners.map((p, i) => ({ ...p, i: pad(i + 1), code: snake(p.name), href: '/partner/' + p.id, icon: P_ICON[i % P_ICON.length], logo: 'assets/partners/' + p.id + '.png', bb: i === S.partners.length - 1 ? '0' : '1px solid var(--border)' })),
+      startups: S.startups.slice(0, 8).map((s, i) => ({ ...s, i: pad(i + 1), code: snake(s.name), href: '/startup/' + s.id, icon: ST_ICON[i % ST_ICON.length], photo: 'assets/startups/' + s.id + '.jpg', bb: i === Math.min(8, S.startups.length) - 1 ? '0' : '1px solid var(--border)' })),
+      contactCols: wide ? 'minmax(0,1fr) minmax(0,1fr)' : 'minmax(0,1fr)', featCols: w >= 600 ? 'repeat(3,minmax(0,1fr))' : 'minmax(0,1fr)', cardCols: w >= 600 ? 'minmax(0,1fr) minmax(0,1fr)' : 'minmax(0,1fr)', arcDisp: wide ? 'block' : 'none',
+      footCols: wide ? 'minmax(0,4fr) minmax(0,5fr) minmax(0,3fr)' : 'minmax(0,1fr)',
+      toTop: e => { e.preventDefault(); scrollTo({ top: 0, behavior: this.reduce ? 'auto' : 'smooth' }); },
+      form, err: { ...field('name'), ...field('email'), ...field('details') },
+      onName: set('name'), onEmail: set('email'), onDetails: set('details'),
+      hasPkg: !!pkg, pkgLabel: pkg || '', clearPkg: () => this.setState({ pkg: null }),
+      submit: ev => { ev.preventDefault(); const e = this.validate(form); this.setState({ err: e, sent: !Object.keys(e).length }); },
+      reset: () => this.setState({ sent: false, form: { name: '', email: '', details: '' }, err: {}, pkg: null }),
+      sent, notSent: !sent
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+- User-provided icon library: assets/icons/process-hq-01..06.png (transparent PNG, 192px, clean line style, white + Signal): 01 chat/communication, 02 document+pencil/planning, 03 browser code/development, 04 checklist/testing, 05 rocket/deployment, 06 growth chart/support. Reuse where appropriate.

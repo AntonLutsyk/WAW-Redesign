@@ -1,0 +1,26 @@
+/* Aliases for the existing Angular/Tailwind variables on webart.work,
+   so current templates pick up the new system without a rename pass. */
+:root,[data-mode="light"]{
+  --primary:var(--accent);
+  --primary-hover:var(--accent-hover);
+  --primary-contrast:var(--on-accent);
+  --c-primary:var(--accent);
+  --c-primary-hover:var(--accent-hover);
+  --c-bg-primary:var(--bg);
+  --c-bg-secondary:var(--surface-2);
+  --c-bg-tertiary:var(--border);
+  --c-border:var(--border);
+  --c-text-primary:var(--text-body);
+  --c-text-secondary:var(--text-heading);
+  --c-text-muted:var(--text-muted);
+  --ff-base:var(--font-sans);
+  --radius:var(--radius-sm);
+  --radius-card:var(--radius-md);
+  --radius-btn:var(--radius-sm);
+  --easing:var(--ease);
+  --motion-fast:var(--dur-fast);
+  --motion:var(--dur);
+  --motion-slow:var(--dur-slow);
+  --focus-ring:0 0 0 var(--focus-ring-w) var(--focus-ring-color);
+  /* Retired: --pricing-accent (#f4d37b), --pricing-green (#7ee787), --c-secondary (#c53d3d) */
+}

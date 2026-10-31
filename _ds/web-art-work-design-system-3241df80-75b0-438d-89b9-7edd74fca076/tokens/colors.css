@@ -1,0 +1,114 @@
+/* Web Art Work — colour tokens
+   Source: webart.work live CSS (--primary #d7d71d, graphite #282828/#343434/#404040, light navy #17224f)
+   and the logo gradient (#F8EC20 → #A79F1E). One accent family: "Signal" yellow.
+   Dark is the default theme (:root). Light theme via [data-mode="light"] on <html>, matching the site's existing attribute. */
+
+:root{
+  /* ── Base palette: Signal (brand yellow) ── */
+  --waw-signal-50:#fbfbe6;
+  --waw-signal-100:#f5f5c2;
+  --waw-signal-200:#eded8c;
+  --waw-signal-300:#f8ec20; /* logo highlight */
+  --waw-signal-400:#d7d71d; /* brand primary */
+  --waw-signal-500:#c5c519; /* brand hover */
+  --waw-signal-600:#a79f1e; /* logo shade */
+  --waw-signal-700:#7a7612;
+  --waw-signal-800:#5c590c;
+  --waw-signal-900:#3a3807;
+
+  /* ── Base palette: Graphite (dark neutrals) ── */
+  --waw-graphite-950:#0f0f14; /* theme-color / header */
+  --waw-graphite-900:#1c1c1e;
+  --waw-graphite-850:#222224;
+  --waw-graphite-800:#282828; /* brand page bg */
+  --waw-graphite-750:#2e2e2e;
+  --waw-graphite-700:#343434; /* brand surface */
+  --waw-graphite-600:#404040; /* brand border */
+  --waw-graphite-500:#5a5a5a;
+  --waw-graphite-400:#7c7c7c;
+  --waw-graphite-300:#9a9a9a;
+  --waw-graphite-200:#b7b7b7; /* brand muted */
+  --waw-graphite-100:#e8e8e8; /* brand body */
+  --waw-graphite-0:#ffffff;
+
+  /* ── Base palette: Mist + Navy (light neutrals, from the site's light mode) ── */
+  --waw-mist-0:#ffffff;
+  --waw-mist-50:#f8f9fb;
+  --waw-mist-100:#f3f4f7; /* brand light bg */
+  --waw-mist-200:#eceef5; /* brand light border */
+  --waw-mist-300:#dcdfe8;
+  --waw-mist-400:#b9bdc9;
+  --waw-ink-500:#6c6e76;
+  --waw-ink-600:#5f6066;  /* brand light body */
+  --waw-navy-700:#2b3664;
+  --waw-navy-800:#17224f; /* brand light heading */
+  --waw-navy-900:#0e1534;
+
+  /* ── Semantic: dark (default) ── */
+  --bg:var(--waw-graphite-800);
+  --bg-sunken:var(--waw-graphite-850);
+  --bg-inverse:var(--waw-mist-100);
+  --surface-1:var(--waw-graphite-750);
+  --surface-2:var(--waw-graphite-700);
+  --surface-featured:#30302a;           /* graphite warmed 4% toward signal */
+  --surface-hover:#323232;
+  --surface-header:rgba(15,15,20,.82);
+
+  --border-subtle:rgba(255,255,255,.07);
+  --border:var(--waw-graphite-600);
+  --border-strong:var(--waw-graphite-500);
+  --border-accent:rgba(215,215,29,.55);
+
+  --text-heading:var(--waw-graphite-0);
+  --text-body:var(--waw-graphite-100);
+  --text-muted:var(--waw-graphite-200);   /* 7.4:1 on --bg */
+  --text-subtle:#999999;                  /* 4.8:1 on --surface-1 — captions, mono labels */
+  --text-disabled:#6a6a6a;                /* decorative / disabled only */
+  --text-inverse:var(--waw-navy-800);
+
+  --accent:var(--waw-signal-400);
+  --accent-hover:var(--waw-signal-500);
+  --accent-active:#b3b316;
+  --accent-text:var(--waw-signal-400);    /* accent used as text: 9.6:1 on --bg */
+  --accent-soft:rgba(215,215,29,.10);
+  --accent-line:rgba(215,215,29,.32);
+  --on-accent:#0b0b0f;                    /* 12.7:1 on --accent */
+
+  --check:var(--accent-text);
+  --focus-ring-color:var(--waw-signal-400);
+}
+
+/* ── Semantic: light ── */
+[data-mode="light"]{
+  --bg:var(--waw-mist-100);
+  --bg-sunken:var(--waw-mist-200);
+  --bg-inverse:var(--waw-graphite-800);
+  --surface-1:var(--waw-mist-0);
+  --surface-2:var(--waw-mist-50);
+  --surface-featured:var(--waw-mist-0);
+  --surface-hover:var(--waw-mist-50);
+  --surface-header:rgba(243,244,247,.84);
+
+  --border-subtle:rgba(23,34,79,.07);
+  --border:var(--waw-mist-300);
+  --border-strong:var(--waw-mist-400);
+  --border-accent:var(--waw-navy-800);
+
+  --text-heading:var(--waw-navy-800);    /* 13.9:1 on --bg */
+  --text-body:var(--waw-ink-600);        /* 5.7:1 on --bg */
+  --text-muted:var(--waw-ink-500);       /* 4.6:1 on --bg */
+  --text-subtle:var(--waw-ink-500);
+  --text-disabled:var(--waw-mist-400);
+  --text-inverse:var(--waw-graphite-0);
+
+  --accent:var(--waw-signal-400);        /* fills only — never text on light */
+  --accent-hover:var(--waw-signal-500);
+  --accent-active:#b3b316;
+  --accent-text:var(--waw-signal-800);   /* 6.6:1 on --bg */
+  --accent-soft:rgba(215,215,29,.16);
+  --accent-line:rgba(167,159,30,.45);
+  --on-accent:#0b0b0f;
+
+  --check:var(--waw-signal-800);
+  --focus-ring-color:var(--waw-navy-800);
+}

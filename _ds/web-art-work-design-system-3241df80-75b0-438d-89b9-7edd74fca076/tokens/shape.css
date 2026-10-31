@@ -1,0 +1,37 @@
+/* Radius, border, elevation, motion — one scale for the whole site */
+:root{
+  --radius-0:0;
+  --radius-xs:2px;/* badges, chips, checkbox-scale details */
+  --radius-sm:4px;/* buttons, inputs, tabs */
+  --radius-md:8px;/* cards, panels, table shell */
+  --radius-lg:14px;/* large feature blocks (final CTA) */
+  --radius-full:999px;/* circular icon buttons only */
+  --border-w:1px; /* @kind other */
+  --border-w-strong:1.5px; /* @kind other */
+  --rule-accent:2px; /* @kind other *//* top rule on featured card, active nav underline */
+
+  /* Elevation: almost flat. Separation comes from hairlines, not shadows. */
+  --shadow-none:none;
+  --shadow-1:0 1px 0 rgba(255,255,255,.04) inset;
+  --shadow-lift:0 24px 48px -28px rgba(0,0,0,.75),0 2px 6px -2px rgba(0,0,0,.35);
+  --shadow-menu:0 16px 40px -12px rgba(0,0,0,.6);
+  --focus-ring-w:3px; /* @kind other */
+  --focus-ring-offset:2px; /* @kind other */
+  --ease:cubic-bezier(.25,.8,.25,1); /* @kind other *//* brand easing, from webart.work */
+  --ease-out:cubic-bezier(.2,.7,.1,1); /* @kind other */
+  --dur-fast:.15s; /* @kind other */
+  --dur:.25s; /* @kind other */
+  --dur-slow:.4s; /* @kind other */
+  --lift:-4px; /* @kind spacing */
+}
+[data-mode="light"]{
+  --shadow-1:0 1px 0 rgba(23,34,79,.04);
+  --shadow-lift:0 24px 48px -28px rgba(23,34,79,.32),0 2px 6px -2px rgba(23,34,79,.08);
+  --shadow-menu:0 16px 40px -12px rgba(23,34,79,.22);
+}
+@media (prefers-reduced-motion:reduce){
+  :root{
+  --dur-fast:0s; /* @kind other */
+  --dur:0s; /* @kind other */
+  --dur-slow:0s; /* @kind other */--lift:0px}
+}

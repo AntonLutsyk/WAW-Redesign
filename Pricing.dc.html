@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Website Pricing: Packages from $200 | Web Art Work</title>
+  <meta name="description" content="Website packages from $200, one-time price with no subscription. Compare Basic, Pro and Extended, and see starting prices for marketplaces, CRM, apps and more.">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/layout.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/shape.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/legacy.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/tokens/base.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/actions/actions.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/pricing/pricing.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/content/content.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/components/navigation/navigation.css">
+  <link rel="stylesheet" href="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/styles.css">
+  <script src="_ds/web-art-work-design-system-3241df80-75b0-438d-89b9-7edd74fca076/_ds_bundle.js"></script>
+  <script src="site.js"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"Website development","provider":{"@type":"Organization","name":"Web Art Work","telephone":"+380971862487","address":{"@type":"PostalAddress","streetAddress":"Ohiyenka Street, 63","addressLocality":"Kamianets-Podilskyi","addressRegion":"Khmelnytskyi Region","postalCode":"32301","addressCountry":"UA"}},"offers":[{"@type":"Offer","name":"Basic","price":"200","priceCurrency":"USD"},{"@type":"Offer","name":"Pro","price":"500","priceCurrency":"USD"},{"@type":"Offer","name":"Extended","price":"900","priceCurrency":"USD"}]}]}</script>
+  <style>
+    html{scroll-behavior:smooth;scroll-padding-top:96px}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:0s!important;animation-duration:0s!important}}
+    body{margin:0;background:var(--bg);color:var(--text-body);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+    a{color:var(--text-heading)}
+    a:hover{color:var(--accent-text)}
+  </style>
+</helmet>
+
+<div style="background:var(--bg);color:var(--text-body);min-height:100vh;overflow-x:clip">
+
+  <dc-import name="WawHeader" current="Pricing" quote-href="/#contact" style="position:sticky;top:0;z-index:60;display:block" hint-size="100%,72px"></dc-import>
+
+  <main>
+    <!-- Hero -->
+    <section data-screen-label="Hero" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(40px,5vw,80px) var(--page-margin) clamp(40px,4vw,64px)">
+      <nav aria-label="Breadcrumb" style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-muted)"><a href="/" style="display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:var(--text-muted)" style-hover="color:var(--text-heading)">Home</a><span aria-hidden="true">/</span><span aria-current="page" style="color:var(--text-heading)">Pricing</span></nav>
+      <h1 style="margin:clamp(16px,2.4vw,40px) 0 0;font-size:clamp(40px,9.4vw,176px);line-height:.94;letter-spacing:-.055em;font-weight:600;color:var(--text-heading);text-wrap:balance;white-space:nowrap">Website pricing<span style="color:var(--accent)">.</span></h1>
+
+      <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 48px;margin-top:clamp(24px,3vw,48px)">
+        <p style="margin:0;font-size:clamp(18px,1.4vw,22px);line-height:1.45;font-weight:300;color:var(--text-heading)">A clear one-time price, no subscription.<br>Choose a package, then grow it with your business.</p>
+        <x-import component-from-global-scope="WebArtWorkDesignSystem_3241df.InlineList" items="{{ benefits }}" hint-size="420px,20px"></x-import>
+      </div>
+    </section>
+
+    <!-- 01 Packages -->
+    <section id="packages" data-screen-label="Packages" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:0 var(--page-margin) clamp(40px,4vw,64px)">
+      <h2 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Packages</h2>
+      <div style="display:grid;grid-template-columns:{{ pkgCols }};border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--surface-1)">
+        <sc-for list="{{ cards }}" as="c" hint-placeholder-count="3">
+          <article aria-labelledby="{{ c.hid }}" style="display:grid;grid-template-rows:1fr auto;border-left:{{ c.bl }};border-top:{{ c.bt }};background:{{ c.bg }}">
+            <div style="display:flex;flex-direction:column;padding:clamp(28px,2.6vw,40px);min-height:{{ pkgMinH }}">
+              <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px">
+                <span aria-hidden="true" style="display:grid;place-items:center;width:52px;height:52px;border-radius:8px;background:var(--surface-2);border:1px solid var(--border)"><span style="display:block;width:34px;height:34px;background:url({{ c.icon }}) center / contain no-repeat"></span></span>
+                <span style="padding:5px 10px;border-radius:2px;font-size:13px;font-weight:500;line-height:1.4;background:{{ c.badgeBg }};color:{{ c.badgeFg }}">{{ c.badge }}</span>
+              </div>
+              <h3 id="{{ c.hid }}" style="margin:clamp(32px,3.4vw,56px) 0 0;font-size:clamp(40px,3.8vw,64px);line-height:1;letter-spacing:-.05em;font-weight:500;color:var(--text-heading)">{{ c.name }}</h3>
+              <p style="margin:16px 0 0;max-width:34ch;font-size:16px;line-height:1.6;font-weight:300;color:var(--text-muted);text-wrap:pretty">{{ c.description }}</p>
+              <p style="margin:12px 0 0;font-size:14px;font-weight:300;color:var(--text-subtle)">{{ c.meta }}</p>
+              <div style="display:flex;align-items:baseline;gap:10px;margin-top:auto;padding-top:clamp(40px,4vw,72px)">
+                <span style="font-size:clamp(56px,5.2vw,88px);line-height:.9;letter-spacing:-.055em;font-weight:500;color:var(--text-heading)">{{ c.priceText }}</span>
+                <span style="font-size:15px;font-weight:300;color:var(--text-muted)">/ one-time</span>
+              </div>
+              <div onClick="{{ c.onCta }}" style="margin-top:28px;align-self:flex-start">
+                <x-import component-from-global-scope="WebArtWorkDesignSystem_3241df.Button" variant="{{ c.btn }}" size="lg" arrow="up-right" href="/#contact" hint-size="230px,52px">{{ c.ctaLabel }}</x-import>
+              </div>
+            </div>
+            <ul style="list-style:none;margin:0;padding:clamp(20px,2vw,28px) clamp(28px,2.6vw,40px) clamp(24px,2.4vw,36px);display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px 24px;border-top:1px solid var(--border)">
+              <sc-for list="{{ c.feats }}" as="f" hint-placeholder-count="5">
+                <li style="display:flex;gap:10px;align-items:baseline;font-size:14px;line-height:1.5;font-weight:300;color:var(--text-body)"><span aria-hidden="true" style="flex:none;width:10px;height:2px;background:var(--accent);transform:translateY(-4px)"></span>{{ f }}</li>
+              </sc-for>
+            </ul>
+          </article>
+        </sc-for>
+      </div>
+    </section>
+
+    <!-- Other solutions -->
+    <section id="solutions" data-screen-label="Other solutions" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin) 0">
+      <div style="display:grid;grid-template-columns:{{ headCols }};gap:20px var(--grid-gutter);align-items:end">
+        <h2 style="margin:0;display:flex;align-items:baseline;gap:.28em;flex-wrap:wrap;font-size:clamp(40px,5.6vw,92px);line-height:1;letter-spacing:-.05em;font-weight:600;color:var(--text-heading);text-wrap:balance"><span style="color:var(--accent-text);font-weight:400">(</span>Other solutions<span style="color:var(--accent-text);font-weight:400">)</span></h2>
+        <p style="margin:0;max-width:44ch;font-size:clamp(16px,1.3vw,20px);line-height:1.55;font-weight:300;color:var(--text-muted);text-wrap:pretty">Marketplaces, CRM, mobile apps and other projects vary too much in scope for a fixed package. Here is a realistic starting point for each.</p>
+      </div>
+      <ul style="list-style:none;margin:clamp(40px,4vw,64px) 0 0;padding:0;display:grid;grid-template-columns:{{ solCols }};gap:1px;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--border)">
+        <sc-for list="{{ solutions }}" as="s" hint-placeholder-count="8">
+          <li style="display:flex;background:var(--surface-1)">
+            <a href="{{ s.href }}" style="flex:1;display:flex;flex-direction:column;min-height:{{ solMinH }};padding:clamp(24px,2.2vw,32px);text-decoration:none;color:var(--text-heading);transition:background-color .25s cubic-bezier(.25,.8,.25,1)" style-hover="background:var(--surface-2)" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:-3px">
+              <span style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px">
+                <span aria-hidden="true" style="display:grid;place-items:center;width:52px;height:52px;border-radius:8px;background:var(--surface-2);border:1px solid var(--border);font-family:var(--font-mono);font-size:14px;font-weight:500;color:var(--accent-text)">{{ s.index }}</span>
+                <span aria-hidden="true" style="display:grid;place-items:center;width:40px;height:40px;border:1px solid var(--border-strong);border-radius:50%;color:var(--accent-text)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"></path></svg></span>
+              </span>
+              <span style="margin-top:clamp(28px,2.8vw,44px);font-size:clamp(24px,2vw,32px);line-height:1.05;letter-spacing:-.045em;font-weight:500">{{ s.name }}</span>
+              <span style="margin-top:12px;font-size:15px;line-height:1.6;font-weight:300;color:var(--text-muted);text-wrap:pretty">{{ s.description }}</span>
+              <span style="display:flex;align-items:baseline;gap:8px;margin-top:auto;padding-top:clamp(28px,2.8vw,44px)">
+                <span style="font-size:14px;font-weight:300;color:var(--text-muted)">{{ s.pre }}</span>
+                <span style="font-size:clamp(28px,2.4vw,40px);line-height:1;letter-spacing:-.05em;font-weight:500;color:var(--text-heading)">{{ s.amount }}</span>
+              </span>
+            </a>
+          </li>
+        </sc-for>
+      </ul>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" data-screen-label="FAQ" style="max-width:calc(var(--container) + 2 * var(--page-margin));margin:0 auto;padding:clamp(96px,11vw,180px) var(--page-margin)">
+      <div style="display:grid;grid-template-columns:{{ headCols }};gap:20px var(--grid-gutter);align-items:end">
+        <h2 style="margin:0;display:flex;align-items:baseline;gap:.28em;flex-wrap:wrap;font-size:clamp(40px,5.6vw,92px);line-height:1;letter-spacing:-.05em;font-weight:600;color:var(--text-heading);text-wrap:balance"><span style="color:var(--accent-text);font-weight:400">(</span>FAQ<span style="color:var(--accent-text);font-weight:400">)</span></h2>
+        <p style="margin:0;max-width:44ch;font-size:clamp(16px,1.3vw,20px);line-height:1.55;font-weight:300;color:var(--text-muted);text-wrap:pretty">If your question is not here, ask us directly. We reply with a plain answer and, where it applies, a fixed estimate.</p>
+      </div>
+      <ul style="list-style:none;margin:clamp(40px,4vw,64px) 0 0;padding:0;display:grid;gap:1px;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--border)">
+        <sc-for list="{{ faqItems }}" as="f" hint-placeholder-count="5">
+          <li style="background:{{ f.bg }}">
+            <h3 style="margin:0">
+              <button type="button" id="{{ f.bid }}" aria-expanded="{{ f.exp }}" aria-controls="{{ f.pid }}" onClick="{{ f.toggle }}" style="display:grid;grid-template-columns:52px minmax(0,1fr) 40px;align-items:center;gap:clamp(16px,2vw,28px);width:100%;min-height:44px;padding:clamp(20px,2vw,28px) clamp(24px,2.2vw,32px);background:none;border:0;text-align:left;cursor:pointer;color:var(--text-heading);font:inherit" style-hover="color:var(--accent-text)" style-focus="outline:3px solid var(--focus-ring-color);outline-offset:-3px">
+                <span aria-hidden="true" style="display:grid;place-items:center;width:52px;height:52px;border-radius:8px;background:var(--surface-2);border:1px solid var(--border);font-family:var(--font-mono);font-size:14px;font-weight:500;color:var(--accent-text)">{{ f.i }}</span>
+                <span style="font-size:clamp(18px,1.6vw,24px);line-height:1.25;letter-spacing:-.03em;font-weight:500">{{ f.q }}</span>
+                <span aria-hidden="true" style="display:grid;place-items:center;width:40px;height:40px;border:1px solid {{ f.ring }};border-radius:50%;background:{{ f.ringBg }};color:{{ f.ringFg }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="{{ f.icon }}"></path></svg></span>
+              </button>
+            </h3>
+            <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+              <div id="{{ f.pid }}" role="region" aria-labelledby="{{ f.bid }}" style="padding:0 clamp(24px,2.2vw,32px) clamp(24px,2.4vw,32px) {{ faqIndent }}">
+                <p style="margin:0;max-width:64ch;font-size:16px;line-height:1.7;font-weight:300;color:var(--text-muted);text-wrap:pretty">{{ f.a }}</p>
+              </div>
+            </sc-if>
+          </li>
+        </sc-for>
+      </ul>
+    </section>
+  </main>
+
+  <dc-import name="WawFooter" current="Pricing" quote-href="/#contact" style="display:block" hint-size="100%,620px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;solutionsLayout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;index&quot;,&quot;cards&quot;],&quot;default&quot;:&quot;index&quot;,&quot;tsType&quot;:&quot;'index' | 'cards'&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;proFirstOnMobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
+class Component extends DCLogic {
+  state = { faq: 0, mode: 'dark', pkg: null, w: typeof window !== 'undefined' ? window.innerWidth : 1440, hover: -1, ready: !!window.WAW_PRICING };
+
+  componentDidMount() {
+    let m = 'dark';
+    try { m = localStorage.getItem('waw-mode') || document.documentElement.getAttribute('data-mode') || 'dark'; } catch (e) {}
+    this.applyMode(m);
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener('resize', this.onResize);
+    this.onResize();
+    if (!window.WAW_PRICING) {
+      this.t = setInterval(() => { if (window.WAW_PRICING) { clearInterval(this.t); this.setState({ ready: true }); } }, 80);
+    }
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this.onResize); clearInterval(this.t); }
+
+  applyMode(m) {
+    document.documentElement.setAttribute('data-mode', m);
+    try { localStorage.setItem('waw-mode', m); } catch (e) {}
+    this.setState({ mode: m });
+  }
+
+  renderVals() {
+    const D = window.WAW_PRICING || { packages: [], compare: [], solutions: [], faq: [], extrasNote: '' };
+    const { w, pkg, hover, mode } = this.state;
+    const isMobile = w < 768;
+    const wideHero = w >= 960;
+    const proFirst = this.props.proFirstOnMobile ?? true;
+    const layout = this.props.solutionsLayout ?? 'index';
+
+    const pick = id => () => this.setState({ pkg: id });
+    const row3 = w >= 1024;
+    const ICON = ['assets/icons/process-hq-02.png', 'assets/icons/process-hq-03.png', 'assets/icons/process-hq-05.png'];
+    let cards = D.packages.map((p, i) => {
+      const feat = !!p.featured;
+      return { ...p, onCta: pick(p.id), hid: 'pkg-' + p.id, icon: ICON[i % 3], priceText: '$' + p.price,
+        feats: (p.features || []).map(f => typeof f === 'string' ? f : f.label),
+        meta: ['Launch: ' + p.launch, p.pages].filter(Boolean).join('  ·  '),
+        badge: feat ? 'Most popular' : 'One-time price',
+        badgeBg: feat ? 'var(--accent)' : 'var(--surface-2)', badgeFg: feat ? '#0b0b0f' : 'var(--text-muted)',
+        btn: feat ? 'primary' : 'secondary', ctaLabel: 'Start with ' + p.name,
+        bg: feat ? 'var(--surface-2)' : 'transparent' };
+    });
+    if (isMobile && proFirst) cards = [...cards.filter(c => c.featured), ...cards.filter(c => !c.featured)];
+    cards = cards.map((c, i) => ({ ...c, bl: row3 && i ? '1px solid var(--border)' : '0', bt: !row3 && i ? '1px solid var(--border)' : '0' }));
+
+    const sel = D.packages.find(p => p.id === pkg);
+    const picker = [...D.packages.map(p => ({ id: p.id, label: p.name, sub: '$' + p.price })), { id: null, label: 'Not sure yet', sub: 'Free call' }]
+      .map(o => {
+        const on = o.id === pkg;
+        return { ...o, checked: on ? 'true' : 'false', pick: pick(o.id),
+          bg: on ? 'var(--accent)' : 'transparent', fg: on ? 'var(--on-accent)' : 'var(--text-heading)', border: on ? 'var(--accent)' : 'var(--border-strong)' };
+      });
+
+    const leave = () => this.setState({ hover: -1 });
+    const solutions = D.solutions.map((s, i) => {
+      const h = i === hover;
+      const num = typeof s.price === 'number' ? s.price : parseFloat(String(s.price).replace(/[^0-9.]/g, ''));
+      const has = !isNaN(num) && num > 0;
+      return { ...s, pre: has ? 'From' : '', amount: has ? '$' + num.toLocaleString('en-US') : 'On request', index: String(i + 1).padStart(2, '0'), enter: () => this.setState({ hover: i }),
+        bg: h ? 'var(--surface-1)' : 'transparent', pad: h ? '16px' : '0px',
+        indexColor: h ? 'var(--accent-text)' : 'var(--text-subtle)',
+        arrowColor: h ? 'var(--accent-text)' : 'var(--text-subtle)', arrowT: h ? 'translate(3px,-3px)' : 'none' };
+    });
+
+    return {
+      headCols: this.state.w >= 1024 ? 'minmax(0,7fr) minmax(0,5fr)' : 'minmax(0,1fr)',
+      mode,
+      setMode: m => this.applyMode(m),
+      isMobile,
+      heroCols: wideHero ? 'repeat(12,minmax(0,1fr))' : 'minmax(0,1fr)',
+      heroLeadCol: wideHero ? '7 / span 6' : '1 / -1',
+      heroLeadRow: '1',
+      heroIndexCol: wideHero ? '1 / span 5' : '1 / -1',
+      heroIndexRow: wideHero ? '1' : '2',
+      benefits: ['One-time payment', 'No subscription', 'Upgrade anytime'],
+      packages: D.packages.map(p => ({ ...p, priceText: '$' + p.price })),
+      solCols: 'repeat(' + (this.state.w >= 1200 ? 4 : this.state.w >= 700 ? 2 : 1) + ',minmax(0,1fr))', solMinH: this.state.w >= 700 ? '320px' : '0',
+      faqItems: (D.faq || []).map((f, i) => { const open = this.state.faq === i; return { ...f, i: String(i + 1).padStart(2, '0'), open, exp: open ? 'true' : 'false', bid: 'faq-b' + i, pid: 'faq-p' + i, bg: open ? 'var(--surface-2)' : 'var(--surface-1)', ring: open ? 'var(--accent)' : 'var(--border-strong)', ringBg: open ? 'var(--accent)' : 'transparent', ringFg: open ? '#0b0b0f' : 'var(--accent-text)', icon: open ? 'M5 12h14' : 'M12 5v14M5 12h14', toggle: () => this.setState(s => ({ faq: s.faq === i ? -1 : i })) }; }),
+      faqIndent: this.state.w >= 700 ? 'calc(clamp(24px,2.2vw,32px) + 52px + clamp(16px,2vw,28px))' : 'clamp(24px,2.2vw,32px)',
+      cards, pkgCols: row3 ? 'repeat(3,minmax(0,1fr))' : 'minmax(0,1fr)', pkgMinH: row3 ? '520px' : '0',
+      extrasNote: D.extrasNote,
+      plans: D.packages.map(p => ({ name: p.name, price: p.price, featured: !!p.featured })),
+      compare: D.compare,
+      facts: [
+        { k: 'Studio', v: 'Kamianets-Podilskyi, Ukraine' },
+        { k: 'Pricing', v: 'One-time package prices in USD, no subscription' },
+        { k: 'Stack', v: 'Angular, React, Vue, Node.js, Python, Capacitor' },
+        { k: 'Find us on', v: 'Upwork, LinkedIn, Instagram, GitHub' },
+      ],
+      steps: [
+        { n: '01', title: 'Request', desc: 'Choose a package or describe your project, and tell us what the site needs to do.', dur: '' },
+        { n: '02', title: 'Discovery call & brief', desc: 'A short call to agree on pages, content and features. You send your logo, colors, photos and texts.', dur: 'Free 15-min call' },
+        { n: '03', title: 'Design & build', desc: 'We design and build the site around your content and connect its forms.', dur: 'A few days to 3 weeks' },
+        { n: '04', title: 'Launch & support', desc: 'The site goes live on your domain. Extended includes ongoing support after launch.', dur: '' },
+      ],
+      solutions, leave,
+      solIndex: layout === 'index',
+      solCards: layout === 'cards',
+      faq: D.faq,
+      picker,
+      footSolutions: window.WAW_SITE ? window.WAW_SITE.footer.solutions : undefined,
+      footCompany: window.WAW_SITE ? window.WAW_SITE.footer.company : undefined,
+      startLabel: sel ? 'Start with ' + sel.name : 'Start your website project',
+      startHref: sel ? '/?package=' + sel.id + '#contact' : '/#contact',
+    };
+  }
+}
+</script>
+</body>
+</html>
